@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* =====================================================================
+   Design tokens - the food-inspired palette used by the whole website.
+   Every colour below also becomes a Tailwind utility, e.g. `bg-primary`,
+   `text-brown`, `border-peach`.
+   ===================================================================== */
+@theme {
+  /* Primary: dark burnt orange */
+  --color-primary: #c1440e;
+  --color-primary-dark: #9a3409;
+  --color-primary-soft: #e4762b;
+
+  /* Backgrounds: golden cream page, warm cream panels, deeper gold accents */
+  --color-cream: #f4deaa;
+  --color-ivory: #fdf4de;
+  --color-peach: #edc884;
+  --color-peach-deep: #d9b264;
+
+  /* Text: near-black ink (the black of the orange + black combo) */
+  --color-brown: #171008;
+  --color-brown-soft: #4a3b2c;
+
+  /* Muted green for success and positive indicators */
+  --color-success: #3f7a4b;
+  --color-success-soft: #dfe9db;
+
+  /* Muted red for validation errors and failures */
+  --color-danger: #b23b2e;
+  --color-danger-soft: #fbe9e6;
+
+  --font-display: var(--font-baloo), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-panel: 0 10px 30px -18px rgba(63, 42, 27, 0.45);
+  --shadow-lift: 0 16px 38px -20px rgba(63, 42, 27, 0.55);
+}
+
+/* =====================================================================
+   Base
+   ===================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-brown);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Visible focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+/* =====================================================================
+   Reusable pieces
+   ===================================================================== */
+@layer components {
+  /* Cream content panel with a soft shadow */
+  .panel {
+    @apply rounded-3xl border border-peach-deep/70 bg-ivory p-6;
+    box-shadow: var(--shadow-panel);
+  }
+
+  .panel-tight {
+    @apply rounded-2xl border border-peach-deep/60 bg-ivory p-4;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
+      text-sm font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-primary px-5
+      py-2.5 text-sm font-bold text-ivory transition duration-200 hover:bg-primary-dark
+      disabled:cursor-not-allowed disabled:opacity-60;
+    box-shadow: 0 10px 22px -14px rgba(193, 68, 14, 0.9);
+  }
+
+  /* Black outlined button: the black half of the orange + black combo */
+  .btn-secondary {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border
+      border-brown bg-ivory px-5 py-2.5 text-sm font-bold text-brown transition duration-200
+      hover:bg-brown hover:text-ivory disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-ghost {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
+      text-sm font-bold text-brown transition duration-200 hover:bg-peach hover:text-primary
+      disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  /* Small rounded label */
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold;
+  }
+
+  /* Form controls */
+  .field-label {
+    @apply mb-1.5 block text-sm font-bold text-brown;
+  }
+
+  .input {
+    @apply w-full rounded-2xl border border-peach-deep bg-ivory px-4 py-2.5 text-sm text-brown
+      transition placeholder:text-brown-soft/60 focus:border-primary focus:outline-none;
+  }
+
+  .input-error {
+    @apply border-danger;
+  }
+
+  /* Table cells that stay readable on small screens */
+  .table-cell {
+    @apply whitespace-nowrap px-4 py-3 text-sm;
+  }
+}
+
+/* Hide the scrollbar of the horizontally scrollable category row */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,1231 @@
+order_id,order_date,city,food_category,order_value,delivery_time_min,customer_rating,order_status
+OD100141,2025-05-11,Bengaluru,Burgers,335.42,21.1,4.8,Delivered
+OD100063,2025-12-14,Bengaluru,South Indian,244.68,37.6,4.6,Delivered
+OD100669,2025-06-14,Bengaluru,Burgers,315.09,30.9,4.7,Delivered
+OD100545,2025-04-10,Hyderabad,Burgers,208.52,24.7,5.0,Delivered
+OD100925,2025-04-05,Bengaluru,Pizza,677.26,30.7,4.5,Delivered
+OD101187,2025-02-20,Mumbai,Beverages,217.77,18.7,4.6,Delivered
+OD100415,2025-11-22,Hyderabad,Pizza,395.0,24.6,5.0,Delivered
+OD100977,2025-09-13,Mumbai,Burgers,118.83,28.8,5.0,Delivered
+OD100112,2025-11-13,Mumbai,Pizza,390.72,26.3,,Delivered
+OD101068,2025-04-20,Pune,Biryani,404.91,39.2,,Delivered
+OD100639,2025-03-17,Bengaluru,Desserts,100.21,23.9,4.7,Delivered
+OD100352,2025-12-13,Bengaluru,Chinese,349.27,35.1,4.6,Delivered
+OD101016,2025-09-04,Bengaluru,Chinese,395.39,40.8,4.3,Delivered
+OD101070,2025-03-08,Chennai,Desserts,278.81,14.2,4.6,Delivered
+OD100871,2025-08-26,Bengaluru,Biryani,470.59,33.5,3.9,Delivered
+OD100139,2025-09-21,Chennai,Biryani,403.17,37.9,4.2,Delivered
+OD100498,2025-01-30,Bengaluru,Pizza,444.81,32.7,4.2,Delivered
+OD101046,2025-01-29,Mumbai,Biryani,340.54,29.8,4.7,Delivered
+OD100651,2025-03-18,Mumbai,Desserts,186.21,19.7,4.5,Delivered
+OD100018,2025-01-19,Bengaluru,Desserts,92.42,28.3,4.7,Delivered
+OD100893,2025-07-07,Chennai,Biryani,623.55,34.6,3.7,Delivered
+OD100895,2025-01-31,Bengaluru,Desserts,127.02,25.4,4.5,Delivered
+OD100208,2025-01-08,Mumbai,Biryani,453.17,41.1,3.8,Delivered
+OD100572,2025-05-21,Mumbai,Burgers,284.45,30.5,4.9,Delivered
+OD100850,2025-04-02,Hyderabad,Biryani,,28.0,5.0,Delivered
+OD100905,2025-06-13,Chennai,Chinese,369.64,37.6,4.9,Delivered
+OD101003,2025-03-06,Pune,Biryani,337.92,26.5,4.6,Delivered
+OD100918,2025-03-09,Chennai,Pizza,500.99,32.4,4.7,Delivered
+OD101058,2025-05-31,Mumbai,Chinese,342.9,39.8,3.7,Delivered
+OD100346,2025-07-31,Mumbai,Beverages,155.45,22.4,5.0,Delivered
+OD100226,2025-02-08,Chennai,Biryani,516.68,23.5,4.4,Delivered
+OD100982,2025-04-08,Bengaluru,South Indian,259.11,30.8,4.4,Delivered
+OD100479,2025-05-19,Hyderabad,Burgers,372.91,25.6,4.9,Delivered
+OD100009,2025-06-29,Bengaluru,Burgers,340.6,24.7,5.0,Delivered
+OD100472,2025-11-18,Pune,Biryani,310.98,40.8,4.3,Delivered
+OD101145,2025-07-10,Bengaluru,Pizza,734.66,34.5,4.6,Delivered
+OD100857,2025-10-15,Bengaluru,Desserts,159.84,21.0,5.0,Delivered
+OD100629,2025-10-17,Hyderabad,South Indian,154.6,23.5,4.8,Delivered
+OD101073,2025-03-31,Chennai,Beverages,108.48,22.9,4.7,Delivered
+OD100276,2025-05-28,Hyderabad,Pizza,502.43,35.8,4.5,Delivered
+OD100379,2025-03-22,Bengaluru,South Indian,157.7,14.2,5.0,Delivered
+OD100287,2025-02-11,Mumbai,Burgers,142.26,28.8,,Delivered
+OD100782,2025-09-06,Chennai,Burgers,300.86,19.0,4.8,Delivered
+OD100200,2025-05-22,Hyderabad,South Indian,146.37,27.3,4.3,Delivered
+OD100420,2025-11-09,Mumbai,Chinese,350.09,52.2,4.8,Delivered
+OD100428,2025-04-26,Chennai,Biryani,504.59,39.7,4.2,Delivered
+OD100783,2025-07-27,Bengaluru,Chinese,447.57,45.2,4.1,Delivered
+OD100535,2025-09-09,Pune,Pizza,577.79,35.8,4.7,Cancelled
+OD100685,2025-01-30,Pune,Pizza,610.26,38.6,4.5,Delivered
+OD100816,2025-05-13,Mumbai,Desserts,147.85,21.1,4.3,Delivered
+OD101186,2025-01-16,Mumbai,Burgers,255.93,24.2,4.9,Delivered
+OD100406,2025-03-13,Bengaluru,Pizza,255.4,26.9,5.0,Delivered
+OD100457,2025-02-27,Bengaluru,Burgers,343.65,21.7,4.3,Delivered
+OD100483,2025-02-10,Hyderabad,Pizza,415.09,18.9,4.7,Cancelled
+OD101100,2025-08-17,Mumbai,Biryani,528.48,37.8,4.4,Delivered
+OD101005,2025-06-24,Mumbai,Burgers,197.15,32.0,4.6,Delivered
+OD101157,2025-05-02,Hyderabad,Biryani,288.07,12.0,4.8,Delivered
+OD100709,2025-07-05,Bengaluru,Burgers,282.19,23.5,,Delivered
+OD100087,2025-04-27,Hyderabad,Burgers,187.08,30.1,5.0,Delivered
+OD100295,2025-06-08,Bengaluru,Desserts,98.93,26.1,4.3,Delivered
+OD101038,2025-11-05,Bengaluru,Burgers,229.74,21.2,5.0,Delivered
+OD100879,2025-06-13,Hyderabad,Chinese,265.13,40.0,4.5,Delivered
+OD101078,2025-05-04,Hyderabad,Chinese,238.59,30.6,4.6,Delivered
+OD100975,2025-11-24,Pune,Chinese,415.46,62.5,3.8,Delivered
+OD100357,2025-11-19,Chennai,South Indian,146.92,27.8,,Delivered
+OD101027,2025-05-08,Mumbai,Pizza,466.23,31.3,,Delivered
+OD100578,2025-04-12,Chennai,Desserts,122.35,26.2,4.6,Delivered
+OD100743,2025-04-10,Bengaluru,Biryani,304.82,38.1,4.6,Delivered
+OD100754,2025-02-03,Bengaluru,South Indian,246.66,30.6,5.0,Delivered
+OD100359,2025-02-20,Bengaluru,Chinese,259.4,29.5,5.0,Delivered
+OD100774,2025-10-13,Pune,Biryani,500.62,35.9,4.5,Delivered
+OD100940,2025-01-31,Bengaluru,Pizza,357.17,26.3,4.4,Delivered
+OD100594,2025-10-27,Hyderabad,Biryani,596.01,37.0,4.7,Delivered
+OD100151,2025-01-16,Chennai,Desserts,80.0,,4.6,Delivered
+OD100194,2025-12-29,Bengaluru,Biryani,356.53,,4.3,Delivered
+OD100135,2025-09-25,Bengaluru,Biryani,245.42,34.2,4.5,Delivered
+OD100962,2025-07-13,Mumbai,Biryani,517.84,33.3,4.7,Delivered
+OD100961,2025-02-13,Pune,Burgers,214.7,25.1,4.8,Delivered
+OD101082,2025-01-06,Mumbai,Beverages,235.7,19.5,5.0,Delivered
+OD100807,2025-11-21,Bengaluru,Biryani,643.56,26.8,4.8,Delivered
+OD101010,2025-01-12,Hyderabad,Chinese,467.75,34.4,4.6,Delivered
+OD100318,2025-01-09,Pune,Pizza,500.11,34.6,4.7,Delivered
+OD100748,2025-09-27,Pune,South Indian,254.54,27.8,4.0,Delivered
+OD100441,2025-07-10,Chennai,Biryani,513.28,43.6,4.3,Delivered
+OD100017,2025-01-25,Mumbai,Biryani,268.42,21.3,,Delivered
+OD100093,2025-07-15,Hyderabad,Burgers,375.1,25.3,Not Rated,Delivered
+OD101048,2025-08-11,Mumbai,Desserts,230.26,13.5,5.0,Refunded
+OD100046,2025-11-19,Pune,Burgers,309.14,29.8,4.6,Delivered
+OD100964,2025-08-07,Bengaluru,Beverages,201.95,22.9,5.0,Cancelled
+OD100979,2025-07-14,Chennai,Biryani,438.8,28.6,5.0,Delivered
+OD100340,2025-06-19,Hyderabad,Biryani,228.54,34.1,4.5,Delivered
+OD100993,2025-12-20,Mumbai,Pizza,416.71,38.5,3.8,Delivered
+OD101047,2025-02-08,Bengaluru,South Indian,220.02,29.3,5.0,Delivered
+OD100350,2025-10-29,Bengaluru,Chinese,253.36,42.1,4.3,Delivered
+OD101119,2025-10-26,Pune,Desserts,228.65,22.4,4.9,Delivered
+OD100541,2025-10-06,Bengaluru,Chinese,334.36,36.8,4.3,Delivered
+OD100298,2025-12-17,Chennai,South Indian,177.81,22.5,4.4,Delivered
+OD100423,2025-12-28,Bengaluru,Biryani,431.27,32.3,4.3,Delivered
+OD100680,2025-09-11,Chennai,Biryani,467.19,31.6,4.8,Delivered
+OD100326,2025-07-04,Bengaluru,South Indian,409.28,30.0,4.4,Delivered
+OD100138,2025-04-16,Mumbai,South Indian,80.0,29.7,5.0,Delivered
+OD100557,2025-05-08,Pune,Burgers,251.4,28.8,4.8,Delivered
+OD100353,2025-06-26,Mumbai,Chinese,260.6,32.1,4.7,Delivered
+OD100275,2025-06-09,Mumbai,Burgers,151.18,28.0,4.9,Delivered
+OD101041,2025-04-10,Hyderabad,Chinese,271.99,40.8,4.5,Delivered
+OD100704,2025-07-10,Mumbai,Pizza,604.55,17.3,4.8,Delivered
+OD100738,2025-01-20,Bengaluru,Burgers,182.8,24.6,4.9,Delivered
+OD101192,2025-08-25,Mumbai,Desserts,175.64,22.6,4.8,Delivered
+OD100253,2025-01-12,Pune,Pizza,628.06,29.7,4.3,Delivered
+OD100891,2025-01-10,Hyderabad,Beverages,141.72,18.7,4.9,Delivered
+OD100274,2025-07-17,Hyderabad,South Indian,233.89,24.2,4.5,Delivered
+OD100746,2025-12-26,Mumbai,Pizza,370.17,36.3,4.0,Delivered
+OD100164,2025-04-12,Bengaluru,Chinese,378.85,26.2,Not Rated,Delivered
+OD100951,2025-02-22,Mumbai,Pizza,605.46,,4.7,Delivered
+OD100106,2025-11-02,Pune,Burgers,269.17,27.6,5.0,Delivered
+OD100036,2025-07-15,Mumbai,Biryani,378.76,36.6,4.3,Delivered
+OD100315,2025-07-26,Hyderabad,Pizza,499.59,32.3,4.8,Delivered
+OD100267,2025-02-26,Chennai,Biryani,473.36,,4.5,Delivered
+OD100038,2025-09-30,Hyderabad,Pizza,520.92,,5.0,Delivered
+OD100248,2025-05-22,Bengaluru,Burgers,222.41,28.2,4.4,Delivered
+OD101022,2025-04-23,Hyderabad,Beverages,219.75,22.8,4.5,Delivered
+OD100085,2025-01-25,Hyderabad,Biryani,423.08,32.5,4.5,Delivered
+OD100153,2025-01-02,Bengaluru,Chinese,457.55,43.7,4.7,Delivered
+OD100422,2025-12-13,Bengaluru,Biryani,252.56,41.2,4.0,Delivered
+OD100943,2025-01-29,Bengaluru,Burgers,204.77,29.0,4.5,Delivered
+OD100477,2025-03-26,Bengaluru,Chinese,257.73,53.1,4.1,Delivered
+OD100522,2025-05-02,Mumbai,Biryani,291.34,24.9,5.0,Delivered
+OD100691,2025-05-25,Pune,Desserts,266.72,26.6,4.4,Delivered
+OD100101,2025-09-22,Bengaluru,South Indian,124.78,20.9,4.3,Delivered
+OD100212,2025-09-16,Bengaluru,Biryani,415.63,37.1,4.4,Refunded
+OD100789,2025-10-16,Pune,Chinese,321.32,53.8,4.1,Delivered
+OD100747,2025-09-30,Chennai,Burgers,160.19,29.5,5.0,Delivered
+OD101066,2025-09-21,Hyderabad,Burgers,230.42,23.0,4.1,Delivered
+OD101124,2025-09-26,Pune,Burgers,186.84,27.5,4.3,Delivered
+OD100345,2025-11-30,Bengaluru,South Indian,163.06,25.3,4.7,Delivered
+OD100956,2025-02-17,Mumbai,South Indian,261.11,31.0,4.4,Delivered
+OD101138,2025-08-01,Mumbai,Biryani,367.52,39.3,4.3,Cancelled
+OD100527,2025-08-21,Mumbai,Beverages,219.61,24.2,4.7,Delivered
+OD100060,2025-06-24,Bengaluru,Chinese,236.76,,3.9,Delivered
+OD101053,2025-02-09,Hyderabad,Biryani,432.81,27.5,4.6,Delivered
+OD100974,2025-10-02,Pune,Pizza,355.44,19.7,4.8,Delivered
+OD100662,2025-06-28,Hyderabad,Biryani,449.75,27.6,4.9,Delivered
+OD100201,2025-10-24,Pune,Beverages,200.53,16.3,5.0,Delivered
+OD100552,2025-02-07,Mumbai,Biryani,250.52,36.1,4.7,Delivered
+OD100678,2025-08-15,Hyderabad,Biryani,532.72,31.1,4.4,Delivered
+OD100497,2025-06-09,Hyderabad,Chinese,281.41,44.4,3.9,Delivered
+OD100501,2025-07-05,Hyderabad,Desserts,175.58,22.9,4.6,Delivered
+OD100131,2025-04-30,Bengaluru,Beverages,196.29,23.2,4.8,Delivered
+OD100586,2025-08-23,Chennai,Biryani,279.98,29.5,4.4,Delivered
+OD100636,2025-11-17,Hyderabad,Chinese,182.89,48.9,4.6,Delivered
+OD100269,2025-07-14,Chennai,Biryani,386.26,34.7,5.0,Delivered
+OD100313,2025-11-02,Pune,Pizza,578.06,28.3,4.5,Cancelled
+OD100936,2025-04-18,Pune,Beverages,164.08,26.8,4.5,Delivered
+OD100206,2025-02-02,Mumbai,Biryani,152.0,27.1,5.0,Delivered
+OD100539,2025-12-02,Bengaluru,Desserts,140.5,25.0,5.0,Delivered
+OD100708,2025-02-14,Bengaluru,Burgers,227.51,20.9,4.8,Delivered
+OD100949,2025-11-08,Pune,Pizza,505.9,34.1,5.0,Delivered
+OD100349,2025-08-26,Bengaluru,Biryani,527.75,43.0,4.9,Delivered
+OD100457,2025-02-27,Bengaluru,Burgers,343.65,21.7,4.3,Delivered
+OD100107,2025-04-01,Pune,Pizza,356.67,,,Delivered
+OD100793,2025-04-01,Mumbai,Biryani,464.5,32.1,4.4,Delivered
+OD101063,2025-02-10,Mumbai,Chinese,193.55,32.8,4.3,Delivered
+OD100122,2025-06-19,Chennai,Biryani,481.09,36.2,4.8,Delivered
+OD100314,2025-07-01,Pune,Pizza,666.12,23.7,4.6,Delivered
+OD101150,2025-10-14,Bengaluru,Biryani,359.41,45.6,3.2,Delivered
+OD100930,2025-01-19,Mumbai,Pizza,473.63,18.0,4.7,Delivered
+OD100608,2025-07-09,Hyderabad,South Indian,235.54,34.9,,Delivered
+OD100196,2025-01-09,Mumbai,Chinese,274.36,36.9,4.9,Delivered
+OD100408,2025-10-12,Hyderabad,Biryani,543.54,33.7,3.9,Delivered
+OD100373,2025-01-14,Hyderabad,Pizza,508.77,32.8,4.7,Delivered
+OD100280,2025-04-11,Mumbai,Biryani,265.47,41.9,4.3,Delivered
+OD100517,2025-11-15,Mumbai,South Indian,224.73,28.6,4.8,Delivered
+OD100000,2025-02-12,Mumbai,South Indian,151.04,23.7,5.0,Delivered
+OD101002,2025-03-29,Bengaluru,Biryani,536.77,38.2,4.5,Delivered
+OD100870,2025-11-27,Hyderabad,South Indian,296.33,23.3,4.5,Delivered
+OD101148,2025-02-18,Chennai,Burgers,168.79,23.8,4.9,Delivered
+OD100103,2025-04-07,Mumbai,Beverages,80.0,19.2,4.9,Delivered
+OD100363,2025-09-15,Chennai,Biryani,158.06,41.2,3.9,Delivered
+OD101111,2025-09-14,Hyderabad,Burgers,87.81,27.2,4.6,Delivered
+OD100095,2025-02-12,Mumbai,Chinese,280.68,39.1,4.6,Delivered
+OD100915,2025-09-29,Pune,Beverages,80.0,25.4,5.0,Delivered
+OD101122,2025-10-01,Bengaluru,Desserts,281.77,24.2,5.0,Delivered
+OD100778,2025-01-23,Hyderabad,South Indian,203.8,31.0,4.6,Delivered
+OD100538,2025-08-16,Bengaluru,Biryani,471.2,26.9,5.0,Delivered
+OD100271,2025-09-11,Mumbai,Biryani,443.9,45.0,4.4,Delivered
+OD100368,2025-03-09,Chennai,Pizza,211.51,27.3,4.9,Delivered
+OD100469,2025-07-13,Pune,Burgers,311.19,33.4,4.6,Delivered
+OD100394,2025-06-04,Bengaluru,Biryani,400.6,29.2,5.0,Delivered
+OD101087,2025-11-29,Mumbai,South Indian,270.93,28.9,4.2,Delivered
+OD100376,2025-10-25,Mumbai,Beverages,222.16,18.3,5.0,Delivered
+OD100772,2025-08-14,Chennai,Chinese,290.11,50.0,4.4,Delivered
+OD100261,2025-05-20,Mumbai,Desserts,118.18,19.5,5.0,Delivered
+OD100118,2025-10-02,Hyderabad,Burgers,234.79,16.3,4.6,Delivered
+OD101079,2025-04-10,Chennai,Pizza,404.82,25.9,5.0,Delivered
+OD101121,2025-03-17,Hyderabad,Biryani,440.76,29.1,,Delivered
+OD100100,2025-04-24,Mumbai,Desserts,288.97,23.2,4.4,Delivered
+OD101144,2025-04-17,Pune,Burgers,231.23,,5.0,Delivered
+OD100166,2025-11-06,Bengaluru,Desserts,190.76,30.2,5.0,Delivered
+OD100757,2025-03-24,Chennai,Beverages,181.57,17.4,5.0,Delivered
+OD100894,2025-03-26,Chennai,South Indian,213.42,41.7,4.6,Delivered
+OD100354,2025-09-18,Bengaluru,Burgers,272.07,28.9,5.0,Delivered
+OD100725,2025-03-24,Mumbai,Biryani,240.92,31.6,4.9,Delivered
+OD100207,2025-09-23,Mumbai,Chinese,461.29,52.0,3.5,Delivered
+OD100148,2025-07-20,Hyderabad,Burgers,242.59,24.1,4.9,Delivered
+OD100859,2025-02-24,Hyderabad,Burgers,199.39,,5.0,Delivered
+OD100810,2025-01-06,Pune,Biryani,378.57,51.4,3.9,Delivered
+OD100677,2025-05-05,Mumbai,Burgers,344.68,19.5,4.9,Delivered
+OD100837,2025-11-30,Bengaluru,Beverages,268.41,15.8,5.0,Delivered
+OD100034,2025-05-20,Pune,Burgers,193.12,29.3,4.9,Delivered
+OD101059,2025-04-04,Hyderabad,South Indian,298.52,27.6,4.6,Delivered
+OD100791,2025-06-04,Hyderabad,Burgers,233.21,30.3,4.4,Delivered
+OD100716,2025-09-30,Chennai,Chinese,322.58,43.2,4.7,Delivered
+OD100615,2025-03-15,Bengaluru,South Indian,271.77,39.8,4.3,Delivered
+OD101099,2025-01-23,Hyderabad,Biryani,414.13,41.6,4.1,Delivered
+OD101112,2025-04-30,Mumbai,Chinese,191.19,51.8,3.6,Delivered
+OD101000,2025-08-11,Hyderabad,Biryani,395.19,36.1,4.1,Delivered
+OD100463,2025-02-25,Pune,Pizza,178.1,32.3,4.5,Delivered
+OD100263,2025-08-07,Pune,Biryani,348.06,35.5,4.2,Delivered
+OD100652,2025-06-16,Hyderabad,Chinese,373.35,43.7,4.5,Delivered
+OD101098,2025-08-11,Pune,Desserts,148.18,23.8,5.0,Delivered
+OD100836,2025-09-03,Hyderabad,South Indian,259.7,18.3,4.5,Delivered
+OD100598,2025-02-20,Pune,Beverages,161.06,27.8,Not Rated,Delivered
+OD100768,2025-05-11,Bengaluru,Biryani,576.32,40.6,3.8,Delivered
+OD100076,2025-03-25,Hyderabad,Pizza,394.04,32.8,3.9,Delivered
+OD100761,2025-09-19,Bengaluru,Biryani,527.65,30.2,4.6,Delivered
+OD100603,2025-10-02,Chennai,South Indian,179.12,28.6,4.8,Delivered
+OD100410,2025-03-18,Pune,Chinese,251.25,31.6,4.5,Delivered
+OD100476,2025-12-26,Bengaluru,Burgers,297.59,29.6,4.1,Delivered
+OD100260,2025-05-06,Mumbai,Biryani,378.24,21.4,4.6,Delivered
+OD101118,2025-09-16,Bengaluru,Pizza,429.55,19.6,4.6,Delivered
+OD100663,2025-12-12,Mumbai,Biryani,405.26,29.7,4.4,Delivered
+OD100696,2025-12-05,Hyderabad,South Indian,121.64,32.8,4.5,Delivered
+OD100398,2025-09-12,Pune,Burgers,356.74,33.9,5.0,Cancelled
+OD100536,2025-11-29,Bengaluru,Burgers,240.45,25.2,4.7,Delivered
+OD100434,2025-06-08,Hyderabad,Biryani,371.54,43.3,4.5,Delivered
+OD100404,2025-12-30,Pune,Beverages,180.27,17.2,5.0,Delivered
+OD100910,2025-12-12,Pune,South Indian,263.92,20.0,4.5,Delivered
+OD101189,2025-06-09,Bengaluru,Chinese,310.82,62.2,3.0,Delivered
+OD101039,2025-02-11,Chennai,Biryani,140.69,39.6,4.2,Delivered
+OD100998,2025-12-12,Chennai,Beverages,213.15,21.8,4.4,Delivered
+OD100197,2025-01-14,Bengaluru,Desserts,256.59,29.8,5.0,Delivered
+OD100203,2025-08-30,Chennai,Biryani,607.67,41.8,4.4,Delivered
+OD100679,2025-07-12,Pune,Pizza,632.89,28.2,5.0,Delivered
+OD100972,2025-08-16,Bengaluru,Biryani,541.84,40.0,4.4,Delivered
+OD100881,2025-01-17,Hyderabad,Chinese,355.91,41.1,4.5,Delivered
+OD100829,2025-06-11,Mumbai,Pizza,505.94,35.1,4.8,Delivered
+OD100303,2025-03-24,Mumbai,Burgers,239.08,26.3,4.3,Delivered
+OD100152,2025-04-08,Hyderabad,Biryani,483.51,34.3,4.8,Delivered
+OD100981,2025-08-24,Chennai,Desserts,314.88,28.9,4.7,Delivered
+OD100697,2025-05-31,Hyderabad,Chinese,374.2,36.2,5.0,Delivered
+OD100195,2025-06-07,Hyderabad,Biryani,518.21,28.6,4.5,Delivered
+OD100499,2025-12-16,Hyderabad,Burgers,203.99,24.3,4.3,Delivered
+OD100960,2025-02-09,Hyderabad,Chinese,243.74,40.7,4.3,Delivered
+OD100627,2025-10-05,Hyderabad,Biryani,378.91,37.4,4.6,Delivered
+OD100264,2025-11-26,Pune,Beverages,204.48,15.2,5.0,Delivered
+OD100689,2025-02-11,Pune,Chinese,490.99,32.3,4.9,Delivered
+OD101083,2025-06-06,Bengaluru,Desserts,132.32,22.3,,Delivered
+OD100392,2025-03-11,Pune,Chinese,487.95,40.3,3.7,Delivered
+OD100668,2025-02-05,Bengaluru,Pizza,341.52,22.9,5.0,Delivered
+OD100786,2025-01-03,Pune,Desserts,171.9,16.7,4.7,Delivered
+OD100802,2025-10-17,Hyderabad,Desserts,265.31,26.1,4.9,Delivered
+OD100484,2025-08-11,Pune,Biryani,419.17,40.5,4.1,Delivered
+OD100188,2025-07-12,Mumbai,South Indian,225.13,28.2,4.7,Delivered
+OD100414,2025-05-16,Hyderabad,Biryani,451.98,31.5,3.8,Refunded
+OD100174,2025-01-04,Bengaluru,Biryani,360.79,35.7,4.5,Delivered
+OD100848,2025-11-25,Bengaluru,Biryani,404.38,32.1,,Delivered
+OD100654,2025-02-17,Mumbai,Desserts,196.16,24.7,4.6,Delivered
+OD100065,2025-05-31,Mumbai,Chinese,314.6,38.6,4.7,Delivered
+OD100852,2025-09-06,Hyderabad,Desserts,204.16,25.8,5.0,Delivered
+OD100094,2025-01-14,Hyderabad,Pizza,795.61,39.1,4.3,Delivered
+OD100562,2025-06-07,Hyderabad,Desserts,186.04,28.7,5.0,Cancelled
+OD100147,2025-02-05,Pune,Burgers,368.65,28.5,4.8,Delivered
+OD100238,2025-06-04,Pune,Biryani,576.79,22.6,5.0,Delivered
+OD100921,2025-12-03,Mumbai,Desserts,80.0,17.3,4.8,Delivered
+OD100854,2025-11-21,Mumbai,Pizza,501.98,33.8,4.7,Delivered
+OD101163,2025-11-07,Bengaluru,Biryani,370.71,35.0,4.5,Delivered
+OD100813,2025-01-08,Pune,Chinese,485.82,42.6,4.6,Delivered
+OD100229,2025-10-15,Mumbai,Biryani,445.44,31.9,4.8,Delivered
+OD100390,2025-08-28,Hyderabad,Chinese,290.85,42.8,5.0,Delivered
+OD101126,2025-02-04,Chennai,Burgers,111.78,21.2,5.0,Delivered
+OD100130,2025-09-25,Hyderabad,Biryani,268.65,29.6,4.4,Delivered
+OD100924,2025-09-01,Pune,Biryani,551.97,37.3,4.5,Delivered
+OD100847,2025-01-15,Bengaluru,South Indian,203.75,27.1,5.0,Delivered
+OD100717,2025-06-30,Pune,Biryani,514.95,32.9,4.4,Delivered
+OD100520,2025-02-03,Bengaluru,Desserts,147.32,21.5,4.6,Delivered
+OD100688,2025-04-14,Hyderabad,South Indian,263.09,20.7,4.8,Delivered
+OD101110,2025-12-05,Bengaluru,Biryani,455.58,24.4,,Cancelled
+OD100277,2025-06-12,Chennai,Burgers,291.36,27.5,4.7,Delivered
+OD100839,2025-04-30,Hyderabad,Burgers,304.92,26.7,4.6,Delivered
+OD100460,2025-01-16,Pune,Chinese,335.44,37.6,4.3,Delivered
+OD100052,2025-01-16,Bengaluru,South Indian,166.76,25.2,Not Rated,Delivered
+OD100903,2025-01-19,Hyderabad,Burgers,163.05,19.6,5.0,Delivered
+OD100528,2025-12-19,Mumbai,South Indian,208.33,31.7,4.8,Delivered
+OD100585,2025-04-14,Mumbai,Chinese,431.22,35.5,4.6,Delivered
+OD100443,2025-03-01,Chennai,Biryani,336.18,41.6,5.0,Delivered
+OD100907,2025-03-04,Hyderabad,Biryani,426.18,27.1,4.6,Delivered
+OD100675,2025-09-10,Bengaluru,Burgers,151.04,18.9,4.7,Delivered
+OD100633,2025-07-23,Bengaluru,Burgers,273.64,24.5,4.8,Refunded
+OD100158,2025-01-03,Pune,South Indian,220.58,27.0,4.2,Delivered
+OD100385,2025-01-13,Chennai,Beverages,133.78,21.7,5.0,Delivered
+OD100322,2025-03-03,Chennai,Pizza,483.72,44.0,4.1,Delivered
+OD100790,2025-04-05,Hyderabad,Pizza,535.98,22.0,5.0,Delivered
+OD100145,2025-06-04,Chennai,Pizza,320.54,29.7,5.0,Delivered
+OD101185,2025-09-07,Bengaluru,Desserts,213.93,12.0,,Delivered
+OD100502,2025-06-19,Bengaluru,Beverages,191.46,25.7,4.6,Delivered
+OD100307,2025-01-28,Bengaluru,Chinese,417.71,41.1,4.2,Delivered
+OD100268,2025-08-31,Mumbai,Biryani,372.65,39.6,4.3,Delivered
+OD100029,2025-01-24,Pune,South Indian,326.18,24.0,4.9,Delivered
+OD100861,2025-03-07,Chennai,South Indian,283.0,24.4,5.0,Delivered
+OD100114,2025-03-01,Pune,Biryani,188.21,33.7,5.0,Delivered
+OD100926,2025-01-26,Hyderabad,Biryani,327.84,38.9,4.8,Delivered
+OD100622,2025-03-14,Mumbai,Beverages,144.01,22.3,4.5,Delivered
+OD101158,2025-09-19,Chennai,Burgers,222.25,23.0,5.0,Delivered
+OD100022,2025-02-18,Hyderabad,Beverages,117.03,15.5,4.7,Delivered
+OD100053,2025-05-15,Chennai,Chinese,183.71,44.1,4.6,Delivered
+OD100750,2025-02-06,Pune,Pizza,315.18,30.4,4.7,Delivered
+OD101004,2025-05-06,Hyderabad,Chinese,380.99,45.0,,Delivered
+OD100655,2025-03-19,Hyderabad,Pizza,521.76,34.0,4.3,Delivered
+OD100328,2025-04-04,Bengaluru,Chinese,303.56,43.1,4.3,Delivered
+OD100620,2025-12-26,Chennai,South Indian,208.07,28.1,5.0,Delivered
+OD100821,2025-11-06,Hyderabad,Chinese,247.39,,4.2,Delivered
+OD101181,2025-07-06,Hyderabad,Biryani,381.66,28.4,Not Rated,Delivered
+OD100902,2025-10-08,Mumbai,Biryani,421.93,26.8,4.6,Delivered
+OD100984,2025-05-11,Pune,Biryani,543.96,40.8,4.1,Delivered
+OD100920,2025-02-26,Mumbai,Biryani,421.38,40.2,4.7,Delivered
+OD100280,2025-04-11,Mumbai,Biryani,265.47,41.9,4.3,Delivered
+OD100730,2025-07-06,Bengaluru,Pizza,421.68,13.8,4.9,Delivered
+OD100330,2025-08-19,Bengaluru,South Indian,235.7,31.0,4.8,Cancelled
+OD100505,2025-09-30,Hyderabad,South Indian,251.78,,4.5,Delivered
+OD100624,2025-05-18,Bengaluru,Beverages,158.35,19.6,4.7,Delivered
+OD100343,2025-05-11,Mumbai,Chinese,343.68,43.6,3.6,Delivered
+OD101113,2025-10-17,Pune,Beverages,197.82,17.2,5.0,Delivered
+OD100098,2025-05-02,Hyderabad,Biryani,616.39,36.5,4.8,Delivered
+OD101197,2025-08-30,Chennai,Chinese,279.11,43.5,4.6,Delivered
+OD100838,2025-01-25,Bengaluru,Burgers,205.04,26.4,4.5,Delivered
+OD100190,2025-08-04,Hyderabad,Beverages,119.01,23.7,4.4,Delivered
+OD100184,2025-10-14,Mumbai,South Indian,179.14,25.4,Not Rated,Delivered
+OD100024,2025-03-06,Bengaluru,South Indian,221.86,30.9,4.9,Delivered
+OD100014,2025-01-13,Hyderabad,Burgers,203.01,21.6,5.0,Delivered
+OD101169,2025-10-22,Pune,Biryani,370.93,37.9,4.5,Delivered
+OD100671,2025-03-16,Mumbai,Chinese,357.71,47.6,,Delivered
+OD101191,2025-11-22,Bengaluru,Burgers,331.99,30.1,4.6,Delivered
+OD100270,2025-05-07,Bengaluru,Biryani,272.56,39.4,3.7,Delivered
+OD100319,2025-03-06,Chennai,Beverages,152.65,16.8,5.0,Delivered
+OD101077,2025-10-23,Mumbai,Burgers,280.02,26.3,4.6,Delivered
+OD101043,2025-02-28,Hyderabad,Chinese,468.13,,4.5,Delivered
+OD100769,2025-04-02,Hyderabad,Chinese,309.68,51.9,4.2,Delivered
+OD101194,2025-02-06,Mumbai,Desserts,267.79,18.1,4.6,Delivered
+OD100803,2025-09-26,Pune,Chinese,332.76,36.5,,Delivered
+OD101034,2025-01-30,Mumbai,Burgers,196.05,27.7,5.0,Delivered
+OD100660,2025-07-12,Chennai,Pizza,414.31,32.2,4.9,Delivered
+OD100534,2025-09-27,Mumbai,Biryani,219.65,46.3,4.5,Delivered
+OD100776,2025-10-19,Bengaluru,Chinese,311.8,44.2,4.8,Delivered
+OD100763,2025-04-08,Mumbai,Biryani,499.33,44.2,4.0,Delivered
+OD100309,2025-06-03,Bengaluru,Biryani,489.23,34.9,4.8,Delivered
+OD100092,2025-12-13,Mumbai,Burgers,206.83,27.8,4.2,Delivered
+OD100334,2025-03-29,Hyderabad,Biryani,729.39,22.0,Not Rated,Delivered
+OD100236,2025-01-19,Hyderabad,Burgers,210.7,20.0,4.6,Delivered
+OD100480,2025-09-26,Mumbai,Burgers,354.32,21.5,4.6,Delivered
+OD100841,2025-07-31,Bengaluru,South Indian,249.92,41.1,,Delivered
+OD100117,2025-03-11,Bengaluru,South Indian,,24.4,,Delivered
+OD100583,2025-09-14,Bengaluru,Burgers,81.2,27.8,5.0,Delivered
+OD101052,2025-07-19,Pune,Pizza,369.78,30.6,4.1,Delivered
+OD100923,2025-07-09,Chennai,Chinese,449.92,45.6,4.3,Delivered
+OD100929,2025-01-13,Pune,South Indian,386.87,27.7,4.6,Delivered
+OD101168,2025-10-16,Mumbai,Desserts,366.76,19.9,4.1,Delivered
+OD100935,2025-04-13,Mumbai,Pizza,325.14,20.6,5.0,Delivered
+OD100694,2025-12-05,Bengaluru,Desserts,124.06,17.6,5.0,Refunded
+OD101029,2025-03-31,Pune,Burgers,225.33,28.4,4.1,Delivered
+OD100083,2025-05-05,Mumbai,Biryani,558.7,43.6,4.0,Delivered
+OD100086,2025-04-01,Pune,South Indian,247.34,35.0,4.6,Delivered
+OD101091,2025-08-01,Chennai,Chinese,421.81,29.4,4.3,Refunded
+OD100732,2025-01-04,Mumbai,Biryani,413.85,18.2,5.0,Delivered
+OD100805,2025-12-22,Bengaluru,Biryani,272.87,38.5,5.0,Delivered
+OD100965,2025-06-09,Hyderabad,Burgers,252.13,27.2,5.0,Delivered
+OD100273,2025-03-13,Hyderabad,Chinese,314.79,34.9,4.4,Delivered
+OD100855,2025-07-30,Pune,Burgers,279.76,22.3,5.0,Delivered
+OD100594,2025-10-27,Hyderabad,Biryani,596.01,37.0,4.7,Delivered
+OD100508,2025-04-07,Mumbai,Burgers,362.95,16.5,4.6,Delivered
+OD100858,2025-01-04,Chennai,Burgers,206.16,23.6,4.3,Delivered
+OD101054,2025-04-22,Pune,Pizza,616.31,32.8,4.8,Delivered
+OD100431,2025-08-24,Mumbai,South Indian,177.68,18.8,4.3,Delivered
+OD100411,2025-12-20,Pune,Chinese,321.67,36.2,4.7,Delivered
+OD100771,2025-09-26,Mumbai,Chinese,317.72,52.2,4.0,Delivered
+OD100387,2025-09-23,Pune,Beverages,181.0,12.0,5.0,Delivered
+OD100006,2025-09-08,Mumbai,South Indian,163.99,31.2,4.6,Delivered
+OD100250,2025-01-29,Mumbai,Chinese,459.03,14.6,4.9,Delivered
+OD100161,2025-05-05,Hyderabad,Beverages,220.17,19.3,4.7,Delivered
+OD100213,2025-08-16,Bengaluru,South Indian,191.32,28.5,4.0,Delivered
+OD101171,2025-06-24,Hyderabad,South Indian,275.92,23.3,4.5,Delivered
+OD100617,2025-02-19,Mumbai,Pizza,390.66,26.2,5.0,Delivered
+OD100806,2025-09-26,Bengaluru,South Indian,225.49,27.7,4.8,Delivered
+OD100919,2025-04-01,Chennai,Chinese,308.39,32.1,4.8,Delivered
+OD101061,2025-07-05,Chennai,Chinese,114.48,45.7,4.4,Delivered
+OD100898,2025-06-04,Bengaluru,Biryani,375.1,36.8,4.1,Refunded
+OD100021,2025-08-13,Bengaluru,Pizza,389.27,33.4,4.8,Delivered
+OD100470,2025-05-08,Chennai,Burgers,254.14,,4.4,Delivered
+OD100167,2025-08-27,Chennai,South Indian,171.27,29.1,4.7,Refunded
+OD100204,2025-09-08,Hyderabad,Biryani,271.85,35.5,4.1,Delivered
+OD101057,2025-09-19,Hyderabad,Pizza,350.3,30.9,4.5,Delivered
+OD100741,2025-06-29,Hyderabad,Biryani,364.93,23.2,4.7,Delivered
+OD100945,2025-02-28,Chennai,Pizza,294.54,31.5,4.9,Delivered
+OD101007,2025-04-04,Hyderabad,Pizza,523.81,32.4,4.5,Delivered
+OD100115,2025-06-12,Bengaluru,Desserts,211.91,23.3,5.0,Delivered
+OD100302,2025-10-27,Hyderabad,Chinese,305.78,29.3,4.0,Delivered
+OD100841,2025-07-31,Bengaluru,South Indian,249.92,41.1,4.8,Delivered
+OD100210,2025-02-17,Bengaluru,South Indian,90.35,26.4,4.7,Delivered
+OD100832,2025-03-09,Pune,Burgers,261.19,28.0,4.6,Delivered
+OD100462,2025-11-20,Pune,Beverages,80.0,19.6,4.8,Delivered
+OD100828,2025-08-28,Mumbai,Desserts,323.07,23.2,5.0,Delivered
+OD100576,2025-06-17,Pune,Desserts,191.54,20.3,,Delivered
+OD101044,2025-10-28,Bengaluru,Biryani,391.24,29.4,5.0,Delivered
+OD100567,2025-05-12,Mumbai,Biryani,281.69,37.6,5.0,Delivered
+OD100154,2025-04-21,Bengaluru,Biryani,162.13,45.1,4.4,Delivered
+OD100433,2025-04-12,Chennai,Desserts,93.0,20.2,4.7,Delivered
+OD100989,2025-06-11,Bengaluru,South Indian,166.34,29.7,4.6,Delivered
+OD100290,2025-02-26,Bengaluru,Desserts,210.24,25.9,4.6,Delivered
+OD100019,2025-02-12,Mumbai,Chinese,469.06,45.7,4.5,Delivered
+OD100062,2025-03-15,Bengaluru,Chinese,314.71,47.1,3.7,Delivered
+OD100071,2025-02-18,Chennai,Burgers,274.18,27.5,5.0,Refunded
+OD101107,2025-04-06,Bengaluru,Burgers,208.72,34.5,4.2,Delivered
+OD101142,2025-07-03,Chennai,Desserts,276.37,,4.8,Delivered
+OD100380,2025-08-14,Bengaluru,Chinese,376.94,37.6,5.0,Delivered
+OD100099,2025-08-23,Hyderabad,Beverages,106.52,16.6,5.0,Delivered
+OD100976,2025-04-18,Bengaluru,Burgers,198.77,20.1,5.0,Delivered
+OD100478,2025-03-29,Mumbai,Chinese,148.62,51.3,3.9,Delivered
+OD100985,2025-06-08,Hyderabad,Beverages,105.99,17.4,5.0,Delivered
+OD100362,2025-06-14,Chennai,Biryani,305.98,33.4,4.8,Delivered
+OD100667,2025-02-27,Bengaluru,Beverages,170.43,16.5,4.8,Delivered
+OD100670,2025-04-27,Chennai,Biryani,505.45,21.7,5.0,Delivered
+OD100892,2025-01-05,Bengaluru,Pizza,276.42,29.5,4.8,Delivered
+OD101117,2025-01-09,Bengaluru,South Indian,286.82,32.0,4.6,Delivered
+OD101146,2025-12-02,Pune,South Indian,216.21,30.8,4.6,Delivered
+OD100721,2025-11-02,Mumbai,Burgers,265.13,22.6,4.8,Delivered
+OD100822,2025-07-31,Mumbai,Pizza,571.76,37.1,4.2,Delivered
+OD100412,2025-04-09,Mumbai,Biryani,370.93,40.9,4.5,Delivered
+OD100560,2025-12-02,Pune,Biryani,346.9,26.7,4.6,Delivered
+OD100037,2025-07-21,Hyderabad,Burgers,261.87,23.0,5.0,Delivered
+OD100706,2025-08-23,Bengaluru,South Indian,181.0,34.5,4.3,Delivered
+OD100312,2025-02-01,Pune,Pizza,505.93,19.7,4.7,Delivered
+OD100758,2025-02-28,Chennai,Biryani,388.75,47.5,4.9,Delivered
+OD100845,2025-10-10,Pune,Desserts,89.59,22.8,4.6,Delivered
+OD100091,2025-01-02,Chennai,South Indian,80.0,21.8,5.0,Delivered
+OD100186,2025-03-24,Mumbai,Burgers,206.98,35.6,4.9,Delivered
+OD100461,2025-12-14,Bengaluru,Biryani,642.27,,5.0,Delivered
+OD100329,2025-12-09,Chennai,Pizza,572.41,24.9,4.4,Delivered
+OD100228,2025-06-22,Pune,Chinese,301.54,48.0,3.9,Delivered
+OD100163,2025-07-28,Bengaluru,Biryani,377.58,32.3,4.1,Refunded
+OD100025,2025-12-21,Mumbai,Biryani,590.71,42.9,4.0,Delivered
+OD101031,2025-04-08,Bengaluru,South Indian,298.23,35.6,4.4,Delivered
+OD100751,2025-09-22,Bengaluru,Pizza,602.22,30.8,5.0,Delivered
+OD100555,2025-06-22,Mumbai,Pizza,819.15,24.5,5.0,Delivered
+OD100933,2025-09-21,Pune,South Indian,188.14,26.8,4.5,Delivered
+OD100134,2025-10-26,Mumbai,Chinese,223.65,43.5,4.5,Delivered
+OD101050,2025-02-10,Hyderabad,Chinese,337.13,41.5,4.6,Delivered
+OD100182,2025-10-14,Mumbai,Burgers,213.52,14.6,5.0,Delivered
+OD100157,2025-09-09,Chennai,Chinese,448.45,26.1,5.0,Delivered
+OD100045,2025-06-06,Bengaluru,South Indian,152.43,28.3,4.0,Delivered
+OD101009,2025-01-02,Hyderabad,Burgers,325.75,28.9,4.3,Delivered
+OD100865,2025-02-24,Bengaluru,Desserts,80.0,21.2,5.0,Cancelled
+OD100597,2025-09-15,Pune,Chinese,238.19,46.8,4.2,Refunded
+OD100211,2025-04-06,Bengaluru,Chinese,325.19,36.9,4.3,Delivered
+OD100596,2025-07-07,Mumbai,South Indian,199.38,15.4,4.3,Delivered
+OD100661,2025-06-08,Bengaluru,Desserts,189.75,30.1,4.7,Delivered
+OD100344,2025-04-18,Mumbai,South Indian,207.38,,4.6,Delivered
+OD100146,2025-03-18,Mumbai,Pizza,647.04,21.5,4.8,Delivered
+OD101023,2025-10-21,Mumbai,Chinese,480.78,53.1,4.2,Delivered
+OD100983,2025-08-10,Hyderabad,Burgers,303.77,22.0,4.7,Delivered
+OD101022,2025-04-23,Hyderabad,Beverages,219.75,22.8,4.5,Delivered
+OD100140,2025-03-14,Hyderabad,Burgers,250.45,17.9,4.2,Delivered
+OD100571,2025-03-17,Mumbai,Desserts,151.65,19.7,5.0,Delivered
+OD100178,2025-05-25,Bengaluru,Desserts,80.0,23.8,4.4,Delivered
+OD100424,2025-08-23,Mumbai,Chinese,241.69,44.5,4.6,Refunded
+OD100944,2025-10-21,Chennai,Burgers,340.93,24.8,4.6,Delivered
+OD100074,2025-06-19,Pune,Biryani,557.36,26.4,4.9,Delivered
+OD100500,2025-04-08,Mumbai,South Indian,190.42,28.6,4.6,Delivered
+OD100003,2025-01-31,Hyderabad,South Indian,150.15,27.6,4.2,Delivered
+OD100452,2025-01-25,Hyderabad,South Indian,204.93,36.9,4.4,Delivered
+OD100568,2025-08-17,Mumbai,Pizza,479.04,33.4,3.9,Delivered
+OD100123,2025-08-22,Pune,Burgers,166.81,36.0,4.2,Delivered
+OD100059,2025-05-20,Hyderabad,Biryani,467.06,37.1,4.3,Delivered
+OD100215,2025-08-11,Bengaluru,South Indian,287.25,18.2,4.3,Delivered
+OD100278,2025-11-30,Hyderabad,Desserts,152.23,31.9,4.5,Refunded
+OD100026,2025-09-22,Mumbai,Burgers,394.69,23.3,Not Rated,Delivered
+OD100912,2025-01-13,Mumbai,Desserts,257.81,25.7,4.3,Delivered
+OD101143,2025-07-11,Bengaluru,Desserts,173.66,26.0,5.0,Delivered
+OD100198,2025-12-22,Bengaluru,Biryani,306.62,34.5,4.1,Delivered
+OD100884,2025-02-06,Bengaluru,Biryani,413.09,35.3,5.0,Delivered
+OD100454,2025-01-13,Bengaluru,Biryani,412.3,31.4,5.0,Delivered
+OD101025,2025-12-31,Hyderabad,Pizza,559.71,30.2,4.4,Delivered
+OD100180,2025-07-25,Bengaluru,Desserts,221.31,30.6,4.5,Delivered
+OD101167,2025-09-19,Pune,Chinese,428.57,53.7,4.3,Delivered
+OD101129,2025-01-27,Mumbai,Beverages,109.35,17.2,5.0,Delivered
+OD100491,2025-07-31,Mumbai,Chinese,318.6,48.0,4.0,Delivered
+OD100055,2025-08-08,Mumbai,South Indian,271.94,18.6,4.6,Delivered
+OD100399,2025-04-08,Pune,Burgers,180.16,24.2,5.0,Delivered
+OD101108,2025-06-28,Pune,Beverages,175.66,18.7,5.0,Delivered
+OD101049,2025-11-13,Hyderabad,Pizza,475.3,30.3,4.7,Delivered
+OD100673,2025-11-17,Hyderabad,South Indian,259.54,31.5,4.1,Delivered
+OD100419,2025-12-05,Bengaluru,Beverages,133.16,26.2,4.6,Delivered
+OD100341,2025-06-06,Hyderabad,Beverages,121.89,28.0,4.9,Delivered
+OD100830,2025-04-03,Bengaluru,Chinese,402.33,45.1,4.2,Refunded
+OD100485,2025-08-07,Bengaluru,Burgers,392.59,22.6,4.6,Delivered
+OD100300,2025-12-18,Bengaluru,South Indian,198.37,27.1,5.0,Delivered
+OD100927,2025-11-05,Chennai,Desserts,195.45,28.2,4.0,Delivered
+OD100013,2025-05-08,Bengaluru,Desserts,190.78,20.4,4.7,Delivered
+OD100744,2025-04-07,Chennai,Burgers,187.69,24.7,4.2,Delivered
+OD100864,2025-03-16,Mumbai,Biryani,398.13,25.1,4.9,Delivered
+OD101096,2025-08-30,Bengaluru,Pizza,281.81,32.4,4.8,Delivered
+OD100531,2025-09-23,Mumbai,South Indian,243.21,31.8,4.9,Delivered
+OD100096,2025-02-07,Hyderabad,Pizza,455.27,27.6,5.0,Delivered
+OD100079,2025-05-14,Mumbai,South Indian,197.32,27.0,4.6,Delivered
+OD100143,2025-04-14,Mumbai,Chinese,267.04,45.4,4.4,Delivered
+OD100361,2025-01-20,Bengaluru,Biryani,338.09,33.6,5.0,Delivered
+OD100001,2025-07-29,Pune,Burgers,404.14,23.9,4.7,Delivered
+OD100592,2025-04-03,Pune,Pizza,699.97,37.6,4.5,Delivered
+OD100715,2025-07-29,Hyderabad,Biryani,,30.5,4.9,Delivered
+OD101032,2025-05-28,Bengaluru,Burgers,283.35,31.6,4.5,Delivered
+OD100516,2025-07-12,Pune,Pizza,459.53,,4.8,Delivered
+OD101060,2025-06-04,Pune,Beverages,116.38,21.4,4.6,Delivered
+OD100050,2025-01-01,Pune,Biryani,482.2,46.9,4.1,Delivered
+OD101161,2025-02-19,Mumbai,Chinese,263.49,43.5,4.2,Refunded
+OD100401,2025-05-23,Bengaluru,Beverages,126.73,16.5,5.0,Delivered
+OD100489,2025-11-05,Mumbai,Chinese,241.38,41.5,4.3,Refunded
+OD100104,2025-04-11,Hyderabad,South Indian,,20.7,4.8,Delivered
+OD100409,2025-07-04,Mumbai,Beverages,192.36,13.4,5.0,Delivered
+OD100644,2025-02-25,Chennai,Chinese,472.85,36.1,5.0,Delivered
+OD100755,2025-09-18,Hyderabad,Pizza,580.95,20.4,5.0,Delivered
+OD100734,2025-05-13,Bengaluru,Biryani,423.3,32.0,4.7,Delivered
+OD100913,2025-07-04,Chennai,Beverages,136.14,13.5,5.0,Delivered
+OD101174,2025-11-20,Bengaluru,Burgers,157.35,18.5,4.9,Delivered
+OD100563,2025-02-17,Chennai,Chinese,364.34,34.6,5.0,Delivered
+OD100234,2025-12-19,Hyderabad,Beverages,137.46,22.7,4.7,Delivered
+OD100817,2025-04-06,Bengaluru,Chinese,426.18,52.7,3.8,Delivered
+OD100407,2025-07-24,Hyderabad,Desserts,144.73,16.6,5.0,Delivered
+OD100756,2025-12-03,Bengaluru,Pizza,422.27,30.6,4.2,Delivered
+OD100421,2025-11-28,Bengaluru,Biryani,356.55,33.9,5.0,Delivered
+OD100811,2025-08-29,Bengaluru,Biryani,357.18,21.6,5.0,Delivered
+OD100301,2025-10-26,Pune,Biryani,416.44,37.7,4.4,Delivered
+OD100690,2025-03-26,Mumbai,Pizza,402.14,33.3,5.0,Delivered
+OD100512,2025-06-17,Pune,Biryani,514.29,26.2,5.0,Delivered
+OD100440,2025-11-05,Chennai,Desserts,190.97,22.5,4.9,Delivered
+OD100293,2025-06-15,Bengaluru,Biryani,336.02,24.3,4.5,Delivered
+OD100378,2025-01-25,Bengaluru,Burgers,219.41,24.5,Not Rated,Delivered
+OD100399,2025-04-08,Pune,Burgers,180.16,24.2,5.0,Delivered
+OD100436,2025-10-26,Bengaluru,Biryani,456.05,38.1,4.1,Delivered
+OD101125,2025-08-18,Hyderabad,Chinese,409.06,51.5,4.2,Delivered
+OD101075,2025-04-08,Bengaluru,Pizza,693.58,31.1,5.0,Delivered
+OD100127,2025-08-26,Pune,Biryani,393.97,21.5,4.6,Delivered
+OD100777,2025-05-27,Mumbai,Biryani,415.4,41.0,4.7,Delivered
+OD100066,2025-01-27,Hyderabad,Chinese,166.68,49.8,4.0,Delivered
+OD100251,2025-04-16,Mumbai,Desserts,292.28,21.7,4.4,Delivered
+OD100647,2025-09-22,Hyderabad,Burgers,263.57,29.8,4.7,Delivered
+OD100831,2025-06-22,Mumbai,Chinese,531.54,33.8,,Delivered
+OD100575,2025-09-14,Chennai,Burgers,233.4,21.9,5.0,Delivered
+OD100712,2025-11-15,Pune,Desserts,249.52,31.2,5.0,Delivered
+OD100430,2025-12-08,Mumbai,Beverages,125.37,20.4,5.0,Delivered
+OD100227,2025-06-01,Hyderabad,Chinese,136.23,42.3,3.9,Delivered
+OD101136,2025-09-28,Chennai,Burgers,284.91,28.2,5.0,Delivered
+OD100948,2025-06-09,Mumbai,Desserts,124.58,27.7,4.9,Delivered
+OD100475,2025-08-08,Chennai,Pizza,557.39,25.0,,Delivered
+OD100292,2025-03-25,Mumbai,Beverages,205.36,22.6,5.0,Delivered
+OD100284,2025-07-26,Mumbai,Chinese,337.19,36.1,4.7,Delivered
+OD100191,2025-05-12,Hyderabad,Pizza,443.46,25.1,4.8,Delivered
+OD100728,2025-04-02,Pune,Burgers,303.14,21.4,4.9,Delivered
+OD100183,2025-06-06,Hyderabad,Pizza,454.16,23.9,4.9,Delivered
+OD100990,2025-12-09,Chennai,Chinese,234.72,36.5,5.0,Delivered
+OD100547,2025-07-02,Chennai,Biryani,431.96,46.1,3.5,Delivered
+OD100429,2025-10-21,Mumbai,South Indian,191.78,30.7,4.4,Delivered
+OD100908,2025-06-19,Hyderabad,Pizza,433.31,25.6,4.4,Delivered
+OD101137,2025-08-30,Hyderabad,Burgers,289.01,21.5,4.1,Cancelled
+OD101090,2025-07-10,Bengaluru,Pizza,737.11,35.1,4.4,Delivered
+OD100969,2025-07-29,Bengaluru,Pizza,447.98,29.0,5.0,Delivered
+OD100155,2025-12-06,Mumbai,Chinese,447.78,31.0,4.3,Delivered
+OD100073,2025-11-12,Bengaluru,Pizza,446.95,19.5,5.0,Delivered
+OD100283,2025-02-23,Mumbai,Pizza,468.57,39.5,4.5,Delivered
+OD100650,2025-02-10,Hyderabad,Burgers,282.98,29.7,4.4,Delivered
+OD101140,2025-08-18,Hyderabad,Pizza,428.67,32.8,4.8,Delivered
+OD100133,2025-12-02,Bengaluru,Pizza,309.44,24.4,4.6,Delivered
+OD101155,2025-06-04,Pune,Biryani,306.33,21.7,4.4,Delivered
+OD100745,2025-09-01,Bengaluru,Burgers,220.45,28.0,5.0,Delivered
+OD100396,2025-05-23,Bengaluru,Desserts,196.65,23.8,4.4,Delivered
+OD100069,2025-05-22,Bengaluru,Burgers,326.33,28.0,4.2,Delivered
+OD101187,2025-02-20,Mumbai,Beverages,217.77,18.7,4.6,Delivered
+OD100051,2025-02-17,Pune,Biryani,461.36,23.6,5.0,Delivered
+OD100366,2025-05-16,Mumbai,South Indian,229.67,27.0,4.9,Delivered
+OD101176,2025-01-05,Pune,Burgers,281.23,22.3,4.8,Delivered
+OD101089,2025-08-23,Bengaluru,Burgers,127.57,28.6,4.8,Delivered
+OD100796,2025-09-11,Hyderabad,Biryani,533.72,22.1,5.0,Delivered
+OD100702,2025-08-05,Bengaluru,Biryani,538.96,31.7,4.6,Delivered
+OD100526,2025-11-17,Bengaluru,Beverages,100.11,12.9,5.0,Delivered
+OD100714,2025-03-31,Hyderabad,South Indian,253.93,31.5,4.3,Delivered
+OD100136,2025-10-07,Bengaluru,Beverages,170.49,19.9,4.4,Delivered
+OD100202,2025-08-14,Chennai,Burgers,223.89,26.4,4.3,Delivered
+OD100970,2025-10-06,Mumbai,Pizza,299.79,25.1,3.9,Delivered
+OD100873,2025-03-18,Chennai,Burgers,368.13,35.1,4.1,Delivered
+OD100176,2025-08-30,Bengaluru,Burgers,149.44,23.3,4.4,Delivered
+OD101172,2025-01-28,Bengaluru,Pizza,695.98,30.6,4.4,Delivered
+OD100034,2025-05-20,Pune,Burgers,193.12,29.3,4.9,Delivered
+OD100767,2025-11-09,Hyderabad,Biryani,647.03,43.5,3.6,Delivered
+OD100569,2025-06-07,Mumbai,Chinese,272.25,32.3,3.9,Delivered
+OD101178,2025-03-31,Mumbai,Pizza,621.08,30.0,4.9,Delivered
+OD100124,2025-04-07,Mumbai,Biryani,502.41,22.2,4.6,Delivered
+OD100064,2025-07-23,Mumbai,Chinese,302.38,37.4,4.3,Delivered
+OD100058,2025-07-08,Mumbai,Biryani,718.18,32.5,4.3,Delivered
+OD100645,2025-03-13,Hyderabad,Desserts,253.22,,4.8,Delivered
+OD100364,2025-09-20,Hyderabad,Chinese,373.2,44.2,4.6,Delivered
+OD100955,2025-03-25,Chennai,Desserts,217.68,18.1,4.8,Delivered
+OD100868,2025-08-21,Chennai,Biryani,522.03,39.3,4.3,Delivered
+OD100381,2025-08-05,Bengaluru,Beverages,150.8,25.2,4.9,Delivered
+OD100780,2025-10-07,Bengaluru,Pizza,492.61,39.9,4.3,Delivered
+OD100048,2025-03-28,Pune,South Indian,,26.3,4.4,Delivered
+OD100574,2025-02-14,Hyderabad,Desserts,246.04,23.6,4.7,Delivered
+OD100626,2025-01-25,Bengaluru,South Indian,157.71,25.5,4.9,Delivered
+OD101097,2025-09-05,Pune,Desserts,,20.5,4.8,Delivered
+OD100209,2025-09-20,Hyderabad,Burgers,259.37,27.4,4.6,Delivered
+OD100418,2025-11-25,Hyderabad,Biryani,487.79,17.7,4.4,Delivered
+OD100506,2025-11-13,Bengaluru,Pizza,609.39,25.9,4.3,Delivered
+OD100257,2025-01-12,Bengaluru,Biryani,596.47,33.8,4.2,Delivered
+OD100942,2025-12-04,Hyderabad,Biryani,451.18,26.8,4.6,Delivered
+OD100707,2025-05-22,Bengaluru,South Indian,290.64,21.2,5.0,Delivered
+OD100090,2025-12-21,Hyderabad,Biryani,446.06,33.4,4.4,Delivered
+OD101162,2025-10-29,Bengaluru,Desserts,114.98,27.0,4.9,Delivered
+OD101177,2025-05-15,Pune,Pizza,520.54,34.3,4.5,Delivered
+OD100305,2025-05-09,Bengaluru,Burgers,186.79,28.0,4.9,Delivered
+OD101018,2025-09-29,Bengaluru,Biryani,609.1,31.3,5.0,Delivered
+OD100030,2025-01-21,Hyderabad,South Indian,169.22,24.9,5.0,Delivered
+OD100883,2025-03-22,Chennai,Burgers,240.36,31.7,4.4,Delivered
+OD100511,2025-05-03,Hyderabad,Desserts,213.11,24.6,4.5,Delivered
+OD100544,2025-10-13,Bengaluru,Biryani,481.64,32.2,4.8,Cancelled
+OD100752,2025-10-23,Bengaluru,Pizza,471.12,29.3,5.0,Delivered
+OD100165,2025-11-22,Hyderabad,Burgers,270.29,37.9,4.1,Delivered
+OD100954,2025-08-30,Hyderabad,Beverages,111.37,22.5,4.8,Delivered
+OD100658,2025-05-25,Mumbai,Chinese,393.74,59.7,3.8,Cancelled
+OD100192,2025-12-21,Bengaluru,Biryani,377.25,44.3,,Refunded
+OD100668,2025-02-05,Bengaluru,Pizza,341.52,22.9,5.0,Delivered
+OD100814,2025-04-09,Hyderabad,Biryani,238.74,44.3,4.5,Delivered
+OD100695,2025-02-19,Chennai,Burgers,274.87,31.7,4.6,Delivered
+OD101094,2025-05-18,Bengaluru,Chinese,382.42,42.2,4.8,Delivered
+OD100710,2025-11-14,Bengaluru,Beverages,115.02,22.5,5.0,Delivered
+OD100493,2025-05-28,Bengaluru,Pizza,336.04,38.7,4.4,Delivered
+OD100835,2025-08-03,Mumbai,Chinese,353.69,46.4,4.4,Refunded
+OD100643,2025-07-11,Hyderabad,Pizza,360.22,41.0,4.0,Delivered
+OD100377,2025-06-18,Hyderabad,Burgers,334.22,38.9,4.2,Delivered
+OD100934,2025-12-12,Hyderabad,South Indian,150.37,22.8,4.7,Delivered
+OD100519,2025-11-27,Hyderabad,Desserts,316.09,16.1,Not Rated,Delivered
+OD100901,2025-09-15,Pune,Pizza,702.99,31.9,4.8,Delivered
+OD100582,2025-04-28,Mumbai,Biryani,366.65,47.2,4.2,Delivered
+OD100525,2025-04-14,Bengaluru,Pizza,664.89,24.9,5.0,Delivered
+OD101011,2025-12-19,Bengaluru,Chinese,176.06,23.6,5.0,Delivered
+OD100448,2025-01-29,Hyderabad,Biryani,519.58,31.9,4.4,Delivered
+OD100159,2025-07-25,Chennai,South Indian,255.21,15.9,,Delivered
+OD100442,2025-08-09,Hyderabad,South Indian,277.07,24.5,5.0,Delivered
+OD101105,2025-10-17,Pune,South Indian,247.25,29.1,4.7,Delivered
+OD101045,2025-09-25,Bengaluru,Pizza,443.65,27.3,5.0,Delivered
+OD101180,2025-08-22,Bengaluru,South Indian,270.77,30.9,4.8,Delivered
+OD100481,2025-11-12,Pune,Pizza,442.49,35.0,4.1,Delivered
+OD101074,2025-01-07,Bengaluru,Desserts,174.5,25.4,4.2,Delivered
+OD100719,2025-11-29,Bengaluru,Beverages,131.21,20.7,5.0,Delivered
+OD100222,2025-07-15,Hyderabad,Chinese,414.73,42.5,3.9,Delivered
+OD101088,2025-12-28,Bengaluru,Burgers,244.9,18.5,5.0,Delivered
+OD100504,2025-11-05,Bengaluru,Burgers,385.26,28.5,4.1,Delivered
+OD101179,2025-04-28,Bengaluru,Pizza,401.42,19.1,5.0,Delivered
+OD101015,2025-07-07,Pune,Biryani,382.21,34.2,4.7,Delivered
+OD100812,2025-06-17,Chennai,Beverages,208.09,29.7,4.2,Delivered
+OD100558,2025-02-19,Mumbai,Chinese,459.63,42.7,4.3,Delivered
+OD100885,2025-05-05,Mumbai,Burgers,235.98,30.8,5.0,Delivered
+OD100785,2025-02-11,Bengaluru,Pizza,561.95,25.6,4.8,Delivered
+OD101106,2025-06-14,Mumbai,Biryani,467.42,35.6,4.5,Cancelled
+OD100435,2025-12-19,Mumbai,Pizza,472.26,27.2,,Delivered
+OD100788,2025-11-27,Bengaluru,South Indian,112.18,27.4,5.0,Delivered
+OD100486,2025-05-17,Mumbai,Burgers,382.99,27.1,4.6,Delivered
+OD100016,2025-09-07,Pune,Chinese,321.4,35.6,3.6,Delivered
+OD100823,2025-02-28,Pune,Chinese,327.27,40.5,3.9,Delivered
+OD101013,2025-11-12,Mumbai,Beverages,277.2,25.6,4.7,Delivered
+OD100713,2025-11-08,Chennai,Desserts,287.84,35.4,4.7,Delivered
+OD100458,2025-04-29,Hyderabad,South Indian,263.01,31.2,4.8,Delivered
+OD100453,2025-05-08,Mumbai,Biryani,221.95,47.3,4.4,Delivered
+OD100638,2025-04-25,Bengaluru,South Indian,131.88,33.2,4.4,Delivered
+OD100880,2025-05-11,Bengaluru,Burgers,338.63,12.9,4.9,Delivered
+OD100916,2025-04-10,Hyderabad,Biryani,367.67,24.8,4.0,Delivered
+OD100089,2025-03-31,Mumbai,Burgers,185.68,21.7,4.3,Delivered
+OD100474,2025-08-23,Pune,Pizza,481.58,38.5,4.5,Delivered
+OD100371,2025-10-20,Hyderabad,Pizza,734.07,26.7,4.1,Delivered
+OD101184,2025-08-23,Bengaluru,Biryani,515.54,31.5,4.7,Delivered
+OD100335,2025-05-19,Bengaluru,Chinese,278.38,34.3,4.2,Delivered
+OD100235,2025-12-28,Mumbai,South Indian,236.49,32.4,4.4,Delivered
+OD100317,2025-08-22,Pune,South Indian,201.86,28.3,4.8,Delivered
+OD100185,2025-06-05,Bengaluru,Chinese,206.16,51.4,3.6,Delivered
+OD100054,2025-12-08,Bengaluru,South Indian,240.51,20.1,4.9,Delivered
+OD101147,2025-05-18,Bengaluru,South Indian,233.27,22.7,5.0,Delivered
+OD101149,2025-08-07,Mumbai,Desserts,379.19,21.3,4.7,Delivered
+OD100890,2025-04-09,Bengaluru,Pizza,670.35,31.7,4.8,Delivered
+OD100625,2025-08-08,Pune,Burgers,254.24,,4.6,Delivered
+OD100324,2025-02-22,Pune,Desserts,222.4,26.4,4.9,Delivered
+OD100047,2025-12-19,Mumbai,Pizza,122.7,24.0,5.0,Delivered
+OD100573,2025-07-21,Bengaluru,South Indian,299.86,28.0,4.8,Delivered
+OD101114,2025-01-20,Bengaluru,Beverages,194.97,16.0,4.7,Delivered
+OD100687,2025-01-09,Chennai,Beverages,114.48,16.3,5.0,Delivered
+OD100445,2025-09-21,Hyderabad,South Indian,306.23,30.8,4.7,Delivered
+OD101055,2025-01-04,Hyderabad,Chinese,162.88,58.5,3.4,Delivered
+OD100731,2025-06-21,Mumbai,Biryani,362.31,26.9,4.8,Delivered
+OD100932,2025-01-16,Hyderabad,Burgers,364.76,32.7,4.8,Delivered
+OD100105,2025-05-01,Pune,South Indian,339.41,30.2,4.9,Delivered
+OD100258,2025-06-28,Pune,Biryani,345.5,28.4,4.3,Delivered
+OD100494,2025-01-25,Bengaluru,South Indian,334.82,25.4,4.9,Delivered
+OD100987,2025-08-17,Mumbai,Biryani,410.29,41.1,4.2,Delivered
+OD101076,2025-08-01,Hyderabad,Chinese,232.46,33.7,4.2,Delivered
+OD100509,2025-06-06,Bengaluru,Biryani,306.48,33.6,4.4,Delivered
+OD100474,2025-08-23,Pune,Pizza,481.58,38.5,4.5,Delivered
+OD100564,2025-12-11,Chennai,Chinese,333.9,43.1,4.2,Delivered
+OD100584,2025-11-04,Hyderabad,Beverages,244.56,27.3,4.4,Delivered
+OD100232,2025-12-24,Pune,Beverages,189.34,15.7,5.0,Delivered
+OD100922,2025-09-19,Chennai,Chinese,234.37,48.8,4.3,Delivered
+OD100097,2025-04-15,Pune,Biryani,407.44,50.1,4.1,Delivered
+OD100308,2025-08-16,Bengaluru,Pizza,381.89,32.8,4.7,Delivered
+OD100723,2025-10-24,Bengaluru,Beverages,126.15,20.2,4.8,Delivered
+OD100041,2025-11-05,Bengaluru,Desserts,197.91,31.0,4.9,Delivered
+OD100946,2025-02-20,Bengaluru,South Indian,239.13,39.2,4.9,Delivered
+OD100766,2025-05-29,Hyderabad,Biryani,275.35,24.3,5.0,Delivered
+OD101183,2025-06-08,Hyderabad,Biryani,322.88,29.9,5.0,Delivered
+OD100621,2025-04-27,Hyderabad,Burgers,151.34,21.8,5.0,Delivered
+OD100866,2025-01-05,Bengaluru,Desserts,227.27,25.4,4.8,Cancelled
+OD100447,2025-02-02,Hyderabad,Chinese,431.94,55.7,4.1,Delivered
+OD100242,2025-06-29,Hyderabad,Pizza,613.43,25.3,4.4,Delivered
+OD100111,2025-03-11,Mumbai,Pizza,308.99,34.3,4.1,Delivered
+OD100968,2025-09-20,Pune,Chinese,330.6,,4.8,Refunded
+OD101132,2025-12-09,Mumbai,Biryani,490.86,28.9,4.8,Delivered
+OD100402,2025-06-17,Mumbai,South Indian,142.95,26.8,4.7,Delivered
+OD100067,2025-10-06,Mumbai,Pizza,522.77,23.2,5.0,Delivered
+OD100737,2025-04-18,Bengaluru,Pizza,384.85,33.8,4.5,Delivered
+OD101085,2025-01-05,Hyderabad,South Indian,315.07,33.8,4.8,Delivered
+OD100610,2025-02-22,Pune,Chinese,291.46,35.1,4.1,Delivered
+OD101116,2025-08-26,Hyderabad,Biryani,559.95,28.8,4.7,Delivered
+OD101026,2025-10-09,Hyderabad,Beverages,87.08,17.0,5.0,Delivered
+OD100490,2025-09-30,Pune,South Indian,299.81,34.0,4.4,Delivered
+OD100952,2025-08-02,Bengaluru,Pizza,497.35,32.2,4.1,Delivered
+OD100947,2025-05-20,Pune,Desserts,172.32,21.7,5.0,Delivered
+OD101141,2025-09-02,Bengaluru,South Indian,325.11,19.5,4.8,Delivered
+OD100082,2025-03-06,Hyderabad,Desserts,162.3,31.9,4.1,Delivered
+OD100549,2025-04-30,Bengaluru,Burgers,230.85,23.9,4.7,Delivered
+OD100846,2025-03-14,Hyderabad,Burgers,200.72,22.1,5.0,Delivered
+OD100254,2025-02-23,Chennai,Pizza,388.36,23.9,5.0,Delivered
+OD100172,2025-12-20,Bengaluru,Pizza,259.91,23.8,4.7,Delivered
+OD101154,2025-04-02,Bengaluru,Chinese,286.02,49.1,3.9,Delivered
+OD100061,2025-04-06,Bengaluru,Burgers,201.42,,4.6,Refunded
+OD100967,2025-09-09,Pune,Biryani,465.68,28.2,Not Rated,Delivered
+OD100488,2025-11-07,Mumbai,Chinese,258.32,41.6,4.4,Delivered
+OD101062,2025-03-02,Pune,Pizza,442.05,23.1,4.9,Delivered
+OD100800,2025-12-28,Mumbai,South Indian,316.69,36.4,4.7,Delivered
+OD100432,2025-10-06,Pune,South Indian,131.84,21.4,4.9,Delivered
+OD101135,2025-04-24,Mumbai,Pizza,532.43,29.4,5.0,Delivered
+OD100775,2025-11-13,Pune,Desserts,178.65,18.2,4.7,Delivered
+OD100995,2025-12-17,Chennai,Burgers,121.34,24.0,5.0,Delivered
+OD101035,2025-05-24,Pune,Chinese,321.59,30.6,4.3,Delivered
+OD100044,2025-09-22,Bengaluru,Desserts,80.0,20.4,4.5,Delivered
+OD101153,2025-10-15,Hyderabad,Biryani,513.07,46.9,4.3,Delivered
+OD100120,2025-10-13,Hyderabad,Chinese,297.55,51.7,4.5,Delivered
+OD100425,2025-02-18,Mumbai,South Indian,210.92,28.4,,Delivered
+OD100181,2025-05-24,Hyderabad,Desserts,223.38,27.1,4.7,Delivered
+OD100808,2025-11-28,Chennai,Burgers,196.03,23.3,4.8,Delivered
+OD101072,2025-12-10,Hyderabad,Burgers,415.58,27.6,4.9,Delivered
+OD100342,2025-04-25,Bengaluru,South Indian,270.83,23.3,4.5,Delivered
+OD100797,2025-10-04,Chennai,Biryani,392.2,32.5,4.7,Delivered
+OD100826,2025-02-02,Mumbai,Chinese,330.97,36.2,4.4,Delivered
+OD101134,2025-03-05,Mumbai,Beverages,80.0,20.7,5.0,Delivered
+OD100727,2025-02-25,Bengaluru,Biryani,394.44,35.8,4.6,Delivered
+OD100126,2025-09-09,Hyderabad,Pizza,503.17,29.4,5.0,Delivered
+OD100141,2025-05-11,Bengaluru,Burgers,335.42,21.1,4.8,Delivered
+OD100296,2025-06-18,Pune,Beverages,219.54,31.4,4.8,Delivered
+OD100657,2025-01-07,Chennai,Pizza,312.51,37.6,4.8,Delivered
+OD100991,2025-10-04,Hyderabad,South Indian,234.12,23.0,5.0,Delivered
+OD100588,2025-05-13,Chennai,Biryani,271.45,31.8,4.4,Delivered
+OD100600,2025-05-14,Bengaluru,Burgers,262.27,18.0,5.0,Delivered
+OD100427,2025-10-18,Bengaluru,Desserts,434.33,21.5,4.7,Delivered
+OD100684,2025-04-05,Bengaluru,Chinese,208.31,52.9,4.8,Delivered
+OD100372,2025-06-21,Bengaluru,Pizza,642.93,30.1,5.0,Delivered
+OD100374,2025-03-03,Pune,Biryani,496.72,49.9,4.4,Delivered
+OD100876,2025-01-24,Pune,Burgers,230.02,29.6,4.2,Delivered
+OD101001,2025-10-01,Pune,Burgers,178.06,,5.0,Cancelled
+OD100546,2025-11-19,Bengaluru,Burgers,329.94,21.1,4.6,Delivered
+OD100492,2025-04-06,Hyderabad,Chinese,398.86,41.2,4.0,Delivered
+OD100375,2025-01-11,Bengaluru,Biryani,246.16,37.1,4.9,Delivered
+OD100108,2025-04-10,Hyderabad,Biryani,456.12,35.3,4.3,Delivered
+OD100020,2025-01-19,Chennai,South Indian,156.94,30.6,4.9,Delivered
+OD100332,2025-05-10,Bengaluru,South Indian,183.49,23.3,5.0,Delivered
+OD100971,2025-07-03,Bengaluru,Biryani,367.1,31.2,4.5,Delivered
+OD101028,2025-10-13,Hyderabad,South Indian,176.09,35.3,4.4,Cancelled
+OD100524,2025-05-31,Mumbai,Biryani,316.11,32.4,5.0,Delivered
+OD100233,2025-06-17,Chennai,Chinese,442.41,44.6,4.3,Delivered
+OD101190,2025-12-30,Bengaluru,Burgers,228.93,26.0,Not Rated,Delivered
+OD100882,2025-11-26,Hyderabad,Beverages,166.05,18.8,4.8,Delivered
+OD100606,2025-03-10,Mumbai,Desserts,182.39,24.0,4.4,Delivered
+OD100219,2025-02-19,Mumbai,Burgers,321.54,32.1,4.8,Delivered
+OD100027,2025-05-17,Bengaluru,Biryani,427.48,31.1,4.0,Delivered
+OD100840,2025-04-07,Hyderabad,Biryani,304.48,35.9,4.1,Delivered
+OD100581,2025-12-22,Bengaluru,Chinese,342.0,31.2,4.8,Delivered
+OD101011,2025-12-19,Bengaluru,Chinese,176.06,23.6,5.0,Delivered
+OD100281,2025-07-26,Hyderabad,Biryani,297.8,42.3,4.5,Delivered
+OD101196,2025-08-03,Chennai,Pizza,540.74,21.4,5.0,Delivered
+OD100011,2025-03-30,Pune,Beverages,94.41,25.9,4.4,Delivered
+OD101133,2025-12-01,Hyderabad,South Indian,204.08,30.5,4.7,Delivered
+OD100672,2025-02-13,Hyderabad,Beverages,90.78,14.0,4.9,Delivered
+OD100682,2025-05-31,Bengaluru,Biryani,424.53,33.6,4.8,Delivered
+OD100351,2025-02-10,Bengaluru,Biryani,409.21,,4.2,Delivered
+OD100339,2025-03-16,Chennai,Beverages,164.07,12.6,4.8,Delivered
+OD100119,2025-02-27,Mumbai,Chinese,80.0,39.9,4.3,Delivered
+OD100125,2025-08-12,Chennai,Burgers,381.31,24.7,5.0,Delivered
+OD100179,2025-06-05,Chennai,South Indian,185.46,28.7,3.9,Delivered
+OD101101,2025-11-18,Bengaluru,Pizza,425.91,44.6,4.0,Delivered
+OD100331,2025-12-18,Pune,Pizza,356.68,34.1,4.3,Delivered
+OD100175,2025-09-12,Hyderabad,Biryani,516.04,30.3,4.1,Delivered
+OD100272,2025-05-18,Pune,Biryani,438.77,30.1,4.7,Delivered
+OD100156,2025-02-25,Chennai,Pizza,490.43,29.9,4.8,Delivered
+OD100217,2025-11-03,Chennai,Biryani,369.17,,4.8,Delivered
+OD101139,2025-12-28,Mumbai,Chinese,420.12,43.3,4.7,Delivered
+OD100088,2025-07-05,Hyderabad,Biryani,492.01,39.2,4.3,Delivered
+OD100889,2025-04-21,Chennai,South Indian,370.04,27.1,4.5,Delivered
+OD100900,2025-04-23,Bengaluru,Burgers,122.74,20.5,5.0,Delivered
+OD100321,2025-01-14,Mumbai,Burgers,218.1,28.1,5.0,Delivered
+OD100878,2025-03-30,Chennai,Chinese,423.92,41.6,4.2,Delivered
+OD100931,2025-07-24,Hyderabad,Burgers,338.66,22.9,4.6,Delivered
+OD100449,2025-09-10,Mumbai,Chinese,510.68,43.9,4.6,Delivered
+OD100388,2025-08-30,Mumbai,Biryani,438.64,41.0,4.0,Cancelled
+OD101051,2025-03-22,Bengaluru,Biryani,360.37,27.4,5.0,Delivered
+OD100631,2025-02-26,Mumbai,Desserts,157.29,20.3,4.8,Delivered
+OD100851,2025-01-18,Bengaluru,Biryani,468.94,37.2,4.6,Delivered
+OD100129,2025-10-10,Hyderabad,Chinese,267.57,36.8,4.3,Delivered
+OD100294,2025-06-21,Pune,Desserts,259.44,25.0,4.8,Delivered
+OD100614,2025-05-24,Mumbai,Pizza,193.68,36.4,4.4,Cancelled
+OD100289,2025-06-27,Hyderabad,Biryani,365.72,38.6,4.3,Delivered
+OD100762,2025-09-14,Bengaluru,Biryani,246.06,38.9,5.0,Delivered
+OD100589,2025-04-19,Chennai,Biryani,515.66,42.2,4.7,Delivered
+OD100225,2025-01-17,Pune,Beverages,95.96,17.7,5.0,Delivered
+OD100656,2025-06-03,Bengaluru,Desserts,204.66,20.5,4.7,Delivered
+OD100703,2025-12-01,Pune,Desserts,166.05,15.3,4.7,Cancelled
+OD100634,2025-07-16,Chennai,Biryani,448.21,37.0,5.0,Delivered
+OD100635,2025-10-24,Chennai,Biryani,327.01,40.0,4.5,Delivered
+OD100750,2025-02-06,Pune,Pizza,315.18,30.4,4.7,Delivered
+OD100503,2025-06-21,Hyderabad,Burgers,298.82,24.8,4.9,Delivered
+OD100370,2025-02-27,Hyderabad,South Indian,228.88,12.7,4.7,Delivered
+OD100809,2025-04-03,Chennai,Beverages,230.84,27.2,4.9,Delivered
+OD101151,2025-12-16,Mumbai,Desserts,109.75,33.9,4.8,Delivered
+OD100057,2025-01-31,Hyderabad,Chinese,525.95,46.2,4.4,Delivered
+OD100953,2025-11-16,Bengaluru,Biryani,250.33,27.8,4.4,Delivered
+OD101175,2025-11-05,Bengaluru,South Indian,178.5,33.5,4.7,Delivered
+OD100530,2025-06-03,Mumbai,South Indian,295.53,22.0,5.0,Delivered
+OD100722,2025-10-20,Mumbai,Biryani,422.09,33.8,3.9,Delivered
+OD101152,2025-07-17,Mumbai,Biryani,298.34,33.7,4.6,Refunded
+OD100323,2025-10-16,Hyderabad,Chinese,372.41,34.8,4.4,Delivered
+OD100770,2025-11-10,Hyderabad,Pizza,286.73,33.7,3.8,Delivered
+OD100988,2025-03-14,Chennai,Pizza,440.06,24.1,5.0,Delivered
+OD100078,2025-07-02,Bengaluru,Chinese,397.55,29.3,5.0,Delivered
+OD101037,2025-01-07,Hyderabad,Burgers,229.05,29.8,4.6,Delivered
+OD100856,2025-10-05,Bengaluru,South Indian,419.17,26.1,4.8,Delivered
+OD100701,2025-02-09,Bengaluru,Pizza,464.55,28.1,4.4,Delivered
+OD100781,2025-12-28,Chennai,Beverages,176.86,22.2,4.5,Delivered
+OD100218,2025-03-20,Hyderabad,Beverages,179.04,19.0,4.2,Delivered
+OD100550,2025-06-03,Bengaluru,Burgers,260.58,23.3,4.3,Delivered
+OD101019,2025-09-10,Mumbai,Burgers,303.4,42.4,3.9,Delivered
+OD100391,2025-08-28,Mumbai,Biryani,511.8,41.3,4.6,Delivered
+OD100618,2025-07-20,Hyderabad,Biryani,461.65,,4.5,Delivered
+OD101103,2025-07-31,Chennai,Desserts,279.81,20.3,5.0,Delivered
+OD100160,2025-12-03,Pune,Biryani,255.87,34.4,4.5,Delivered
+OD100872,2025-10-04,Mumbai,Beverages,172.51,12.6,4.8,Delivered
+OD101021,2025-06-08,Mumbai,South Indian,356.51,24.7,5.0,Delivered
+OD100033,2025-08-21,Pune,Burgers,224.23,25.8,4.7,Delivered
+OD100338,2025-03-09,Chennai,Biryani,486.33,31.4,5.0,Delivered
+OD100468,2025-01-25,Mumbai,Biryani,220.94,37.3,5.0,Delivered
+OD100827,2025-01-05,Mumbai,Pizza,263.18,38.5,4.3,Delivered
+OD100367,2025-11-03,Hyderabad,Chinese,418.94,47.5,4.1,Delivered
+OD100110,2025-08-27,Pune,Burgers,231.71,20.5,5.0,Delivered
+OD101069,2025-05-31,Bengaluru,Burgers,212.81,20.3,5.0,Delivered
+OD100482,2025-04-12,Chennai,Chinese,173.2,49.4,3.9,Delivered
+OD100729,2025-09-09,Pune,Burgers,293.63,30.1,4.4,Delivered
+OD100612,2025-12-02,Mumbai,Beverages,224.94,22.8,5.0,Delivered
+OD100168,2025-08-22,Chennai,Pizza,509.47,25.8,4.8,Delivered
+OD100957,2025-06-15,Hyderabad,Burgers,272.93,37.0,4.5,Delivered
+OD100818,2025-08-27,Mumbai,Chinese,374.82,39.6,4.5,Delivered
+OD101067,2025-02-15,Pune,South Indian,287.81,30.2,4.6,Delivered
+OD100521,2025-11-18,Chennai,Burgers,246.44,35.2,4.1,Delivered
+OD100333,2025-08-13,Chennai,Desserts,257.01,25.4,5.0,Delivered
+OD100365,2025-06-15,Hyderabad,Burgers,304.07,14.1,4.8,Delivered
+OD100649,2025-12-18,Chennai,Biryani,553.7,45.3,4.5,Delivered
+OD100325,2025-03-02,Bengaluru,Chinese,465.91,41.1,4.2,Delivered
+OD100844,2025-12-02,Pune,Biryani,343.08,32.8,4.2,Delivered
+OD100413,2025-05-03,Bengaluru,Desserts,137.22,19.5,4.4,Delivered
+OD100471,2025-09-15,Mumbai,Burgers,182.9,32.3,5.0,Delivered
+OD101156,2025-06-02,Pune,Biryani,321.39,25.8,4.9,Delivered
+OD100193,2025-05-16,Mumbai,Desserts,81.94,25.7,4.5,Delivered
+OD100121,2025-02-04,Hyderabad,Chinese,322.96,22.8,5.0,Delivered
+OD100231,2025-02-24,Pune,Burgers,343.5,28.0,4.2,Delivered
+OD100914,2025-12-05,Hyderabad,Beverages,80.0,15.8,4.7,Delivered
+OD100928,2025-12-18,Pune,Chinese,334.45,41.6,4.1,Delivered
+OD100282,2025-01-18,Bengaluru,Pizza,292.96,40.7,4.6,Delivered
+OD100450,2025-06-13,Bengaluru,Biryani,433.61,29.9,,Delivered
+OD100681,2025-09-02,Pune,Pizza,514.86,36.1,Not Rated,Delivered
+OD100507,2025-05-19,Mumbai,Desserts,212.71,16.0,5.0,Delivered
+OD101120,2025-08-05,Hyderabad,Chinese,443.93,31.3,4.5,Delivered
+OD100764,2025-01-16,Mumbai,Beverages,164.18,16.2,Not Rated,Delivered
+OD100694,2025-12-05,Bengaluru,Desserts,124.06,17.6,5.0,Refunded
+OD100863,2025-10-02,Hyderabad,Chinese,415.78,40.0,4.2,Delivered
+OD100514,2025-08-02,Bengaluru,Pizza,526.04,12.8,5.0,Delivered
+OD100739,2025-04-14,Bengaluru,Burgers,285.99,35.4,,Delivered
+OD100843,2025-11-17,Bengaluru,Burgers,154.22,32.4,4.3,Delivered
+OD100705,2025-08-07,Bengaluru,Chinese,300.03,57.7,4.2,Delivered
+OD100005,2025-02-04,Chennai,Beverages,175.05,14.7,5.0,Delivered
+OD100604,2025-08-12,Pune,Beverages,102.94,19.5,4.7,Delivered
+OD100875,2025-04-21,Hyderabad,Desserts,155.64,21.1,5.0,Delivered
+OD100397,2025-10-08,Chennai,Pizza,163.9,30.9,4.8,Delivered
+OD100002,2025-08-30,Bengaluru,Desserts,96.57,15.4,5.0,Delivered
+OD100653,2025-08-25,Chennai,Pizza,546.46,31.5,4.8,Delivered
+OD101165,2025-04-04,Hyderabad,Desserts,114.96,16.5,4.9,Delivered
+OD101128,2025-01-06,Bengaluru,Chinese,353.67,34.6,4.9,Delivered
+OD100628,2025-06-17,Hyderabad,Chinese,428.9,54.8,4.3,Delivered
+OD100466,2025-01-04,Pune,Chinese,472.82,57.1,4.3,Delivered
+OD100311,2025-09-02,Mumbai,Burgers,195.64,,5.0,Delivered
+OD100012,2025-11-07,Hyderabad,Chinese,207.75,37.6,4.6,Delivered
+OD100700,2025-04-26,Chennai,Pizza,401.34,32.4,3.6,Delivered
+OD100609,2025-04-11,Bengaluru,Burgers,390.19,25.7,5.0,Delivered
+OD100819,2025-08-31,Pune,Pizza,382.14,24.7,5.0,Delivered
+OD100369,2025-01-28,Bengaluru,Desserts,101.86,25.5,5.0,Delivered
+OD100795,2025-05-07,Bengaluru,Pizza,549.58,25.5,4.4,Delivered
+OD100939,2025-03-29,Pune,Biryani,391.88,31.5,,Delivered
+OD100028,2025-06-06,Bengaluru,Biryani,401.13,23.1,,Delivered
+OD100473,2025-06-28,Pune,Biryani,457.38,37.2,4.8,Delivered
+OD100825,2025-11-06,Pune,Biryani,271.93,23.1,5.0,Delivered
+OD100799,2025-06-19,Chennai,South Indian,227.94,21.7,4.8,Delivered
+OD100043,2025-11-01,Hyderabad,Pizza,171.91,31.5,4.9,Delivered
+OD100938,2025-05-11,Hyderabad,Desserts,266.99,26.1,4.9,Delivered
+OD100619,2025-08-17,Mumbai,Biryani,585.14,36.8,4.2,Delivered
+OD101124,2025-09-26,Pune,Burgers,186.84,27.5,4.3,Delivered
+OD100177,2025-12-25,Bengaluru,Beverages,174.61,18.1,5.0,Delivered
+OD101017,2025-04-03,Mumbai,Desserts,324.18,27.8,4.9,Delivered
+OD100801,2025-11-14,Pune,Pizza,303.35,32.9,4.9,Delivered
+OD101131,2025-01-10,Bengaluru,Burgers,296.99,30.0,4.2,Delivered
+OD100008,2025-07-10,Hyderabad,Biryani,487.43,33.0,5.0,Delivered
+OD100173,2025-05-07,Hyderabad,Beverages,223.71,17.4,5.0,Delivered
+OD100607,2025-11-17,Bengaluru,Biryani,370.82,35.5,5.0,Delivered
+OD100416,2025-07-02,Bengaluru,Biryani,232.69,23.9,5.0,Delivered
+OD100451,2025-11-06,Hyderabad,Desserts,329.24,25.2,4.2,Delivered
+OD100842,2025-07-14,Bengaluru,Burgers,317.47,25.6,4.1,Delivered
+OD101084,2025-08-14,Pune,Beverages,224.16,21.2,,Delivered
+OD101199,2025-11-21,Bengaluru,South Indian,420.02,29.5,5.0,Delivered
+OD100591,2025-11-16,Bengaluru,Burgers,373.73,,4.6,Delivered
+OD100286,2025-08-27,Mumbai,Biryani,434.29,33.5,4.1,Delivered
+OD100994,2025-01-06,Bengaluru,Beverages,155.66,28.0,4.7,Delivered
+OD100384,2025-01-26,Pune,Burgers,236.94,28.0,5.0,Delivered
+OD100128,2025-05-25,Bengaluru,Biryani,480.63,36.8,3.9,Delivered
+OD100616,2025-06-02,Chennai,South Indian,190.52,28.6,5.0,Delivered
+OD100010,2025-02-09,Chennai,Burgers,414.7,35.8,4.1,Delivered
+OD100877,2025-12-20,Chennai,Pizza,446.03,20.0,4.6,Delivered
+OD100587,2025-03-16,Hyderabad,Pizza,595.8,34.8,4.6,Delivered
+OD100247,2025-09-05,Chennai,Burgers,167.13,26.2,4.8,Cancelled
+OD100686,2025-11-30,Chennai,Burgers,127.08,16.8,5.0,Delivered
+OD100724,2025-11-08,Chennai,Biryani,392.85,37.4,,Delivered
+OD100444,2025-05-04,Hyderabad,Pizza,452.91,16.8,4.8,Delivered
+OD100804,2025-01-02,Bengaluru,Biryani,457.36,35.3,4.7,Delivered
+OD100721,2025-11-02,Mumbai,Burgers,265.13,22.6,4.8,Delivered
+OD100077,2025-01-21,Bengaluru,Chinese,526.23,47.4,4.1,Delivered
+OD100542,2025-05-24,Mumbai,Desserts,333.16,22.6,4.6,Delivered
+OD100570,2025-03-27,Pune,Pizza,486.38,16.5,,Delivered
+OD100285,2025-07-06,Bengaluru,Burgers,298.13,26.1,4.5,Delivered
+OD100495,2025-04-02,Chennai,Chinese,579.27,32.5,3.9,Delivered
+OD100733,2025-09-07,Pune,Burgers,185.73,28.4,4.3,Delivered
+OD100243,2025-03-09,Bengaluru,Chinese,124.4,39.6,4.2,Delivered
+OD101071,2025-11-07,Pune,Chinese,326.77,37.7,4.0,Delivered
+OD100613,2025-12-23,Chennai,Beverages,80.0,18.9,4.8,Delivered
+OD100869,2025-09-25,Mumbai,Pizza,281.85,32.5,4.8,Delivered
+OD100510,2025-07-24,Mumbai,Biryani,573.91,40.7,4.5,Cancelled
+OD100602,2025-06-07,Chennai,Desserts,292.52,22.8,4.9,Delivered
+OD100556,2025-07-26,Hyderabad,Pizza,,24.0,5.0,Cancelled
+OD100986,2025-03-25,Mumbai,Pizza,330.0,32.1,4.9,Delivered
+OD100554,2025-11-01,Hyderabad,Biryani,622.64,47.5,3.6,Delivered
+OD100189,2025-09-15,Mumbai,Pizza,465.68,28.7,,Delivered
+OD100736,2025-02-11,Hyderabad,Pizza,263.19,26.5,4.8,Delivered
+OD100075,2025-01-01,Chennai,Pizza,341.78,26.0,5.0,Delivered
+OD100084,2025-12-27,Pune,Biryani,665.22,41.0,,Delivered
+OD100310,2025-10-29,Chennai,Burgers,267.57,29.9,5.0,Delivered
+OD101195,2025-06-16,Pune,Biryani,227.66,40.1,4.5,Delivered
+OD100221,2025-03-13,Hyderabad,Burgers,384.71,21.6,4.8,Delivered
+OD101040,2025-12-31,Bengaluru,Biryani,374.86,,4.0,Delivered
+OD100040,2025-07-19,Hyderabad,Burgers,264.84,27.3,4.3,Delivered
+OD101006,2025-09-29,Hyderabad,Beverages,80.0,29.4,4.7,Delivered
+OD100779,2025-08-10,Mumbai,Desserts,318.99,25.5,4.4,Delivered
+OD100559,2025-08-22,Hyderabad,Burgers,347.69,28.9,5.0,Delivered
+OD100593,2025-04-17,Pune,Chinese,310.66,40.8,4.4,Delivered
+OD100815,2025-12-28,Mumbai,Desserts,196.5,25.6,4.5,Delivered
+OD100784,2025-07-30,Bengaluru,Beverages,176.79,19.8,5.0,Delivered
+OD100046,2025-11-19,Pune,Burgers,309.14,29.8,4.6,Delivered
+OD100337,2025-11-01,Mumbai,South Indian,223.62,30.4,4.8,Delivered
+OD100787,2025-01-17,Mumbai,Pizza,689.55,32.3,4.1,Delivered
+OD100980,2025-11-25,Mumbai,Beverages,128.9,23.1,4.0,Delivered
+OD100320,2025-06-05,Mumbai,Beverages,148.32,,5.0,Delivered
+OD100400,2025-10-04,Pune,Pizza,824.47,38.9,4.8,Refunded
+OD100205,2025-03-14,Bengaluru,Pizza,674.73,34.9,4.6,Delivered
+OD100266,2025-04-11,Pune,Pizza,432.07,28.6,4.4,Delivered
+OD100674,2025-08-13,Pune,Chinese,241.89,35.5,4.4,Delivered
+OD100909,2025-02-14,Chennai,Pizza,272.11,16.0,4.7,Delivered
+OD100540,2025-02-07,Mumbai,Beverages,173.09,20.4,4.9,Delivered
+OD100128,2025-05-25,Bengaluru,Biryani,480.63,36.8,3.9,Delivered
+OD100186,2025-03-24,Mumbai,Burgers,206.98,35.6,4.9,Delivered
+OD100937,2025-11-12,Pune,Biryani,452.57,36.2,4.4,Delivered
+OD100973,2025-08-14,Pune,Beverages,127.76,24.1,4.8,Delivered
+OD100959,2025-05-09,Chennai,Burgers,247.91,,4.3,Delivered
+OD100899,2025-12-29,Pune,Burgers,317.13,20.1,5.0,Refunded
+OD100580,2025-04-24,Mumbai,Burgers,227.29,26.2,5.0,Delivered
+OD100630,2025-06-19,Hyderabad,Beverages,122.93,15.4,4.9,Delivered
+OD101132,2025-12-09,Mumbai,Biryani,490.86,28.9,4.8,Delivered
+OD100887,2025-12-31,Chennai,Biryani,391.86,40.0,4.5,Delivered
+OD100963,2025-12-11,Bengaluru,Biryani,360.42,38.0,4.6,Delivered
+OD100199,2025-07-12,Mumbai,Pizza,361.14,26.2,4.4,Delivered
+OD100646,2025-02-13,Bengaluru,Biryani,505.93,41.4,4.3,Cancelled
+OD100348,2025-12-27,Bengaluru,Chinese,401.08,38.1,4.7,Delivered
+OD100726,2025-01-07,Mumbai,Pizza,706.26,34.7,4.0,Delivered
+OD100648,2025-08-21,Bengaluru,Chinese,210.65,34.7,,Delivered
+OD100659,2025-10-04,Hyderabad,Burgers,502.54,24.9,4.9,Delivered
+OD100720,2025-08-17,Hyderabad,Burgers,332.81,27.4,4.9,Delivered
+OD100072,2025-07-14,Hyderabad,Desserts,310.34,12.0,5.0,Delivered
+OD100749,2025-06-22,Mumbai,Desserts,80.0,23.5,4.7,Delivered
+OD100132,2025-09-25,Mumbai,Chinese,300.8,43.3,4.0,Delivered
+OD101065,2025-12-26,Mumbai,Beverages,267.28,21.4,5.0,Delivered
+OD101042,2025-05-19,Pune,Chinese,295.81,27.8,4.4,Delivered
+OD100904,2025-07-02,Bengaluru,Beverages,82.61,21.3,4.5,Delivered
+OD100773,2025-12-15,Mumbai,Desserts,317.9,26.5,5.0,Delivered
+OD100109,2025-12-16,Hyderabad,Desserts,197.96,20.5,4.6,Delivered
+OD100561,2025-07-09,Pune,Pizza,383.09,34.7,4.9,Delivered
+OD100383,2025-01-10,Pune,Burgers,264.48,28.5,4.8,Delivered
+OD101173,2025-03-12,Pune,South Indian,176.5,24.8,4.6,Delivered
+OD100455,2025-09-16,Bengaluru,Biryani,360.38,42.0,4.5,Delivered
+OD100860,2025-10-12,Mumbai,South Indian,415.98,26.2,4.2,Delivered
+OD100792,2025-06-26,Hyderabad,Pizza,494.79,32.1,4.6,Delivered
+OD100239,2025-07-01,Pune,Biryani,576.43,30.8,4.7,Delivered
+OD100144,2025-11-04,Bengaluru,Burgers,285.67,27.2,5.0,Delivered
+OD100735,2025-10-05,Chennai,South Indian,228.73,26.7,4.2,Delivered
+OD100137,2025-10-21,Chennai,Burgers,159.01,26.1,5.0,Delivered
+OD100911,2025-08-03,Pune,Desserts,361.18,20.5,5.0,Delivered
+OD100464,2025-02-20,Hyderabad,Chinese,130.08,49.6,4.6,Delivered
+OD100532,2025-07-03,Pune,Burgers,204.44,17.9,4.8,Delivered
+OD100666,2025-12-06,Bengaluru,South Indian,258.84,31.4,4.4,Delivered
+OD100437,2025-03-16,Mumbai,Burgers,262.92,15.8,5.0,Delivered
+OD100496,2025-06-14,Chennai,Burgers,362.93,21.9,4.9,Delivered
+OD100820,2025-05-02,Bengaluru,Biryani,412.97,48.2,4.2,Delivered
+OD100252,2025-12-04,Mumbai,Burgers,172.5,31.1,4.0,Delivered
+OD100216,2025-01-18,Mumbai,Biryani,450.12,34.0,4.6,Delivered
+OD101008,2025-07-26,Bengaluru,South Indian,169.07,38.6,4.8,Cancelled
+OD100632,2025-01-08,Hyderabad,Biryani,549.63,35.4,5.0,Delivered
+OD100382,2025-10-27,Hyderabad,South Indian,277.85,29.4,5.0,Delivered
+OD100297,2025-11-28,Pune,South Indian,260.82,25.5,4.2,Delivered
+OD100327,2025-02-03,Mumbai,Chinese,270.57,33.5,4.9,Delivered
+OD100958,2025-06-22,Bengaluru,Burgers,204.55,25.1,4.8,Delivered
+OD100999,2025-08-08,Mumbai,Pizza,284.09,33.2,4.1,Delivered
+OD100262,2025-08-19,Hyderabad,Pizza,477.9,31.5,4.0,Delivered
+OD100760,2025-05-02,Pune,South Indian,297.42,26.4,4.6,Delivered
+OD100393,2025-10-01,Hyderabad,South Indian,206.8,32.1,4.3,Delivered
+OD101198,2025-02-21,Bengaluru,Pizza,331.82,26.7,4.8,Delivered
+OD100611,2025-02-16,Bengaluru,Chinese,573.1,49.4,4.0,Delivered
+OD100579,2025-01-19,Pune,Pizza,273.09,36.1,4.3,Delivered
+OD100544,2025-10-13,Bengaluru,Biryani,481.64,32.2,4.8,Cancelled
+OD100692,2025-02-17,Mumbai,Pizza,625.91,24.9,4.9,Delivered
+OD100896,2025-04-17,Bengaluru,Pizza,280.47,27.9,4.8,Delivered
+OD100081,2025-09-08,Mumbai,Burgers,312.14,26.0,5.0,Delivered
+OD100116,2025-09-10,Mumbai,South Indian,282.69,18.0,4.4,Delivered
+OD100405,2025-11-03,Bengaluru,Desserts,192.2,21.9,5.0,Delivered
+OD100459,2025-11-05,Pune,Chinese,380.77,39.1,4.7,Delivered
+OD100515,2025-09-18,Chennai,Biryani,407.53,33.6,4.8,Delivered
+OD101166,2025-09-20,Bengaluru,Desserts,251.03,20.2,5.0,Delivered
+OD100240,2025-04-24,Hyderabad,Desserts,80.0,24.1,4.5,Delivered
+OD100566,2025-11-26,Pune,South Indian,165.16,,3.9,Delivered
+OD101014,2025-04-30,Hyderabad,Pizza,471.24,35.3,4.9,Delivered
+OD101093,2025-03-15,Hyderabad,Pizza,327.16,30.6,4.3,Delivered
+OD100169,2025-08-08,Hyderabad,Beverages,80.0,20.5,5.0,Delivered
+OD100513,2025-02-25,Chennai,Pizza,636.06,31.3,4.6,Delivered
+OD100113,2025-03-08,Mumbai,Chinese,373.03,40.1,4.6,Delivered
+OD101159,2025-11-19,Bengaluru,South Indian,177.05,32.4,4.6,Delivered
+OD100664,2025-07-09,Hyderabad,Pizza,844.05,28.4,4.2,Cancelled
+OD100992,2025-06-01,Hyderabad,South Indian,209.77,45.3,4.3,Delivered
+OD101104,2025-03-23,Mumbai,Biryani,448.35,30.4,4.9,Delivered
+OD100640,2025-02-08,Hyderabad,South Indian,187.04,,4.2,Delivered
+OD100798,2025-02-05,Mumbai,South Indian,260.68,23.9,5.0,Delivered
+OD101164,2025-12-08,Mumbai,Biryani,324.56,34.5,4.3,Delivered
+OD101123,2025-05-04,Mumbai,Biryani,255.12,33.9,4.7,Delivered
+OD100887,2025-12-31,Chennai,Biryani,391.86,40.0,,Delivered
+OD100291,2025-04-24,Chennai,Biryani,,27.0,4.9,Delivered
+OD100676,2025-02-13,Bengaluru,Beverages,155.18,15.3,5.0,Delivered
+OD100529,2025-12-15,Pune,Pizza,414.89,20.3,5.0,Delivered
+OD100456,2025-11-10,Pune,Beverages,164.68,20.6,4.9,Delivered
+OD101115,2025-05-21,Chennai,Biryani,486.61,32.2,Not Rated,Delivered
+OD100888,2025-03-10,Mumbai,Biryani,445.88,26.1,4.4,Delivered
+OD100711,2025-04-25,Pune,Chinese,333.91,38.0,4.5,Delivered
+OD100906,2025-07-05,Mumbai,Burgers,285.9,32.2,4.3,Delivered
+OD100487,2025-03-09,Bengaluru,Pizza,448.28,38.1,5.0,Delivered
+OD100867,2025-06-21,Bengaluru,South Indian,301.88,32.6,4.7,Cancelled
+OD100355,2025-03-31,Pune,Burgers,282.18,28.4,4.3,Delivered
+OD100669,2025-06-14,Bengaluru,Burgers,315.09,30.9,4.7,Delivered
+OD100220,2025-11-17,Mumbai,Pizza,346.85,34.0,4.9,Delivered
+OD101092,2025-05-16,Mumbai,Pizza,516.64,17.1,5.0,Cancelled
+OD101170,2025-12-14,Mumbai,Burgers,282.04,32.6,4.7,Delivered
+OD100102,2025-04-18,Mumbai,Pizza,485.33,36.8,4.5,Delivered
+OD100753,2025-07-06,Hyderabad,Burgers,181.72,40.1,4.5,Delivered
+OD100849,2025-12-11,Bengaluru,Beverages,190.09,19.4,5.0,Delivered
+OD100245,2025-02-23,Chennai,Desserts,103.18,20.8,5.0,Delivered
+OD100833,2025-05-17,Mumbai,Chinese,371.47,40.5,3.8,Delivered
+OD100149,2025-06-14,Mumbai,Biryani,392.24,33.7,4.6,Delivered
+OD101033,2025-02-04,Bengaluru,Desserts,278.1,20.3,4.8,Delivered
+OD100759,2025-09-27,Pune,Burgers,263.72,,4.6,Delivered
+OD100109,2025-12-16,Hyderabad,Desserts,197.96,20.5,4.6,Delivered
+OD100259,2025-10-01,Hyderabad,Chinese,349.48,30.9,3.9,Delivered
+OD100246,2025-11-04,Hyderabad,Chinese,400.29,40.8,4.6,Delivered
+OD100874,2025-05-05,Hyderabad,South Indian,196.94,28.2,5.0,Delivered
+OD101109,2025-02-14,Mumbai,Biryani,320.62,28.9,4.4,Delivered
+OD100023,2025-08-10,Hyderabad,Desserts,207.79,24.3,4.5,Delivered
+OD100941,2025-11-03,Bengaluru,Desserts,239.59,27.8,4.4,Delivered
+OD100699,2025-06-11,Hyderabad,Pizza,317.09,32.0,5.0,Delivered
+OD100070,2025-09-01,Pune,Pizza,466.6,32.2,,Delivered
+OD100255,2025-11-05,Mumbai,South Indian,271.27,19.4,4.8,Delivered
+OD100599,2025-11-15,Bengaluru,Chinese,337.26,44.7,4.0,Delivered
+OD100230,2025-08-10,Mumbai,Biryani,472.26,29.2,4.6,Delivered
+OD100080,2025-02-18,Chennai,Chinese,281.93,48.3,4.2,Delivered
+OD100565,2025-11-14,Bengaluru,Chinese,251.02,28.8,4.9,Delivered
+OD101102,2025-08-25,Hyderabad,South Indian,240.86,24.2,Not Rated,Delivered
+OD100641,2025-01-01,Chennai,South Indian,156.62,28.8,5.0,Delivered
+OD100601,2025-08-29,Bengaluru,South Indian,172.29,38.2,4.4,Delivered
+OD100170,2025-09-26,Pune,Pizza,438.16,20.3,5.0,Delivered
+OD100386,2025-05-24,Hyderabad,South Indian,299.82,28.1,3.9,Delivered
+OD100288,2025-11-08,Pune,Burgers,276.43,23.6,5.0,Delivered
+OD100151,2025-01-16,Chennai,Desserts,80.0,24.3,4.6,Delivered
+OD100642,2025-01-31,Pune,Biryani,556.2,29.3,5.0,Delivered
+OD100051,2025-02-17,Pune,Biryani,461.36,23.6,5.0,Delivered
+OD100241,2025-07-23,Mumbai,South Indian,233.97,20.2,5.0,Delivered
+OD101086,2025-03-15,Chennai,South Indian,120.48,24.5,4.5,Delivered
+OD100171,2025-06-17,Hyderabad,Burgers,289.16,22.4,4.8,Delivered
+OD100623,2025-02-18,Hyderabad,Burgers,288.57,31.5,4.8,Delivered
+OD100304,2025-06-10,Mumbai,Desserts,196.9,23.2,4.1,Delivered
+OD100056,2025-08-14,Pune,Burgers,330.12,27.4,4.9,Delivered
+OD100265,2025-04-01,Pune,Biryani,355.53,35.2,4.3,Delivered
+OD100358,2025-06-14,Mumbai,Burgers,187.8,24.5,Not Rated,Delivered
+OD100007,2025-10-20,Hyderabad,South Indian,123.65,26.4,4.9,Refunded
+OD100389,2025-03-18,Bengaluru,Desserts,80.0,24.0,4.8,Delivered
+OD101182,2025-06-25,Pune,Biryani,466.91,30.1,5.0,Delivered
+OD100966,2025-12-06,Hyderabad,Beverages,110.88,17.5,5.0,Delivered
+OD100718,2025-09-13,Mumbai,Chinese,453.53,49.0,3.6,Delivered
+OD100438,2025-12-08,Hyderabad,South Indian,273.35,26.6,5.0,Delivered
+OD100886,2025-02-22,Chennai,Burgers,254.9,24.9,4.7,Delivered
+OD100224,2025-10-08,Pune,Pizza,500.74,28.4,5.0,Delivered
+OD101012,2025-11-07,Bengaluru,Burgers,195.27,16.1,5.0,Delivered
+OD100740,2025-12-04,Hyderabad,Biryani,411.92,37.0,4.5,Delivered
+OD100395,2025-01-22,Chennai,Burgers,319.96,29.3,Not Rated,Delivered
+OD100256,2025-07-09,Bengaluru,Desserts,122.31,28.2,4.2,Delivered
+OD100996,2025-05-09,Chennai,Chinese,377.61,34.5,4.3,Delivered
+OD100162,2025-03-13,Mumbai,Pizza,399.08,37.6,4.6,Delivered
+OD100223,2025-06-27,Pune,Beverages,174.88,22.3,4.9,Delivered
+OD101163,2025-11-07,Bengaluru,Biryani,370.71,35.0,4.5,Delivered
+OD100360,2025-08-29,Bengaluru,Beverages,179.54,17.5,4.5,Delivered
+OD100417,2025-09-20,Bengaluru,South Indian,314.97,24.3,4.6,Delivered
+OD100853,2025-08-03,Chennai,Beverages,204.67,19.6,5.0,Cancelled
+OD100306,2025-02-05,Bengaluru,Burgers,167.71,26.8,5.0,Delivered
+OD101056,2025-07-02,Bengaluru,Beverages,241.71,24.1,5.0,Delivered
+OD100605,2025-03-05,Bengaluru,South Indian,380.98,27.6,5.0,Delivered
+OD100004,2025-12-10,Chennai,Biryani,336.18,35.0,4.7,Delivered
+OD100042,2025-04-09,Hyderabad,South Indian,231.88,25.8,4.6,Delivered
+OD101130,2025-04-20,Pune,Beverages,256.86,26.5,4.9,Delivered
+OD100279,2025-03-20,Bengaluru,Desserts,140.07,24.7,4.9,Delivered
+OD100693,2025-06-20,Bengaluru,Pizza,506.15,32.9,4.7,Delivered
+OD100465,2025-09-10,Pune,South Indian,324.31,29.8,4.7,Delivered
+OD100824,2025-04-29,Chennai,Desserts,176.28,28.3,4.8,Delivered
+OD100765,2025-07-22,Hyderabad,Biryani,504.94,34.7,4.0,Delivered
+OD100794,2025-06-04,Hyderabad,Biryani,596.6,41.3,4.1,Delivered
+OD100244,2025-04-16,Bengaluru,Chinese,184.9,46.1,4.1,Delivered
+OD100553,2025-07-05,Pune,Desserts,107.19,23.0,4.8,Delivered
+OD100523,2025-06-14,Hyderabad,Chinese,293.77,41.8,4.2,Delivered
+OD100356,2025-02-04,Chennai,South Indian,129.92,35.9,4.2,Delivered
+OD100446,2025-11-04,Pune,Beverages,210.52,21.9,5.0,Delivered
+OD101160,2025-04-30,Bengaluru,Biryani,415.35,28.2,4.7,Delivered
+OD100299,2025-06-28,Chennai,Chinese,512.24,44.5,4.4,Delivered
+OD100150,2025-07-06,Bengaluru,Desserts,138.97,25.1,5.0,Delivered
+OD100068,2025-06-22,Bengaluru,Biryani,557.02,40.7,3.8,Delivered
+OD101193,2025-01-14,Bengaluru,Beverages,145.3,19.2,5.0,Delivered
+OD100997,2025-10-27,Chennai,Biryani,358.43,36.5,5.0,Delivered
+OD101188,2025-05-05,Bengaluru,Biryani,455.73,31.7,4.6,Delivered
+OD100426,2025-02-11,Hyderabad,Pizza,333.97,34.4,4.8,Delivered
+OD101095,2025-09-13,Chennai,Burgers,260.54,22.2,4.8,Delivered
+OD100249,2025-05-25,Pune,Burgers,300.79,28.8,Not Rated,Delivered
+OD100830,2025-04-03,Bengaluru,Chinese,402.33,45.1,4.2,Refunded
+OD100439,2025-07-02,Bengaluru,Chinese,251.88,44.0,4.3,Delivered
+OD100978,2025-01-12,Hyderabad,Chinese,383.63,40.0,4.6,Delivered
+OD100834,2025-03-27,Chennai,South Indian,220.67,22.5,4.3,Delivered
+OD100336,2025-03-05,Bengaluru,Biryani,387.04,25.5,4.9,Delivered
+OD100467,2025-07-04,Mumbai,Beverages,93.51,20.8,5.0,Delivered
+OD100590,2025-09-03,Bengaluru,Beverages,104.69,,4.6,Cancelled
+OD100142,2025-12-08,Mumbai,Beverages,80.0,14.4,5.0,Delivered
+OD101020,2025-05-29,Mumbai,Desserts,137.96,24.7,5.0,Delivered
+OD100032,2025-01-09,Mumbai,Pizza,609.91,30.6,4.9,Delivered
+OD100518,2025-12-30,Hyderabad,Biryani,534.33,26.4,4.8,Delivered
+OD100917,2025-11-22,Mumbai,Biryani,393.15,31.8,4.4,Delivered
+OD101024,2025-12-27,Bengaluru,Chinese,360.43,44.0,4.2,Delivered
+OD100862,2025-03-17,Mumbai,South Indian,200.26,,4.7,Delivered
+OD100543,2025-06-08,Bengaluru,Beverages,119.02,24.4,5.0,Delivered
+OD100316,2025-12-19,Chennai,Burgers,332.9,27.0,,Delivered
+OD101080,2025-04-01,Bengaluru,Pizza,458.47,37.6,4.3,Delivered
+OD100035,2025-02-20,Pune,Biryani,485.29,44.8,4.8,Delivered
+OD100637,2025-02-28,Hyderabad,South Indian,160.0,28.0,4.1,Delivered
+OD100537,2025-10-09,Bengaluru,Biryani,709.82,37.9,4.3,Delivered
+OD100698,2025-08-05,Hyderabad,Chinese,252.34,39.0,4.5,Delivered
+OD101127,2025-02-06,Bengaluru,South Indian,221.48,14.5,5.0,Delivered
+OD100214,2025-10-13,Chennai,South Indian,253.39,28.0,4.7,Delivered
+OD100015,2025-09-24,Bengaluru,Pizza,511.65,35.3,,Delivered
+OD100683,2025-10-13,Bengaluru,Burgers,177.99,31.1,4.8,Delivered
+OD100897,2025-04-11,Hyderabad,Pizza,207.9,23.1,4.9,Delivered
+OD100577,2025-11-18,Bengaluru,Chinese,218.96,50.8,4.1,Delivered
+OD100548,2025-05-08,Hyderabad,South Indian,239.48,21.1,4.7,Delivered
+OD100551,2025-12-11,Hyderabad,Biryani,505.79,39.3,4.7,Delivered
+OD100187,2025-12-28,Mumbai,Biryani,430.74,27.4,4.6,Delivered
+OD100403,2025-02-01,Pune,Biryani,595.22,31.5,3.8,Delivered
+OD101081,2025-01-02,Hyderabad,Beverages,164.69,19.8,4.4,Delivered
+OD100533,2025-06-30,Bengaluru,Chinese,428.91,37.1,4.2,Delivered
+OD101036,2025-07-20,Pune,Pizza,525.24,41.1,4.5,Delivered
+OD101128,2025-01-06,Bengaluru,Chinese,353.67,34.6,4.9,Delivered
+OD100459,2025-11-05,Pune,Chinese,380.77,39.1,Not Rated,Delivered
+OD100049,2025-12-24,Mumbai,Biryani,508.5,29.3,4.8,Delivered
+OD101030,2025-11-24,Hyderabad,Chinese,260.95,50.8,3.5,Delivered
+OD100665,2025-07-15,Hyderabad,South Indian,171.12,27.7,4.9,Delivered
+OD100039,2025-03-14,Hyderabad,Chinese,122.94,23.9,5.0,Delivered
+OD100347,2025-12-02,Chennai,Pizza,428.79,27.3,4.9,Delivered
+OD100237,2025-07-04,Mumbai,South Indian,92.01,31.6,5.0,Delivered
+OD100031,2025-07-16,Mumbai,Beverages,147.69,27.0,4.6,Cancelled
+OD100950,2025-09-13,Chennai,Chinese,357.1,41.0,4.9,Delivered
+OD101064,2025-03-08,Mumbai,Pizza,588.15,27.8,4.6,Delivered
+OD100742,2025-06-10,Pune,Desserts,103.37,16.1,4.8,Delivered
+OD100595,2025-06-18,Mumbai,Pizza,633.7,23.0,5.0,Delivered
