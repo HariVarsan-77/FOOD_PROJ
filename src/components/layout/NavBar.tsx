@@ -58,7 +58,7 @@ export function NavBar() {
               boxShadow: "0 0 14px -4px rgba(212,160,23,0.60)",
             }}
           >
-            <FoodLogoMark className="h-8 w-8" style={{ color: "#0d0a06" }} />
+            <FoodLogoMark className="h-8 w-8" />
           </span>
           <span className="leading-tight">
             <span
