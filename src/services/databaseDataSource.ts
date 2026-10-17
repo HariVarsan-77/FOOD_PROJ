@@ -1,94 +1,111 @@
+import { collection, getDocs, addDoc } from "firebase/firestore";
+import { getDb, isFirebaseConfigured } from "./firebase";
 import { DATABASE_CONFIGURED } from "./config";
 import { DataSourceError, type DataSource } from "./dataSource.types";
-import type { FoodRecord } from "@/types/records";
+import type { FoodRecord, NewFoodRecord } from "@/types/records";
 
 /**
- * Firebase / Supabase adapter - the integration point for a real database.
+ * Firebase Firestore adapter for live database integration.
  *
- * Nothing here runs while `DATA_SOURCE_MODE` in `src/services/config.ts` is
- * "demo". When you are ready to connect a real backend:
- *
- *   1. Follow "Connecting Firebase or Supabase" in README.md.
- *   2. Install the client (`npm install @supabase/supabase-js` or `firebase`).
- *   3. Fill in the three TODO methods below (they all use the same pattern).
- *   4. Set `DATABASE_CONFIGURED = true` in `src/services/config.ts`
- *      and `DATA_SOURCE_MODE = "database"`.
- *
- * The rest of the app does not change: the pages only use the `DataSource`
- * interface, so the charts and tables start showing database records
- * automatically.
- *
- * The stored record schema matches `FoodRecord`:
- *   id, foodItem, category, orderValue, deliveryTime, customerRating, createdAt
+ * All food records are saved in the "food_records" collection in Firestore.
  */
 
-/** Replaces this with a real client instance after installing the SDK. */
-const databaseClient: null = null;
-
-/** Throws a clear, actionable error instead of silently returning sample data. */
-function assertDatabaseReady(): void {
-  if (!DATABASE_CONFIGURED || databaseClient === null) {
+function assertDatabaseReady() {
+  if (!DATABASE_CONFIGURED) {
     throw new DataSourceError(
-      "The database is not connected yet. Add your Firebase or Supabase project, " +
-        "fill in src/services/databaseDataSource.ts and set DATABASE_CONFIGURED = true " +
-        "(see README.md -> Connecting Firebase or Supabase).",
+      "Database mode is enabled in config.ts, but DATABASE_CONFIGURED is false."
+    );
+  }
+  if (!isFirebaseConfigured()) {
+    throw new DataSourceError(
+      "Firebase credentials are missing or incomplete in .env.local. " +
+      "Please set NEXT_PUBLIC_FIREBASE_API_KEY and NEXT_PUBLIC_FIREBASE_PROJECT_ID."
     );
   }
 }
 
-/* ---------------------------------------------------------------------
- * Example implementation with Supabase
- * ---------------------------------------------------------------------
- * import { createClient } from "@supabase/supabase-js";
- *
- * const supabase = createClient(
- *   process.env.NEXT_PUBLIC_SUPABASE_URL!,
- *   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
- * );
- *
- * // getRecords()
- * const { data, error } = await supabase.from("food_records").select("*");
- * if (error) throw new DataSourceError(error.message);
- * return data.map(toFoodRecord);
- *
- * // addRecord()
- * const { data, error } = await supabase.from("food_records").insert(toRow(record)).select().single();
- * if (error) throw new DataSourceError(error.message);
- * return toFoodRecord(data);
- *
- * // removeSampleData(): the sample dataset is never inserted into the table,
- * // so there is nothing to delete - database records are always database-only.
- * ------------------------------------------------------------------- */
-
 export const databaseDataSource: DataSource = {
   getDataSourceStatus() {
+    const configured = DATABASE_CONFIGURED && isFirebaseConfigured();
     return {
       mode: "database",
-      label: "Live Database Data",
-      description: DATABASE_CONFIGURED
-        ? "Showing records retrieved from the connected database."
-        : "The database is selected but not connected yet - no records can be shown.",
-      isLive: DATABASE_CONFIGURED,
+      label: "Firebase Cloud Firestore",
+      description: configured
+        ? "Showing live records synchronized with Firebase Firestore."
+        : "Firebase project is connected in code, but environment variables are missing in .env.local.",
+      isLive: configured,
     };
   },
 
   async getRecords(): Promise<FoodRecord[]> {
     assertDatabaseReady();
-    // TODO: replace with the real SELECT query shown in the example above.
-    throw new DataSourceError("getRecords() is not implemented yet.");
+    const db = getDb();
+    if (!db) {
+      throw new DataSourceError("Could not initialize Firebase Firestore.");
+    }
+
+    try {
+      const recordsCol = collection(db, "food_records");
+      const snapshot = await getDocs(recordsCol);
+
+      const records: FoodRecord[] = [];
+      snapshot.forEach((docSnap) => {
+        const data = docSnap.data();
+        records.push({
+          id: docSnap.id,
+          foodItem: String(data.foodItem ?? "Unknown Item"),
+          category: String(data.category ?? "Other"),
+          orderValue: Number(data.orderValue) || 0,
+          deliveryTime: Number(data.deliveryTime) || 0,
+          customerRating: Number(data.customerRating) || 0,
+          createdAt: String(data.createdAt ?? new Date().toISOString()),
+          source: "database",
+        });
+      });
+
+      return records.sort(
+        (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      );
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to load records from Firestore.";
+      throw new DataSourceError(msg);
+    }
   },
 
   async refreshRecords(): Promise<FoodRecord[]> {
-    assertDatabaseReady();
-    // TODO: replace with the real SELECT query shown in the example above.
-    throw new DataSourceError("refreshRecords() is not implemented yet.");
+    return this.getRecords();
   },
 
-  // The parameter is omitted on purpose: this method throws until the real
-  // INSERT query is added, so it never needs the record it was given.
-  async addRecord(): Promise<FoodRecord> {
+  async addRecord(record: NewFoodRecord): Promise<FoodRecord> {
     assertDatabaseReady();
-    // TODO: replace with the real INSERT query shown in the example above.
-    throw new DataSourceError("addRecord() is not implemented yet.");
+    const db = getDb();
+    if (!db) {
+      throw new DataSourceError("Could not initialize Firebase Firestore.");
+    }
+
+    try {
+      const recordsCol = collection(db, "food_records");
+      const createdAt = new Date().toISOString();
+      const docData = {
+        foodItem: record.foodItem.trim(),
+        category: record.category.trim(),
+        orderValue: Number(record.orderValue),
+        deliveryTime: Number(record.deliveryTime),
+        customerRating: Number(record.customerRating),
+        createdAt,
+        source: "database",
+      };
+
+      const docRef = await addDoc(recordsCol, docData);
+
+      return {
+        id: docRef.id,
+        ...docData,
+        source: "database",
+      };
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : "Failed to save record to Firestore.";
+      throw new DataSourceError(msg);
+    }
   },
 };
