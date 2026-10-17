@@ -74,7 +74,13 @@ export function InsightsDashboard() {
                     <p className="mt-2 text-sm leading-relaxed text-brown-soft">{analysis.summary}</p>
                   </div>
 
-                  <div className="mt-4 rounded-2xl border border-peach-deep/60 bg-cream px-4 py-3">
+                  <div
+                    className="mt-4 rounded-2xl px-4 py-3"
+                    style={{
+                      background: "linear-gradient(145deg, #2e2010 0%, #1a1108 100%)",
+                      border: "1px solid rgba(212,160,23,0.25)",
+                    }}
+                  >
                     <MiniBarPreview
                       variant={analysis.previewVariant}
                       className="h-12 w-full"

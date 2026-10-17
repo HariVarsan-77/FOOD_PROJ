@@ -3,10 +3,19 @@ import Link from "next/link";
 /** Footer with the project note and the technology used. */
 export function SiteFooter() {
   return (
-    <footer className="mt-16 border-t border-peach-deep/70 bg-ivory">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-brown-soft sm:px-6 md:flex-row md:items-center md:justify-between">
+    <footer
+      className="mt-16"
+      style={{
+        background: "linear-gradient(180deg, #1a1108 0%, #0d0a06 100%)",
+        borderTop: "1px solid rgba(212,160,23,0.35)",
+      }}
+    >
+      <div
+        className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm sm:px-6 md:flex-row md:items-center md:justify-between"
+        style={{ color: "rgba(252,233,160,0.65)" }}
+      >
         <div>
-          <p className="font-display text-base font-bold text-brown">
+          <p className="font-display text-base font-bold" style={{ color: "#f0c842" }}>
             Food Delivery Data Analysis
           </p>
           <p className="mt-1 max-w-xl">
@@ -23,9 +32,16 @@ export function SiteFooter() {
           </Link>
         </div>
       </div>
-      <p className="border-t border-peach-deep/50 px-4 py-4 text-center text-xs text-brown-soft sm:px-6">
+      <p
+        className="px-4 py-4 text-center text-xs sm:px-6"
+        style={{
+          borderTop: "1px solid rgba(212,160,23,0.20)",
+          color: "rgba(252,233,160,0.40)",
+        }}
+      >
         The demo dataset is sample data for demonstration, not real delivery records.
       </p>
     </footer>
   );
 }
+

@@ -1,39 +1,52 @@
 @import "tailwindcss";
 
 /* =====================================================================
-   Design tokens - the food-inspired palette used by the whole website.
+   Design tokens — vibrant crème / black / orange / gold palette.
    Every colour below also becomes a Tailwind utility, e.g. `bg-primary`,
-   `text-brown`, `border-peach`.
+   `text-onyx`, `border-gold`.
    ===================================================================== */
 @theme {
-  /* Primary: dark burnt orange */
-  --color-primary: #c1440e;
-  --color-primary-dark: #9a3409;
-  --color-primary-soft: #e4762b;
+  /* Primary: vivid flame orange */
+  --color-primary:      #e85d04;
+  --color-primary-dark: #c44b02;
+  --color-primary-soft: #ff7c2a;
 
-  /* Backgrounds: golden cream page, warm cream panels, deeper gold accents */
-  --color-cream: #f4deaa;
-  --color-ivory: #fdf4de;
-  --color-peach: #edc884;
-  --color-peach-deep: #d9b264;
+  /* Crème & ivory backgrounds */
+  --color-cream:       #fef3dc;
+  --color-ivory:       #fffbf0;
 
-  /* Text: near-black ink (the black of the orange + black combo) */
-  --color-brown: #171008;
-  --color-brown-soft: #4a3b2c;
+  /* Gold spectrum */
+  --color-gold:        #d4a017;
+  --color-gold-light:  #f0c842;
+  --color-gold-soft:   #fce9a0;
+  --color-peach:       #f5d080;
+  --color-peach-deep:  #c9920a;
 
-  /* Muted green for success and positive indicators */
-  --color-success: #3f7a4b;
-  --color-success-soft: #dfe9db;
+  /* Deep blacks */
+  --color-onyx:        #0d0a06;
+  --color-obsidian:    #1a1108;
+  --color-charcoal:    #2e2010;
 
-  /* Muted red for validation errors and failures */
-  --color-danger: #b23b2e;
-  --color-danger-soft: #fbe9e6;
+  /* Keep legacy aliases so nothing breaks */
+  --color-brown:       #0d0a06;
+  --color-brown-soft:  #5a4020;
+
+  /* Muted green for success */
+  --color-success:      #2d7a4b;
+  --color-success-soft: #d6edd9;
+
+  /* Muted red for errors */
+  --color-danger:      #b83030;
+  --color-danger-soft: #fce8e8;
 
   --font-display: var(--font-baloo), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-sans:    var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-panel: 0 10px 30px -18px rgba(63, 42, 27, 0.45);
-  --shadow-lift: 0 16px 38px -20px rgba(63, 42, 27, 0.55);
+  --shadow-panel:  0 8px 32px -12px rgba(13, 10, 6, 0.55);
+  --shadow-lift:   0 20px 48px -18px rgba(232, 93, 4, 0.45);
+  --shadow-gold:   0 0 0 2px rgba(212, 160, 23, 0.35);
+  --glow-orange:   0 0 28px -6px rgba(232, 93, 4, 0.60);
+  --glow-gold:     0 0 28px -6px rgba(212, 160, 23, 0.55);
 }
 
 /* =====================================================================
@@ -44,98 +57,140 @@ html {
 }
 
 body {
-  background-color: var(--color-cream);
-  color: var(--color-brown);
+  /* Rich crème + subtle warm vignette background */
+  background-color: #fef3dc;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 10% 0%,   rgba(212,160,23,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 90% 100%,  rgba(232,93,4,0.10)  0%, transparent 60%),
+    radial-gradient(ellipse 100% 80% at 50% 50%,  rgba(255,251,240,0.40) 0%, transparent 100%);
+  color: var(--color-onyx);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
   letter-spacing: -0.01em;
 }
 
-/* Visible focus ring for keyboard users */
+/* Vivid focus ring */
 :focus-visible {
-  outline: 3px solid var(--color-primary);
+  outline: 3px solid var(--color-gold);
   outline-offset: 2px;
   border-radius: 0.5rem;
 }
 
 /* =====================================================================
-   Reusable pieces
+   Reusable component classes
    ===================================================================== */
 @layer components {
-  /* Cream content panel with a soft shadow */
+
+  /* ── Panels ─────────────────────────────────────────────────────── */
   .panel {
-    @apply rounded-3xl border border-peach-deep/70 bg-ivory p-6;
-    box-shadow: var(--shadow-panel);
+    @apply rounded-3xl p-6;
+    background: linear-gradient(145deg, #fffbf0 0%, #fef3dc 100%);
+    border: 1px solid rgba(212, 160, 23, 0.40);
+    box-shadow: var(--shadow-panel), inset 0 1px 0 rgba(255,255,255,0.80);
   }
 
   .panel-tight {
-    @apply rounded-2xl border border-peach-deep/60 bg-ivory p-4;
+    @apply rounded-2xl p-4;
+    background: linear-gradient(145deg, #fffbf0 0%, #fef3dc 100%);
+    border: 1px solid rgba(212, 160, 23, 0.35);
+    box-shadow: var(--shadow-panel);
   }
 
-  /* Buttons */
+  /* ── Buttons ────────────────────────────────────────────────────── */
   .btn {
     @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
-      text-sm font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-60;
+           text-sm font-bold transition-all duration-200
+           disabled:cursor-not-allowed disabled:opacity-50;
   }
 
+  /* Flame-orange primary — glows on hover */
   .btn-primary {
-    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-primary px-5
-      py-2.5 text-sm font-bold text-ivory transition duration-200 hover:bg-primary-dark
-      disabled:cursor-not-allowed disabled:opacity-60;
-    box-shadow: 0 10px 22px -14px rgba(193, 68, 14, 0.9);
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
+           text-sm font-bold text-ivory transition-all duration-200
+           disabled:cursor-not-allowed disabled:opacity-50;
+    background: linear-gradient(135deg, #ff7c2a 0%, #e85d04 55%, #c44b02 100%);
+    box-shadow: 0 6px 20px -8px rgba(232,93,4,0.75), inset 0 1px 0 rgba(255,255,255,0.25);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #ff9040 0%, #ff6a10 55%, #d45503 100%);
+    box-shadow: var(--glow-orange), 0 6px 20px -8px rgba(232,93,4,0.90), inset 0 1px 0 rgba(255,255,255,0.30);
+    transform: translateY(-1px);
   }
 
-  /* Black outlined button: the black half of the orange + black combo */
+  /* Onyx/black secondary with gold border glow */
   .btn-secondary {
-    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border
-      border-brown bg-ivory px-5 py-2.5 text-sm font-bold text-brown transition duration-200
-      hover:bg-brown hover:text-ivory disabled:cursor-not-allowed disabled:opacity-60;
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
+           text-sm font-bold transition-all duration-200
+           disabled:cursor-not-allowed disabled:opacity-50;
+    background: linear-gradient(135deg, #2e2010 0%, #0d0a06 100%);
+    border: 1.5px solid rgba(212,160,23,0.60);
+    color: #fce9a0;
+    box-shadow: 0 4px 16px -8px rgba(13,10,6,0.70), inset 0 1px 0 rgba(255,255,255,0.06);
+  }
+  .btn-secondary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #3e2c14 0%, #1a1108 100%);
+    border-color: rgba(212,160,23,0.90);
+    box-shadow: var(--glow-gold), 0 4px 16px -8px rgba(13,10,6,0.80);
+    color: #f0c842;
+    transform: translateY(-1px);
   }
 
+  /* Ghost — subtle gold tint on hover */
   .btn-ghost {
     @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full px-5 py-2.5
-      text-sm font-bold text-brown transition duration-200 hover:bg-peach hover:text-primary
-      disabled:cursor-not-allowed disabled:opacity-60;
+           text-sm font-bold text-onyx transition-all duration-200
+           disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: rgba(212,160,23,0.18);
+    color: var(--color-primary);
   }
 
-  /* Small rounded label */
+  /* ── Badge ──────────────────────────────────────────────────────── */
   .badge {
     @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold;
   }
 
-  /* Form controls */
+  /* ── Form controls ──────────────────────────────────────────────── */
   .field-label {
-    @apply mb-1.5 block text-sm font-bold text-brown;
+    @apply mb-1.5 block text-sm font-bold text-onyx;
   }
 
   .input {
-    @apply w-full rounded-2xl border border-peach-deep bg-ivory px-4 py-2.5 text-sm text-brown
-      transition placeholder:text-brown-soft/60 focus:border-primary focus:outline-none;
+    @apply w-full rounded-2xl px-4 py-2.5 text-sm text-onyx transition-all
+           placeholder:text-brown-soft/60 focus:outline-none;
+    background: #fffbf0;
+    border: 1.5px solid rgba(212,160,23,0.45);
+    box-shadow: inset 0 1px 3px rgba(13,10,6,0.06);
+  }
+  .input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(232,93,4,0.15), inset 0 1px 3px rgba(13,10,6,0.06);
   }
 
   .input-error {
-    @apply border-danger;
+    border-color: var(--color-danger) !important;
+    box-shadow: 0 0 0 3px rgba(184,48,48,0.12) !important;
   }
 
-  /* Table cells that stay readable on small screens */
+  /* ── Table ──────────────────────────────────────────────────────── */
   .table-cell {
     @apply whitespace-nowrap px-4 py-3 text-sm;
   }
 }
 
-/* Hide the scrollbar of the horizontally scrollable category row */
+/* =====================================================================
+   Scrollbar hidden
+   ===================================================================== */
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+

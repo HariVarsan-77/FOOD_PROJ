@@ -24,26 +24,53 @@ export function NavBar() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const linkClass = (href: string) =>
-    `rounded-full px-4 py-2 text-sm font-bold transition ${
-      isActive(href) ? "bg-primary text-ivory" : "text-brown hover:bg-peach"
-    }`;
+    isActive(href)
+      ? "rounded-full px-4 py-2 text-sm font-bold transition-all duration-200 text-ivory"
+      : "rounded-full px-4 py-2 text-sm font-bold transition-all duration-200 text-gold-soft hover:text-gold-light";
+
+  const activeLinkStyle = (href: string) =>
+    isActive(href)
+      ? {
+          background: "linear-gradient(135deg, #ff7c2a 0%, #e85d04 100%)",
+          boxShadow: "0 0 16px -4px rgba(232,93,4,0.65)",
+        }
+      : {};
 
   return (
-    <header className="sticky top-0 z-40 border-b border-peach-deep/70 bg-cream/95 backdrop-blur">
+    <header
+      className="sticky top-0 z-40 backdrop-blur-md"
+      style={{
+        background: "linear-gradient(90deg, #1a1108 0%, #0d0a06 100%)",
+        borderBottom: "1px solid rgba(212,160,23,0.35)",
+        boxShadow: "0 4px 24px -8px rgba(13,10,6,0.70), inset 0 -1px 0 rgba(212,160,23,0.20)",
+      }}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link
           href="/"
           className="flex items-center gap-3 rounded-2xl"
           onClick={() => setIsMenuOpen(false)}
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-peach">
-            <FoodLogoMark className="h-8 w-8" />
+          <span
+            className="flex h-11 w-11 items-center justify-center rounded-2xl"
+            style={{
+              background: "linear-gradient(135deg, #f0c842 0%, #d4a017 100%)",
+              boxShadow: "0 0 14px -4px rgba(212,160,23,0.60)",
+            }}
+          >
+            <FoodLogoMark className="h-8 w-8" style={{ color: "#0d0a06" }} />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-base font-extrabold text-primary">
+            <span
+              className="block font-display text-base font-extrabold"
+              style={{ color: "#f0c842" }}
+            >
               Food Delivery
             </span>
-            <span className="block text-[11px] font-bold tracking-[0.16em] text-brown-soft uppercase">
+            <span
+              className="block text-[11px] font-bold tracking-[0.16em] uppercase"
+              style={{ color: "rgba(252,233,160,0.65)" }}
+            >
               Data Analysis
             </span>
           </span>
@@ -55,6 +82,7 @@ export function NavBar() {
               key={link.href}
               href={link.href}
               className={linkClass(link.href)}
+              style={activeLinkStyle(link.href)}
               aria-current={isActive(link.href) ? "page" : undefined}
             >
               {link.label}
@@ -64,7 +92,12 @@ export function NavBar() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-2xl border border-peach-deep bg-ivory text-brown transition hover:bg-peach sm:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-2xl transition"
+          style={{
+            background: "#1a1108",
+            border: "1.5px solid rgba(212,160,23,0.50)",
+            color: "#fce9a0",
+          }}
           onClick={() => setIsMenuOpen((open) => !open)}
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
@@ -82,7 +115,11 @@ export function NavBar() {
         <nav
           id="mobile-navigation"
           aria-label="Mobile navigation"
-          className="border-t border-peach-deep/70 bg-ivory px-4 py-2 sm:hidden"
+          className="px-4 py-2 sm:hidden"
+          style={{
+            borderTop: "1px solid rgba(212,160,23,0.25)",
+            background: "#0d0a06",
+          }}
         >
           <ul className="flex flex-col">
             {NAV_LINKS.map((link) => (
@@ -90,8 +127,15 @@ export function NavBar() {
                 <Link
                   href={link.href}
                   className={`block rounded-2xl px-4 py-3 text-sm font-bold transition ${
-                    isActive(link.href) ? "bg-primary text-ivory" : "text-brown hover:bg-peach"
+                    isActive(link.href) ? "text-ivory" : "hover:bg-white/5"
                   }`}
+                  style={
+                    isActive(link.href)
+                      ? {
+                          background: "linear-gradient(135deg, #ff7c2a 0%, #e85d04 100%)",
+                        }
+                      : { color: "#fce9a0" }
+                  }
                   aria-current={isActive(link.href) ? "page" : undefined}
                   onClick={() => setIsMenuOpen(false)}
                 >

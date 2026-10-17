@@ -22,18 +22,64 @@ const HERO_ILLUSTRATIONS = [
 /** The landing hero: project title, one paragraph and the main call to action. */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-peach-deep/60 bg-peach/45">
-      {/* Soft decorative circles, purely visual */}
-      <span className="pointer-events-none absolute -top-16 -left-16 h-56 w-56 rounded-full bg-ivory/50" />
-      <span className="pointer-events-none absolute -right-10 -bottom-10 h-44 w-44 rounded-full bg-ivory/40" />
+    <section
+      className="relative overflow-hidden border-b"
+      style={{
+        background: "linear-gradient(135deg, #0d0a06 0%, #1a1108 40%, #2e1a06 80%, #0d0a06 100%)",
+        borderColor: "rgba(212,160,23,0.35)",
+      }}
+    >
+      {/* Gold radial glow decorations */}
+      <span
+        className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(212,160,23,0.20) 0%, transparent 70%)",
+        }}
+      />
+      <span
+        className="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(232,93,4,0.18) 0%, transparent 70%)",
+        }}
+      />
+      <span
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background: "radial-gradient(circle, rgba(212,160,23,0.05) 0%, transparent 70%)",
+        }}
+      />
 
       <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
         <div>
-          <h1 className="font-display text-4xl leading-[1.05] font-extrabold text-primary sm:text-5xl lg:text-[3.4rem]">
+          {/* Gold accent line above heading */}
+          <div
+            className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold"
+            style={{
+              background: "rgba(212,160,23,0.15)",
+              border: "1px solid rgba(212,160,23,0.40)",
+              color: "#f0c842",
+            }}
+          >
+            <span
+              className="h-1.5 w-1.5 rounded-full"
+              style={{ background: "#f0c842" }}
+            />
+            Interactive Data Dashboard
+          </div>
+
+          <h1
+            className="font-display text-4xl leading-[1.05] font-extrabold sm:text-5xl lg:text-[3.4rem]"
+            style={{
+              background: "linear-gradient(135deg, #f0c842 0%, #fce9a0 40%, #e85d04 75%, #ff7c2a 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+            }}
+          >
             FOOD DELIVERY DATA ANALYSIS
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-brown sm:text-lg">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed sm:text-lg" style={{ color: "rgba(252,233,160,0.80)" }}>
             Turn food delivery data into meaningful business insights. Explore revenue trends,
             discover popular food categories, evaluate delivery efficiency, and understand customer
             satisfaction through simple calculations and interactive visualizations.
@@ -51,13 +97,17 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Cartoon food illustrations */}
+        {/* Cartoon food illustrations on dark cards */}
         <div className="grid grid-cols-3 gap-4" aria-hidden="true">
-          {HERO_ILLUSTRATIONS.map(({ Component, background }, index) => (
+          {HERO_ILLUSTRATIONS.map(({ Component }, index) => (
             <div
               key={index}
-              className={`flex aspect-square items-center justify-center rounded-3xl border border-peach-deep/60 ${background} p-3 transition duration-200 hover:-translate-y-1`}
-              style={{ boxShadow: "var(--shadow-panel)" }}
+              className="flex aspect-square items-center justify-center rounded-3xl p-3 transition duration-200 hover:-translate-y-1"
+              style={{
+                background: "linear-gradient(145deg, #2e2010 0%, #1a1108 100%)",
+                border: "1px solid rgba(212,160,23,0.30)",
+                boxShadow: "0 8px 24px -12px rgba(13,10,6,0.80), inset 0 1px 0 rgba(212,160,23,0.15)",
+              }}
             >
               <Component className="h-full w-full" />
             </div>
@@ -67,3 +117,4 @@ export function Hero() {
     </section>
   );
 }
+
