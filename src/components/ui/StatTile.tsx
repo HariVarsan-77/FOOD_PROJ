@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import type { ReactNode } from "react";
+import type { ComponentType, ReactNode } from "react";
 import { Info, Sparkles } from "lucide-react";
 
 /**
@@ -17,7 +17,7 @@ export function StatTile({
   /** null shows the empty state instead of a misleading 0. */
   value: string | null;
   hint?: string;
-  icon: LucideIcon;
+  icon: LucideIcon | ComponentType<{ className?: string }>;
   emptyMessage: string;
 }) {
   return (

@@ -19,16 +19,11 @@ import {
 import { AnalysisPageFrame, AnalysisSection } from "@/components/analysis/AnalysisPageFrame";
 import { CategoryBarChart, type BarChartPoint } from "@/components/charts/CategoryBarChart";
 import {
-  BurgerIllustration,
   DeliveryBagIllustration,
   DessertIllustration,
-  DrinkIllustration,
-  FriesIllustration,
   FoodLogoMark,
-  NoodlesIllustration,
-  PizzaIllustration,
-  SaladIllustration,
 } from "@/components/illustrations/FoodIllustrations";
+import { FoodIllustration, getFoodIllustration } from "@/components/illustrations/foodRegistry";
 import { CaveatNote, InsightPanel, StatTile } from "@/components/ui/StatTile";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/StateBlocks";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -80,6 +75,7 @@ export function FinalAnalysisPage() {
     popularity,
     delivery,
     satisfaction,
+    categoryRatings,
     summary,
     sampleCount,
     userCount,
@@ -160,7 +156,11 @@ export function FinalAnalysisPage() {
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                 <IllustrationTile>
-                  <NoodlesIllustration className="h-full w-full" />
+                  <FoodIllustration
+                    category={revenue.topCategory?.category}
+                    fallback={DeliveryBagIllustration}
+                    className="h-full w-full"
+                  />
                 </IllustrationTile>
                 <SummaryText>
                   <p>
@@ -234,9 +234,9 @@ export function FinalAnalysisPage() {
                   }}
                   aria-hidden="true"
                 >
-                  <FriesIllustration className="h-12 w-12" />
-                  <DrinkIllustration className="h-12 w-12" />
-                  <SaladIllustration className="h-12 w-12" />
+                  <FoodIllustration category={revenue.topCategory?.category} className="h-12 w-12" />
+                  <FoodIllustration category={popularity.topCategory?.category} className="h-12 w-12" />
+                  <FoodIllustration category={delivery.fastestCategory?.category} className="h-12 w-12" />
                 </div>
               </div>
             </AnalysisSection>
@@ -252,7 +252,7 @@ export function FinalAnalysisPage() {
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                   <IllustrationTile>
-                    <PizzaIllustration className="h-full w-full" />
+                    <FoodIllustration category={revenue.topCategory?.category} className="h-full w-full" />
                   </IllustrationTile>
                   <SummaryText>
                     <p>
@@ -298,7 +298,7 @@ export function FinalAnalysisPage() {
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                   <IllustrationTile>
-                    <BurgerIllustration className="h-full w-full" />
+                    <FoodIllustration category={popularity.topCategory?.category} className="h-full w-full" />
                   </IllustrationTile>
                   <SummaryText>
                     {popularity.topCategory ? (
@@ -342,7 +342,11 @@ export function FinalAnalysisPage() {
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                   <IllustrationTile>
-                    <DeliveryBagIllustration className="h-full w-full" />
+                    <FoodIllustration
+                      category={delivery.fastestCategory?.category}
+                      fallback={DeliveryBagIllustration}
+                      className="h-full w-full"
+                    />
                   </IllustrationTile>
                   <SummaryText>
                     <p>
@@ -395,7 +399,11 @@ export function FinalAnalysisPage() {
               >
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
                   <IllustrationTile>
-                    <DessertIllustration className="h-full w-full" />
+                    <FoodIllustration
+                      category={categoryRatings.highestRatedCategory?.category}
+                      fallback={DessertIllustration}
+                      className="h-full w-full"
+                    />
                   </IllustrationTile>
                   <SummaryText>
                     <p>
@@ -415,6 +423,12 @@ export function FinalAnalysisPage() {
                       </strong>{" "}
                       stars in favor of rapid fulfillment.
                     </p>
+                    {categoryRatings.highestRatedCategory ? (
+                      <p>
+                        Across menu categories, <strong>{categoryRatings.highestRatedCategory.category}</strong> achieves the highest average satisfaction rating at{" "}
+                        <strong>{formatRating(categoryRatings.highestRatedCategory.averageRating)} stars</strong> (from {formatNumber(categoryRatings.highestRatedCategory.orderCount)} rated orders).
+                      </p>
+                    ) : null}
                   </SummaryText>
                 </div>
 
@@ -538,7 +552,11 @@ export function FinalAnalysisPage() {
             >
               <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
                 <IllustrationTile>
-                  <FoodLogoMark className="h-full w-full" />
+                  <FoodIllustration
+                    category={revenue.topCategory?.category}
+                    fallback={FoodLogoMark}
+                    className="h-full w-full"
+                  />
                 </IllustrationTile>
                 <div className="space-y-4 text-sm leading-relaxed text-brown sm:text-base flex-1">
                   <div className="flex items-start gap-3">

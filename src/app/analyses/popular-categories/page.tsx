@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { AnalysisPageFrame, AnalysisSection } from "@/components/analysis/AnalysisPageFrame";
 import { CategoryBarChart, type BarChartPoint } from "@/components/charts/CategoryBarChart";
+import { getFoodIllustration } from "@/components/illustrations/foodRegistry";
 import { InsightPanel, StatTile } from "@/components/ui/StatTile";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/StateBlocks";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -78,7 +79,7 @@ export default function PopularCategoriesPage() {
                     ? `${formatNumber(popularity.topCategory.value)} orders (${formatPercent(popularity.topCategory.share)})`
                     : undefined
                 }
-                icon={Crown}
+                icon={getFoodIllustration(popularity.topCategory?.category)}
                 emptyMessage="No category has orders."
               />
             </ScrollReveal>

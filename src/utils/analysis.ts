@@ -1,5 +1,7 @@
 import type {
   CategoryMetric,
+  CategoryRatingMetric,
+  CategoryRatingsAnalysis,
   DeliveryAnalysis,
   DeliveryCategoryMetric,
   PopularityAnalysis,
@@ -231,3 +233,37 @@ export function getSummaryStats(records: FoodRecord[]): SummaryStats {
       valid.length > 0 ? average(valid.map((record) => record.customerRating)) : null,
   };
 }
+
+/* ------------------------------------------------------------------ */
+/* 5. Category ratings analysis (Highest and Lowest Rated)            */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Average customer satisfaction rating per category, ordered from highest
+ * to lowest rated. Uses existing rating validity criteria and average calculation.
+ */
+export function analyzeCategoryRatings(records: FoodRecord[]): CategoryRatingsAnalysis {
+  const eligible = records.filter(hasValidRating);
+  const byCategory: CategoryRatingMetric[] = [];
+
+  for (const [category, group] of groupByCategory(eligible)) {
+    const ratings = group.map((record) => record.customerRating);
+    byCategory.push({
+      category,
+      averageRating: average(ratings),
+      orderCount: group.length,
+    });
+  }
+
+  // Sort descending by average rating; use order volume as tie-breaker
+  byCategory.sort((a, b) => b.averageRating - a.averageRating || b.orderCount - a.orderCount);
+
+  return {
+    eligibleOrders: eligible.length,
+    byCategory,
+    highestRatedCategory: byCategory[0] ?? null,
+    lowestRatedCategory: byCategory.length > 0 ? byCategory[byCategory.length - 1] : null,
+    hasData: eligible.length > 0,
+  };
+}
+

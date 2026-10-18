@@ -66,6 +66,21 @@ export interface SatisfactionAnalysis {
   hasData: boolean;
 }
 
+/** One category in the category ratings ranking. */
+export interface CategoryRatingMetric {
+  category: string;
+  averageRating: number;
+  orderCount: number;
+}
+
+export interface CategoryRatingsAnalysis {
+  eligibleOrders: number;
+  byCategory: CategoryRatingMetric[];
+  highestRatedCategory: CategoryRatingMetric | null;
+  lowestRatedCategory: CategoryRatingMetric | null;
+  hasData: boolean;
+}
+
 /** Numbers shown on the home page. `null` means "no valid data for this metric". */
 export interface SummaryStats {
   validOrders: number;
@@ -73,3 +88,4 @@ export interface SummaryStats {
   averageDeliveryTime: number | null;
   averageRating: number | null;
 }
+

@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { AnalysisPageFrame, AnalysisSection } from "@/components/analysis/AnalysisPageFrame";
 import { CategoryBarChart, type BarChartPoint } from "@/components/charts/CategoryBarChart";
+import { FoodIllustration } from "@/components/illustrations/foodRegistry";
 import { CaveatNote, InsightPanel, StatTile } from "@/components/ui/StatTile";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/StateBlocks";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -20,7 +21,7 @@ import { useFoodRecords } from "@/hooks/useFoodRecords";
 import { formatMinutes, formatNumber, formatRating } from "@/utils/format";
 
 export default function CustomerSatisfactionPage() {
-  const { status, isLoading, error, refresh, satisfaction } = useFoodRecords();
+  const { status, isLoading, error, refresh, satisfaction, categoryRatings } = useFoodRecords();
 
   const chartData: BarChartPoint[] = [
     {
@@ -291,6 +292,18 @@ export default function CustomerSatisfactionPage() {
                   statistically significant in the hospitality sector. It directly confirms that delivery promptness is
                   not merely a logistics metric, but an active component of brand equity and customer retention.
                 </p>
+              ) : null}
+              {categoryRatings.highestRatedCategory ? (
+                <div className="mt-4 flex items-center gap-3 rounded-2xl border border-peach-deep/30 bg-white/70 p-3.5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-ivory p-1.5 shadow-sm border border-gold/30">
+                    <FoodIllustration category={categoryRatings.highestRatedCategory.category} className="h-full w-full" />
+                  </div>
+                  <div className="text-xs sm:text-sm">
+                    <span className="font-bold text-onyx">Highest-Rated Menu Category: </span>
+                    <strong className="text-primary">{categoryRatings.highestRatedCategory.category}</strong> ranks #1 in customer satisfaction with an average rating of{" "}
+                    <strong>{formatRating(categoryRatings.highestRatedCategory.averageRating)} stars</strong> across {formatNumber(categoryRatings.highestRatedCategory.orderCount)} rated orders.
+                  </div>
+                </div>
               ) : null}
             </InsightPanel>
           </ScrollReveal>

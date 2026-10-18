@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { AnalysisPageFrame, AnalysisSection } from "@/components/analysis/AnalysisPageFrame";
 import { CategoryBarChart, type BarChartPoint } from "@/components/charts/CategoryBarChart";
+import { getFoodIllustration } from "@/components/illustrations/foodRegistry";
 import { CaveatNote, InsightPanel, StatTile } from "@/components/ui/StatTile";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/StateBlocks";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
@@ -86,7 +87,7 @@ export default function RevenueAnalysisPage() {
                     ? `${formatCurrency(revenue.topCategory.value)} (${formatPercent(revenue.topCategory.share)})`
                     : undefined
                 }
-                icon={Sparkles}
+                icon={getFoodIllustration(revenue.topCategory?.category)}
                 emptyMessage="No category has revenue."
               />
             </ScrollReveal>

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { getDataSource, getErrorMessage } from "@/services";
 import type {
+  CategoryRatingsAnalysis,
   DeliveryAnalysis,
   PopularityAnalysis,
   RevenueAnalysis,
@@ -11,6 +12,7 @@ import type {
 } from "@/types/analysis";
 import type { DataSourceStatus, FoodRecord, NewFoodRecord } from "@/types/records";
 import {
+  analyzeCategoryRatings,
   analyzeDelivery,
   analyzePopularity,
   analyzeRevenue,
@@ -35,6 +37,7 @@ export interface UseFoodRecordsResult {
   popularity: PopularityAnalysis;
   delivery: DeliveryAnalysis;
   satisfaction: SatisfactionAnalysis;
+  categoryRatings: CategoryRatingsAnalysis;
   summary: SummaryStats;
   sampleCount: number;
   userCount: number;
@@ -110,6 +113,7 @@ export function useFoodRecords(): UseFoodRecordsResult {
   const popularity = useMemo(() => analyzePopularity(records), [records]);
   const delivery = useMemo(() => analyzeDelivery(records), [records]);
   const satisfaction = useMemo(() => analyzeSatisfaction(records), [records]);
+  const categoryRatings = useMemo(() => analyzeCategoryRatings(records), [records]);
   const summary = useMemo(() => getSummaryStats(records), [records]);
 
   const sampleCount = useMemo(
@@ -133,6 +137,7 @@ export function useFoodRecords(): UseFoodRecordsResult {
     popularity,
     delivery,
     satisfaction,
+    categoryRatings,
     summary,
     sampleCount,
     userCount,

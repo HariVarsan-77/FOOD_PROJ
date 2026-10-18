@@ -1,32 +1,148 @@
 "use client";
 
+import { useMemo } from "react";
 import Link from "next/link";
 import { ArrowDown, Plus, Sparkles, TrendingUp, ShieldCheck, Zap } from "lucide-react";
-import {
-  BurgerIllustration,
-  DessertIllustration,
-  DrinkIllustration,
-  FriesIllustration,
-  NoodlesIllustration,
-  PizzaIllustration,
-} from "@/components/illustrations/FoodIllustrations";
+import { getFoodIllustration } from "@/components/illustrations/foodRegistry";
+import { useFoodRecords } from "@/hooks/useFoodRecords";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-
-const HERO_TILES = [
-  { Component: PizzaIllustration, label: "Pizza", tag: "Revenue Anchor" },
-  { Component: BurgerIllustration, label: "Burgers", tag: "Top Volume" },
-  { Component: NoodlesIllustration, label: "Noodles", tag: "Fast Transit" },
-  { Component: FriesIllustration, label: "Sides", tag: "Add-on Margin" },
-  { Component: DrinkIllustration, label: "Drinks", tag: "Instant Dispatch" },
-  { Component: DessertIllustration, label: "Desserts", tag: "Rating Leader" },
-];
 
 /**
  * 2.5D Elevated Hero Section.
  * Sets a distinctive visual identity with layered perspective,
  * clear focal hierarchy, and authentic analytical narrative.
+ * Renders the top analytical category leaders dynamically based on active dataset records.
  */
 export function Hero() {
+  const { revenue, popularity, delivery, categoryRatings } = useFoodRecords();
+
+  const heroTiles = useMemo(() => {
+    const revLeader = revenue.topCategory?.category;
+    const volLeader = popularity.topCategory?.category;
+    const fastLeader = delivery.fastestCategory?.category;
+    const ratingLeader = categoryRatings.highestRatedCategory?.category;
+
+    // Fallback if data is not loaded yet
+    if (!revLeader && !volLeader) {
+      return [
+        { Component: getFoodIllustration("Indian Food"), label: "Indian Food", tag: "Revenue Anchor" },
+        { Component: getFoodIllustration("Biryani"), label: "Biryani", tag: "Top Volume" },
+        { Component: getFoodIllustration("Burgers"), label: "Burgers", tag: "Menu Staple" },
+        { Component: getFoodIllustration("Pizza"), label: "Pizza", tag: "Popular Choice" },
+        { Component: getFoodIllustration("Beverages"), label: "Beverages", tag: "Fast Transit" },
+        { Component: getFoodIllustration("Desserts"), label: "Desserts", tag: "Rating Leader" },
+      ];
+    }
+
+    const tiles: {
+      Component: React.ComponentType<{ className?: string }>;
+      label: string;
+      tag: string;
+    }[] = [];
+    const usedCategories = new Set<string>();
+
+    // 1. Revenue Anchor (Rank 1 in Revenue)
+    if (revLeader) {
+      tiles.push({
+        Component: getFoodIllustration(revLeader),
+        label: revLeader,
+        tag: "Revenue Anchor",
+      });
+      usedCategories.add(revLeader);
+    }
+
+    // 2. Top Volume (Rank 1 in Order Volume)
+    if (volLeader && !usedCategories.has(volLeader)) {
+      tiles.push({
+        Component: getFoodIllustration(volLeader),
+        label: volLeader,
+        tag: "Top Volume",
+      });
+      usedCategories.add(volLeader);
+    } else if (popularity.byCategory.length > 1) {
+      const runnerUp = popularity.byCategory.find((c) => !usedCategories.has(c.category));
+      if (runnerUp) {
+        tiles.push({
+          Component: getFoodIllustration(runnerUp.category),
+          label: runnerUp.category,
+          tag: "Top Volume",
+        });
+        usedCategories.add(runnerUp.category);
+      }
+    }
+
+    // 3. Fast Transit (Rank 1 in Delivery Speed)
+    if (fastLeader && !usedCategories.has(fastLeader)) {
+      tiles.push({
+        Component: getFoodIllustration(fastLeader),
+        label: fastLeader,
+        tag: "Fast Transit",
+      });
+      usedCategories.add(fastLeader);
+    } else if (delivery.byCategory.length > 0) {
+      const nextFast = delivery.byCategory.find((c) => !usedCategories.has(c.category));
+      if (nextFast) {
+        tiles.push({
+          Component: getFoodIllustration(nextFast.category),
+          label: nextFast.category,
+          tag: "Fast Transit",
+        });
+        usedCategories.add(nextFast.category);
+      }
+    }
+
+    // 4. Rating Leader (Rank 1 in Customer Rating)
+    if (ratingLeader && !usedCategories.has(ratingLeader)) {
+      tiles.push({
+        Component: getFoodIllustration(ratingLeader),
+        label: ratingLeader,
+        tag: "Rating Leader",
+      });
+      usedCategories.add(ratingLeader);
+    } else if (categoryRatings.byCategory.length > 0) {
+      const nextRated = categoryRatings.byCategory.find((c) => !usedCategories.has(c.category));
+      if (nextRated) {
+        tiles.push({
+          Component: getFoodIllustration(nextRated.category),
+          label: nextRated.category,
+          tag: "Rating Leader",
+        });
+        usedCategories.add(nextRated.category);
+      }
+    }
+
+    // 5 & 6: Fill with remaining active categories from dataset
+    const activeCandidates = [
+      ...popularity.byCategory.map((c) => c.category),
+      ...revenue.byCategory.map((c) => c.category),
+      "Indian Food",
+      "Pizza",
+      "Burgers",
+      "Desserts",
+      "Beverages",
+      "Fast Food",
+      "Chinese Food",
+    ];
+
+    const descriptiveTags = ["Menu Staple", "Customer Favorite", "Add-on Margin", "Chef Specialty"];
+    let tagIdx = 0;
+
+    for (const cat of activeCandidates) {
+      if (tiles.length >= 6) break;
+      if (!usedCategories.has(cat)) {
+        tiles.push({
+          Component: getFoodIllustration(cat),
+          label: cat,
+          tag: descriptiveTags[tagIdx % descriptiveTags.length],
+        });
+        usedCategories.add(cat);
+        tagIdx++;
+      }
+    }
+
+    return tiles.slice(0, 6);
+  }, [revenue, popularity, delivery, categoryRatings]);
+
   return (
     <section
       className="relative overflow-hidden border-b"
@@ -170,7 +286,7 @@ export function Hero() {
             </div>
 
             <div className="grid grid-cols-3 gap-3.5">
-              {HERO_TILES.map(({ Component, label, tag }, index) => (
+              {heroTiles.map(({ Component, label, tag }, index) => (
                 <div
                   key={index}
                   className="group relative flex flex-col items-center justify-center rounded-2xl p-3 transition-all duration-300 hover:-translate-y-1.5"
