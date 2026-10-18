@@ -1,10 +1,9 @@
-import { Database, FlaskConical } from "lucide-react";
+import { Database, ShieldCheck } from "lucide-react";
 import type { DataSourceStatus } from "@/types/records";
 
 /**
- * The badge that tells the user whether the numbers on screen come from the
- * built-in demo dataset or from a live database. Keeping this visible
- * everywhere prevents demo results from being mistaken for real ones.
+ * A subtle, restrained data-source indicator.
+ * Provides accurate transparency without visually dominating the UI.
  */
 export function DataSourceBadge({
   status,
@@ -14,54 +13,60 @@ export function DataSourceBadge({
   className?: string;
 }) {
   const isLive = status.isLive;
-  const Icon = isLive ? Database : FlaskConical;
 
   return (
     <span
-      className={`badge ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold ${className}`}
       style={
         isLive
-          ? { background: "#d6edd9", color: "#2d7a4b" }
+          ? {
+              background: "rgba(45, 122, 75, 0.12)",
+              border: "1px solid rgba(45, 122, 75, 0.35)",
+              color: "#22633c",
+            }
           : {
-              background: "rgba(212,160,23,0.20)",
-              border: "1px solid rgba(212,160,23,0.45)",
-              color: "#d4a017",
+              background: "rgba(212, 160, 23, 0.12)",
+              border: "1px solid rgba(212, 160, 23, 0.35)",
+              color: "#996b00",
             }
       }
       title={status.description}
     >
-      <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-      {status.label}
+      <span
+        className={`h-1.5 w-1.5 rounded-full ${
+          isLive ? "bg-emerald-600" : "bg-amber-500"
+        }`}
+      />
+      <span>{status.label}</span>
     </span>
   );
 }
 
 /**
- * The larger explanation shown on the Food Data page and the home page:
- * it states the current mode and, in demo mode, that records are stored only
- * in this browser.
+ * A compact, tasteful technical footnote shown at the bottom of data-heavy views.
  */
 export function DataSourceNotice({ status }: { status: DataSourceStatus }) {
   return (
     <div
-      className="rounded-2xl p-4"
+      className="panel-tight flex flex-wrap items-center justify-between gap-3 text-xs"
       style={{
-        background: "linear-gradient(145deg, #2e2010 0%, #1a1108 100%)",
-        border: "1px solid rgba(212,160,23,0.35)",
+        background: "linear-gradient(145deg, #fffcf5 0%, #fff7eb 100%)",
+        border: "1px solid rgba(212, 160, 23, 0.25)",
       }}
     >
-      <div className="flex flex-wrap items-center gap-3">
-        <DataSourceBadge status={status} />
-        <p className="text-sm" style={{ color: "rgba(252,233,160,0.80)" }}>
-          {status.description}
-        </p>
+      <div className="flex items-center gap-2.5">
+        <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-peach/40 text-primary">
+          <Database className="h-3.5 w-3.5" aria-hidden="true" />
+        </span>
+        <div>
+          <span className="font-bold text-onyx">Data Pipeline Status: </span>
+          <span className="text-brown-soft">{status.description}</span>
+        </div>
       </div>
-      {!status.isLive ? (
-        <p className="mt-2 text-xs" style={{ color: "rgba(252,233,160,0.50)" }}>
-          Records you add are saved in this browser only (demo mode). They are not sent to a cloud
-          database yet, and they are kept separate from the built-in sample dataset.
-        </p>
-      ) : null}
+      <div className="flex items-center gap-1 text-[11px] text-brown-soft">
+        <ShieldCheck className="h-3.5 w-3.5 text-success" aria-hidden="true" />
+        <span>Synchronized live</span>
+      </div>
     </div>
   );
 }

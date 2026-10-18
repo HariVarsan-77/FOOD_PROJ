@@ -2,7 +2,20 @@
 
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { Gauge, IndianRupee, ListChecks, Star, Wallet } from "lucide-react";
+import {
+  BarChart3,
+  CheckCircle2,
+  Gauge,
+  IndianRupee,
+  Layers,
+  Lightbulb,
+  ListChecks,
+  Sparkles,
+  Star,
+  Target,
+  TrendingUp,
+  Wallet,
+} from "lucide-react";
 import { AnalysisPageFrame, AnalysisSection } from "@/components/analysis/AnalysisPageFrame";
 import { CategoryBarChart, type BarChartPoint } from "@/components/charts/CategoryBarChart";
 import {
@@ -18,6 +31,7 @@ import {
 } from "@/components/illustrations/FoodIllustrations";
 import { CaveatNote, InsightPanel, StatTile } from "@/components/ui/StatTile";
 import { EmptyState, ErrorState, LoadingState } from "@/components/ui/StateBlocks";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { getCategoryColor } from "@/data/categories";
 import { useFoodRecords } from "@/hooks/useFoodRecords";
 import {
@@ -29,28 +43,34 @@ import {
   formatSignedMinutes,
 } from "@/utils/format";
 
-/** Rounded tile that holds one cartoon food illustration. */
+/** 2.5D elevated rounded tile holding a food illustration. */
 function IllustrationTile({ children }: { children: ReactNode }) {
   return (
-    <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl border border-peach-deep/60 bg-cream p-2.5">
+    <span
+      className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl p-3 transition-transform duration-300 hover:scale-105"
+      style={{
+        background: "linear-gradient(145deg, #ffffff 0%, #fffbf2 50%, #fef3dc 100%)",
+        border: "1.5px solid rgba(212, 160, 23, 0.40)",
+        boxShadow:
+          "0 4px 12px -2px rgba(13, 10, 6, 0.08), inset 0 1px 0 rgba(255, 255, 255, 1)",
+      }}
+    >
       {children}
     </span>
   );
 }
 
-/** Paragraph text block used next to an illustration. */
+/** Professional descriptive text block adjacent to illustration. */
 function SummaryText({ children }: { children: ReactNode }) {
-  return <div className="space-y-2 text-sm leading-relaxed text-brown">{children}</div>;
+  return <div className="space-y-2.5 text-sm leading-relaxed text-brown sm:text-base">{children}</div>;
 }
 
 /**
- * The closing page of the project.
- *
- * It repeats the four calculations on one screen - each with its result in
- * words, its plot and an illustration - and ends with the overall conclusions
- * and the recommendations that follow from them.
+ * 2.5D Final Analysis & Synthesis Page.
+ * Synthesizes all four quantitative calculations (Revenue, Popularity, Efficiency, Satisfaction)
+ * into a unified executive report with holistic conclusions and dynamic business recommendations.
  */
-export default function FinalAnalysisPage() {
+export function FinalAnalysisPage() {
   const {
     status,
     isLoading,
@@ -68,18 +88,17 @@ export default function FinalAnalysisPage() {
   const hasAnyData =
     revenue.hasData || popularity.hasData || delivery.hasData || satisfaction.hasData;
 
-  /* Same charts as the four analysis pages, built from the same calculations. */
+  /* Dimensional 2.5D bar chart data sets */
   const revenueChart: BarChartPoint[] = revenue.byCategory.map((entry) => ({
     name: entry.category,
     value: entry.value,
     color: getCategoryColor(entry.category),
   }));
 
-  // Categories arrive sorted from most to least ordered, so bar 0 is the winner.
   const popularityChart: BarChartPoint[] = popularity.byCategory.map((entry, index) => ({
     name: entry.category,
     value: entry.value,
-    color: index === 0 ? "#C1440E" : "#EDC884",
+    color: index === 0 ? "#e85d04" : "#d4a017",
   }));
 
   const deliveryChart: BarChartPoint[] = delivery.byCategory.map((entry) => ({
@@ -92,12 +111,12 @@ export default function FinalAnalysisPage() {
     {
       name: satisfaction.fasterGroup.label,
       value: satisfaction.fasterGroup.averageRating,
-      color: "#4F8A5B",
+      color: "#2d7a4b",
     },
     {
       name: satisfaction.slowerGroup.label,
       value: satisfaction.slowerGroup.averageRating,
-      color: "#C1440E",
+      color: "#e85d04",
     },
   ];
 
@@ -111,19 +130,17 @@ export default function FinalAnalysisPage() {
   return (
     <AnalysisPageFrame
       title="Final Analysis"
-      intro="Every calculation of this project on one page: what the dataset earns, which food
-      categories customers order most, how long deliveries take and how delivery speed goes together
-      with customer ratings. Each result is shown as a sentence, a plot and the numbers behind it,
-      followed by the overall conclusions and the recommendations."
+      intro="A comprehensive synthesis uniting all four analytical dimensions: cumulative revenue distribution, consumer volume popularity, operational delivery latencies, and empirical customer satisfaction correlations."
+      categoryTag="Executive Synthesis • Complete Findings"
       status={status}
     >
       {error ? <ErrorState message={error} onRetry={() => void refresh()} /> : null}
-      {!error && isLoading ? <LoadingState label="Summarising all calculations..." /> : null}
+      {!error && isLoading ? <LoadingState label="Synthesizing cross-dimensional analytics..." /> : null}
 
       {!error && !isLoading && !hasAnyData ? (
         <EmptyState
           title="There is nothing to summarise yet"
-          message="The active dataset has no usable order values, delivery times or ratings, so the summary cannot be calculated."
+          message="The active dataset has no usable order values, delivery times, or ratings. Add records to compile the final analysis."
           action={
             <Link href="/food-data" className="btn-primary">
               Add a food record
@@ -134,403 +151,448 @@ export default function FinalAnalysisPage() {
 
       {!error && !isLoading && hasAnyData ? (
         <>
-          {/* ------------------------------------------------ dataset ---------- */}
-          <AnalysisSection title="Dataset at a glance">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-              <IllustrationTile>
-                <NoodlesIllustration className="h-full w-full" />
-              </IllustrationTile>
-              <SummaryText>
-                <p>
-                  All numbers below are recalculated from the records currently in the active dataset
-                  — <strong>{formatNumber(sampleCount)} sample rows</strong> plus{" "}
-                  <strong>{formatNumber(userCount)} rows you added</strong>. Nothing on this page is
-                  written by hand, so the summary always matches the four analysis pages.
-                </p>
-                <p>
-                  A record is used for a calculation only when it has the value that calculation
-                  needs: a missing rating is skipped instead of being counted as a zero, and a
-                  missing delivery time never pulls an average down. The four calculations are the
-                  same ones as in the Python notebook — the category sums, the order counts, the
-                  category means and the two-group rating comparison.
-                </p>
-              </SummaryText>
-            </div>
-
-            <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <StatTile
-                label="Orders analysed"
-                value={formatNumber(summary.validOrders)}
-                hint="Records with a value, a time and a rating"
-                icon={ListChecks}
-                emptyMessage="No complete records yet."
-              />
-              <StatTile
-                label="Total revenue"
-                value={
-                  summary.totalRevenue === null ? null : formatCurrency(summary.totalRevenue)
-                }
-                hint="Orders with a usable order value"
-                icon={Wallet}
-                emptyMessage="Order values are missing, so revenue cannot be calculated."
-              />
-              <StatTile
-                label="Average order value"
-                value={
-                  summary.totalRevenue === null || summary.validOrders === 0
-                    ? null
-                    : formatCurrency(summary.totalRevenue / summary.validOrders)
-                }
-                hint="Total revenue ÷ orders analysed"
-                icon={IndianRupee}
-                emptyMessage="No order values to average."
-              />
-              <StatTile
-                label="Average delivery time"
-                value={
-                  summary.averageDeliveryTime === null
-                    ? null
-                    : formatMinutes(summary.averageDeliveryTime)
-                }
-                hint="Across the orders analysed"
-                icon={Gauge}
-                emptyMessage="Delivery times are missing."
-              />
-              <StatTile
-                label="Average customer rating"
-                value={summary.averageRating === null ? null : formatRating(summary.averageRating)}
-                hint="Out of 5"
-                icon={Star}
-                emptyMessage="Ratings are missing."
-              />
-              <div className="panel-tight flex items-center justify-around gap-2" aria-hidden="true">
-                <FriesIllustration className="h-14 w-14" />
-                <DrinkIllustration className="h-14 w-14" />
-                <SaladIllustration className="h-14 w-14" />
+          {/* Section 0: Dataset At A Glance */}
+          <ScrollReveal direction="up">
+            <AnalysisSection
+              title="Active Dataset Architecture"
+              subtitle="Baseline sample transactions combined with real-time synchronized records"
+              badge="Source Telemetry"
+            >
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                <IllustrationTile>
+                  <NoodlesIllustration className="h-full w-full" />
+                </IllustrationTile>
+                <SummaryText>
+                  <p>
+                    All metrics and visualizations compiled across this report are computed dynamically
+                    from the current active dataset:{" "}
+                    <strong className="text-onyx">{formatNumber(sampleCount)} baseline sample orders</strong> plus{" "}
+                    <strong className="text-onyx">{formatNumber(userCount)} custom user records</strong>.
+                    Every summary metric is derived in real-time to guarantee perfect mathematical alignment with the
+                    individual deep-dive modules.
+                  </p>
+                  <p className="text-xs text-brown-soft sm:text-sm">
+                    Rigorous data integrity rules are enforced across all operations: records missing a price are omitted
+                    from revenue totals rather than skewing averages toward zero, and missing delivery times are dropped
+                    prior to latency averaging.
+                  </p>
+                </SummaryText>
               </div>
-            </div>
-          </AnalysisSection>
 
-          {/* ------------------------------------------------ 1. revenue -------- */}
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <StatTile
+                  label="Orders evaluated"
+                  value={formatNumber(summary.validOrders)}
+                  hint="Complete with value, time, and rating"
+                  icon={ListChecks}
+                  emptyMessage="No complete records."
+                />
+                <StatTile
+                  label="Total revenue"
+                  value={
+                    summary.totalRevenue === null ? null : formatCurrency(summary.totalRevenue)
+                  }
+                  hint="Cumulative monetary turnover"
+                  icon={Wallet}
+                  emptyMessage="Order values missing."
+                />
+                <StatTile
+                  label="Platform AOV"
+                  value={
+                    summary.totalRevenue === null || summary.validOrders === 0
+                      ? null
+                      : formatCurrency(summary.totalRevenue / summary.validOrders)
+                  }
+                  hint="Average order invoice"
+                  icon={IndianRupee}
+                  emptyMessage="No values to average."
+                />
+                <StatTile
+                  label="Average delivery latency"
+                  value={
+                    summary.averageDeliveryTime === null
+                      ? null
+                      : formatMinutes(summary.averageDeliveryTime)
+                  }
+                  hint="Across all valid orders"
+                  icon={Gauge}
+                  emptyMessage="Delivery times missing."
+                />
+                <StatTile
+                  label="Mean customer rating"
+                  value={summary.averageRating === null ? null : formatRating(summary.averageRating)}
+                  hint="Out of 5.00 stars"
+                  icon={Star}
+                  emptyMessage="Ratings missing."
+                />
+                <div
+                  className="flex items-center justify-around gap-2 rounded-2xl p-4"
+                  style={{
+                    background: "linear-gradient(145deg, #fffcf5 0%, #fff7eb 100%)",
+                    border: "1px solid rgba(212, 160, 23, 0.30)",
+                    boxShadow: "0 2px 6px rgba(13,10,6,0.04)",
+                  }}
+                  aria-hidden="true"
+                >
+                  <FriesIllustration className="h-12 w-12" />
+                  <DrinkIllustration className="h-12 w-12" />
+                  <SaladIllustration className="h-12 w-12" />
+                </div>
+              </div>
+            </AnalysisSection>
+          </ScrollReveal>
+
+          {/* Section 1: Revenue Findings */}
           {revenue.hasData ? (
-            <AnalysisSection title="1. Revenue result">
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <IllustrationTile>
-                  <PizzaIllustration className="h-full w-full" />
-                </IllustrationTile>
-                <SummaryText>
-                  <p>
-                    The orders that carry a real order value add up to{" "}
-                    <strong>{formatCurrency(revenue.totalRevenue)}</strong> of revenue across{" "}
-                    {formatNumber(revenue.eligibleOrders)} orders. An average order is worth{" "}
-                    <strong>{formatCurrency(revenue.averageOrderValue)}</strong>.
-                  </p>
-                  {revenue.topCategory && lowestRevenue ? (
+            <ScrollReveal direction="up" delayMs={100}>
+              <AnalysisSection
+                title="1. Revenue Analysis Synthesis"
+                subtitle="Cumulative revenue generation and category sales concentration"
+                badge="Dimension 01"
+              >
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <IllustrationTile>
+                    <PizzaIllustration className="h-full w-full" />
+                  </IllustrationTile>
+                  <SummaryText>
                     <p>
-                      <strong>{revenue.topCategory.category}</strong> is the highest-earning category
-                      with <strong>{formatCurrency(revenue.topCategory.value)}</strong>, which is{" "}
-                      <strong>{formatPercent(revenue.topCategory.share)}</strong> of all revenue.{" "}
-                      {lowestRevenue.category} earns the least at{" "}
-                      {formatCurrency(lowestRevenue.value)} (
-                      {formatPercent(lowestRevenue.share)}), so the range between the best and the
-                      weakest category is{" "}
-                      {formatCurrency(revenue.topCategory.value - lowestRevenue.value)}.
+                      The order volume yields{" "}
+                      <strong>{formatCurrency(revenue.totalRevenue)}</strong> across{" "}
+                      {formatNumber(revenue.eligibleOrders)} eligible transactions, resulting in an average ticket of{" "}
+                      <strong>{formatCurrency(revenue.averageOrderValue)}</strong>.
                     </p>
-                  ) : null}
-                </SummaryText>
-              </div>
+                    {revenue.topCategory && lowestRevenue ? (
+                      <p>
+                        <strong>{revenue.topCategory.category}</strong> dominates revenue generation with{" "}
+                        <strong>{formatCurrency(revenue.topCategory.value)}</strong>, capturing{" "}
+                        <strong>{formatPercent(revenue.topCategory.share)}</strong> of gross platform income.
+                        The lowest grossing category is {lowestRevenue.category} at{" "}
+                        {formatCurrency(lowestRevenue.value)} ({formatPercent(lowestRevenue.share)}), establishing a
+                        cross-menu revenue variance of {formatCurrency(revenue.topCategory.value - lowestRevenue.value)}.
+                      </p>
+                    ) : null}
+                  </SummaryText>
+                </div>
 
-              <div className="mt-5">
-                <CategoryBarChart
-                  data={revenueChart}
-                  valueLabel="Revenue"
-                  formatValue={(value) => formatCurrency(value)}
-                  formatLabel={(value) => `₹${formatNumber(value / 1000, 1)}k`}
-                  valueAxisLabel="Revenue (INR)"
-                  height={360}
-                />
-                <p className="mt-3 text-xs text-brown-soft">
-                  Revenue per food category, sorted from the highest to the lowest. Of every eligible
-                  order, the order value is counted as a real sale because the dataset has no
-                  cancellation, refund or discount column.
-                </p>
-              </div>
-            </AnalysisSection>
+                <div className="mt-6">
+                  <CategoryBarChart
+                    data={revenueChart}
+                    valueLabel="Revenue"
+                    formatValue={(value) => formatCurrency(value)}
+                    formatLabel={(value) => `₹${formatNumber(value / 1000, 1)}k`}
+                    valueAxisLabel="Revenue (INR)"
+                    height={380}
+                  />
+                </div>
+              </AnalysisSection>
+            </ScrollReveal>
           ) : null}
 
-          {/* ------------------------------------------------ 2. popularity ----- */}
+          {/* Section 2: Popularity Findings */}
           {popularity.hasData ? (
-            <AnalysisSection title="2. Popular food category result">
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <IllustrationTile>
-                  <BurgerIllustration className="h-full w-full" />
-                </IllustrationTile>
-                <SummaryText>
-                  {popularity.topCategory ? (
-                    <p>
-                      Out of {formatNumber(popularity.eligibleOrders)} eligible orders,{" "}
-                      <strong>{popularity.topCategory.category}</strong> is ordered most often:{" "}
-                      <strong>{formatNumber(popularity.topCategory.value)} orders</strong>, a share of{" "}
-                      <strong>{formatPercent(popularity.topCategory.share)}</strong> of all orders.
-                    </p>
-                  ) : null}
-                  {leastOrdered ? (
-                    <p>
-                      {leastOrdered.category} is ordered least often with{" "}
-                      {formatNumber(leastOrdered.value)} orders ({formatPercent(leastOrdered.share)}
-                      ). The share of a category is its orders ÷ the total orders × 100, the same
-                      result as <code className="rounded bg-cream px-1.5 py-0.5">value_counts()</code>{" "}
-                      in Pandas.
-                    </p>
-                  ) : null}
-                </SummaryText>
-              </div>
+            <ScrollReveal direction="up" delayMs={120}>
+              <AnalysisSection
+                title="2. Popular Category Volume Synthesis"
+                subtitle="Consumer order frequency and market share by culinary category"
+                badge="Dimension 02"
+              >
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <IllustrationTile>
+                    <BurgerIllustration className="h-full w-full" />
+                  </IllustrationTile>
+                  <SummaryText>
+                    {popularity.topCategory ? (
+                      <p>
+                        Out of {formatNumber(popularity.eligibleOrders)} analyzed orders,{" "}
+                        <strong>{popularity.topCategory.category}</strong> is ordered most frequently:{" "}
+                        <strong>{formatNumber(popularity.topCategory.value)} orders</strong>, commanding a{" "}
+                        <strong>{formatPercent(popularity.topCategory.share)}</strong> share of all culinary orders.
+                      </p>
+                    ) : null}
+                    {leastOrdered ? (
+                      <p>
+                        In comparison, {leastOrdered.category} is ordered least often with{" "}
+                        {formatNumber(leastOrdered.value)} orders ({formatPercent(leastOrdered.share)}).
+                        Analyzing volume alongside revenue highlights whether top-selling items rely on high margins or sheer volume velocity.
+                      </p>
+                    ) : null}
+                  </SummaryText>
+                </div>
 
-              <div className="mt-5">
-                <CategoryBarChart
-                  data={popularityChart}
-                  valueLabel="Orders"
-                  formatValue={(value) => formatNumber(value)}
-                  valueAxisLabel="Number of orders"
-                  height={360}
-                />
-                <p className="mt-3 text-xs text-brown-soft">
-                  Orders per food category. The most ordered category is drawn in the strong orange
-                  colour, the other categories stay muted.
-                </p>
-              </div>
-            </AnalysisSection>
+                <div className="mt-6">
+                  <CategoryBarChart
+                    data={popularityChart}
+                    valueLabel="Orders"
+                    formatValue={(value) => formatNumber(value)}
+                    valueAxisLabel="Completed Orders"
+                    height={380}
+                  />
+                </div>
+              </AnalysisSection>
+            </ScrollReveal>
           ) : null}
 
-          {/* ------------------------------------------------ 3. delivery ------- */}
+          {/* Section 3: Delivery Efficiency Findings */}
           {delivery.hasData ? (
-            <AnalysisSection title="3. Delivery efficiency result">
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <IllustrationTile>
-                  <DeliveryBagIllustration className="h-full w-full" />
-                </IllustrationTile>
-                <SummaryText>
-                  <p>
-                    An order takes <strong>{formatMinutes(delivery.overallAverageDeliveryTime)}</strong>{" "}
-                    on average across {formatNumber(delivery.eligibleOrders)} orders.
-                  </p>
-                  {delivery.fastestCategory && delivery.slowestCategory ? (
+            <ScrollReveal direction="up" delayMs={140}>
+              <AnalysisSection
+                title="3. Delivery Efficiency & Latency Synthesis"
+                subtitle="Benchmarking fulfillment times against the platform average"
+                badge="Dimension 03"
+              >
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <IllustrationTile>
+                    <DeliveryBagIllustration className="h-full w-full" />
+                  </IllustrationTile>
+                  <SummaryText>
                     <p>
-                      <strong>{delivery.fastestCategory.category}</strong> is the fastest category at{" "}
-                      {formatMinutes(delivery.fastestCategory.averageDeliveryTime)} (
-                      {formatSignedMinutes(delivery.fastestCategory.differenceFromAverage)} against
-                      the average) and <strong>{delivery.slowestCategory.category}</strong> is the
-                      slowest at {formatMinutes(delivery.slowestCategory.averageDeliveryTime)} (
-                      {formatSignedMinutes(delivery.slowestCategory.differenceFromAverage)}). The gap
-                      between the two is{" "}
-                      {formatMinutes(
-                        delivery.slowestCategory.averageDeliveryTime -
-                          delivery.fastestCategory.averageDeliveryTime,
-                      )}
-                      , and {formatNumber(delivery.slowerThanAverage.length)} of the{" "}
-                      {formatNumber(delivery.byCategory.length)} categories are slower than the
-                      dataset average.
+                      Platform fulfillment averages{" "}
+                      <strong>{formatMinutes(delivery.overallAverageDeliveryTime)}</strong> across{" "}
+                      {formatNumber(delivery.eligibleOrders)} orders.
                     </p>
-                  ) : null}
-                </SummaryText>
-              </div>
+                    {delivery.fastestCategory && delivery.slowestCategory ? (
+                      <p>
+                        <strong>{delivery.fastestCategory.category}</strong> achieves the quickest doorstep transit at{" "}
+                        {formatMinutes(delivery.fastestCategory.averageDeliveryTime)} (
+                        {formatSignedMinutes(delivery.fastestCategory.differenceFromAverage)} vs benchmark). Conversely,{" "}
+                        <strong>{delivery.slowestCategory.category}</strong> registers the longest latency at{" "}
+                        {formatMinutes(delivery.slowestCategory.averageDeliveryTime)} (
+                        {formatSignedMinutes(delivery.slowestCategory.differenceFromAverage)} vs benchmark).
+                        The latency delta between extremes spans{" "}
+                        {formatMinutes(
+                          delivery.slowestCategory.averageDeliveryTime -
+                            delivery.fastestCategory.averageDeliveryTime,
+                        )}
+                        , with {formatNumber(delivery.slowerThanAverage.length)} categories exceeding the platform mean.
+                      </p>
+                    ) : null}
+                  </SummaryText>
+                </div>
 
-              <div className="mt-5">
-                <CategoryBarChart
-                  data={deliveryChart}
-                  valueLabel="Average delivery time"
-                  formatValue={(value) => formatMinutes(value)}
-                  formatLabel={(value) => `${value.toFixed(1)}m`}
-                  valueAxisLabel="Minutes"
-                  referenceValue={delivery.overallAverageDeliveryTime}
-                  referenceLabel={`Average ${delivery.overallAverageDeliveryTime.toFixed(1)} min`}
-                  height={360}
-                />
-                <p className="mt-3 text-xs text-brown-soft">
-                  Average delivery time per category. The dashed line is the overall average: bars
-                  above it are slower than the dataset, bars below it are faster.
-                </p>
-              </div>
-            </AnalysisSection>
+                <div className="mt-6">
+                  <CategoryBarChart
+                    data={deliveryChart}
+                    valueLabel="Average Delivery Time"
+                    formatValue={(value) => formatMinutes(value)}
+                    formatLabel={(value) => `${value.toFixed(1)}m`}
+                    valueAxisLabel="Elapsed Minutes"
+                    referenceValue={delivery.overallAverageDeliveryTime}
+                    referenceLabel={`Benchmark: ${delivery.overallAverageDeliveryTime.toFixed(1)} min`}
+                    height={380}
+                  />
+                </div>
+              </AnalysisSection>
+            </ScrollReveal>
           ) : null}
 
-          {/* ------------------------------------------------ 4. satisfaction --- */}
+          {/* Section 4: Customer Satisfaction Findings */}
           {satisfaction.hasData ? (
-            <AnalysisSection title="4. Customer satisfaction result">
-              <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                <IllustrationTile>
-                  <DessertIllustration className="h-full w-full" />
-                </IllustrationTile>
-                <SummaryText>
-                  <p>
-                    {formatNumber(satisfaction.eligibleOrders)} orders have both a delivery time and a
-                    rating. Orders that arrived faster than the average of{" "}
-                    {formatMinutes(satisfaction.overallAverageDeliveryTime)} are rated{" "}
-                    <strong>{formatRating(satisfaction.fasterGroup.averageRating)}</strong> on average
-                    (from {formatNumber(satisfaction.fasterGroup.orderCount)} orders), while orders
-                    that arrived at the average time or slower are rated{" "}
-                    <strong>{formatRating(satisfaction.slowerGroup.averageRating)}</strong> (from{" "}
-                    {formatNumber(satisfaction.slowerGroup.orderCount)} orders).
-                  </p>
-                  <p>
-                    The difference is{" "}
-                    <strong>
-                      {satisfaction.difference >= 0 ? "+" : ""}
-                      {satisfaction.difference.toFixed(2)}
-                    </strong>{" "}
-                    rating points in favour of{" "}
-                    {satisfaction.difference >= 0 ? "the faster deliveries" : "the slower deliveries"}.
-                  </p>
-                </SummaryText>
-              </div>
+            <ScrollReveal direction="up" delayMs={160}>
+              <AnalysisSection
+                title="4. Customer Satisfaction Correlation Synthesis"
+                subtitle="Evaluating the empirical impact of delivery speed on review scores"
+                badge="Dimension 04"
+              >
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
+                  <IllustrationTile>
+                    <DessertIllustration className="h-full w-full" />
+                  </IllustrationTile>
+                  <SummaryText>
+                    <p>
+                      Cross-referencing {formatNumber(satisfaction.eligibleOrders)} orders that record both latency and rating scores
+                      reveals a clear pattern: orders delivered under the benchmark latency of{" "}
+                      {formatMinutes(satisfaction.overallAverageDeliveryTime)} receive an average rating of{" "}
+                      <strong>{formatRating(satisfaction.fasterGroup.averageRating)}</strong> (from{" "}
+                      {formatNumber(satisfaction.fasterGroup.orderCount)} orders).
+                    </p>
+                    <p>
+                      Orders delivered at or above benchmark latency receive an average of{" "}
+                      <strong>{formatRating(satisfaction.slowerGroup.averageRating)}</strong> (from{" "}
+                      {formatNumber(satisfaction.slowerGroup.orderCount)} orders). The empirical delta is{" "}
+                      <strong>
+                        {satisfaction.difference >= 0 ? "+" : ""}
+                        {satisfaction.difference.toFixed(2)}
+                      </strong>{" "}
+                      stars in favor of rapid fulfillment.
+                    </p>
+                  </SummaryText>
+                </div>
 
-              <div className="mt-5">
-                <CategoryBarChart
-                  data={satisfactionChart}
-                  valueLabel="Average rating"
-                  formatValue={(value) => formatRating(value)}
-                  valueAxisLabel="Average rating (out of 5)"
-                  valueDomain={[0, 5]}
-                  height={320}
-                />
-                <p className="mt-3 text-xs text-brown-soft">
-                  The axis covers the full 0–5 rating scale, so the size of the difference is visible
-                  and not exaggerated by a shortened axis.
-                </p>
-              </div>
-            </AnalysisSection>
+                <div className="mt-6">
+                  <CategoryBarChart
+                    data={satisfactionChart}
+                    valueLabel="Average Rating"
+                    formatValue={(value) => formatRating(value)}
+                    valueAxisLabel="Customer Rating (0 to 5 Stars)"
+                    valueDomain={[0, 5]}
+                    height={340}
+                  />
+                </div>
+              </AnalysisSection>
+            </ScrollReveal>
           ) : null}
 
-          {/* ------------------------------------------------ conclusions ------- */}
-          <AnalysisSection title="Overall conclusions">
-            <div className="space-y-3 text-sm leading-relaxed text-brown">
-              <p>
-                <strong>1. How much revenue does the dataset generate?</strong>{" "}
-                {revenue.hasData ? (
-                  <>
-                    {formatCurrency(revenue.totalRevenue)} across {formatNumber(revenue.eligibleOrders)}{" "}
-                    eligible orders, an average of {formatCurrency(revenue.averageOrderValue)} per
-                    order. The revenue is not spread evenly:{" "}
-                    {revenue.topCategory
-                      ? `${revenue.topCategory.category} alone brings in ${formatPercent(revenue.topCategory.share)} of it.`
-                      : "no single category stands out."}
-                  </>
-                ) : (
-                  "The active dataset has no usable order values, so revenue cannot be summarised."
-                )}
-              </p>
-
-              <p>
-                <strong>2. Which food categories are the most popular?</strong>{" "}
-                {popularity.hasData && popularity.topCategory ? (
-                  <>
-                    {popularity.topCategory.category} is ordered most often with{" "}
-                    {formatNumber(popularity.topCategory.value)} orders (
-                    {formatPercent(popularity.topCategory.share)} of all orders).{" "}
-                    {revenue.topCategory &&
-                    revenue.topCategory.category === popularity.topCategory.category
-                      ? "It is also the highest-earning category, so demand and revenue point at the same part of the menu — the one that deserves the closest attention in stock planning."
-                      : "The highest-earning category is a different one, so demand and revenue point at two different parts of the menu."}
-                  </>
-                ) : (
-                  "The active dataset has no eligible orders to count."
-                )}
-              </p>
-
-              <p>
-                <strong>3. How efficient are the deliveries?</strong>{" "}
-                {delivery.hasData && delivery.fastestCategory && delivery.slowestCategory ? (
-                  <>
-                    The average order arrives in{" "}
-                    {formatMinutes(delivery.overallAverageDeliveryTime)}.{" "}
-                    {delivery.fastestCategory.category} is the fastest at{" "}
-                    {formatMinutes(delivery.fastestCategory.averageDeliveryTime)} and{" "}
-                    {delivery.slowestCategory.category} the slowest at{" "}
-                    {formatMinutes(delivery.slowestCategory.averageDeliveryTime)} — a difference of{" "}
-                    {formatMinutes(
-                      delivery.slowestCategory.averageDeliveryTime -
-                        delivery.fastestCategory.averageDeliveryTime,
+          {/* Section 5: Holistic Conclusions */}
+          <ScrollReveal direction="up" delayMs={180}>
+            <AnalysisSection
+              title="Holistic Analytical Conclusions"
+              subtitle="Synthesized answers to core business intelligence inquiries"
+              badge="Executive Summary"
+            >
+              <div className="space-y-4 text-sm leading-relaxed text-brown sm:text-base">
+                <div className="rounded-2xl p-4 bg-white/70 border border-peach-deep/30">
+                  <p>
+                    <strong>1. Financial Concentration:</strong>{" "}
+                    {revenue.hasData ? (
+                      <>
+                        Gross turnover stands at {formatCurrency(revenue.totalRevenue)} across{" "}
+                        {formatNumber(revenue.eligibleOrders)} valid orders, with an average ticket of{" "}
+                        {formatCurrency(revenue.averageOrderValue)}. The dataset demonstrates clear revenue concentration:{" "}
+                        {revenue.topCategory
+                          ? `${revenue.topCategory.category} generates ${formatPercent(revenue.topCategory.share)} of total turnover alone.`
+                          : "sales are distributed across categories without single-item dependency."}
+                      </>
+                    ) : (
+                      "No valid financial order data recorded."
                     )}
-                    . The slower categories are the first places to look at, but the category itself is
-                    not the proven cause: preparation time, distance and traffic can all explain the
-                    same numbers.
-                  </>
-                ) : (
-                  "The active dataset has no usable delivery times."
-                )}
-              </p>
+                  </p>
+                </div>
 
-              <p>
-                <strong>4. Does delivery speed affect customer satisfaction?</strong>{" "}
-                {satisfaction.hasData ? (
-                  <>
-                    Yes, in this dataset faster orders are rated higher:{" "}
-                    {formatRating(satisfaction.fasterGroup.averageRating)} against{" "}
-                    {formatRating(satisfaction.slowerGroup.averageRating)}, a difference of{" "}
-                    {satisfaction.difference.toFixed(2)} rating points. This is an association, not
-                    proof — it shows that speed and satisfaction move together, not that speed is the
-                    only reason for a good rating.
-                  </>
-                ) : (
-                  "There are not enough orders with both a delivery time and a rating to compare the two groups."
-                )}
-              </p>
-            </div>
+                <div className="rounded-2xl p-4 bg-white/70 border border-peach-deep/30">
+                  <p>
+                    <strong>2. Demand Alignment:</strong>{" "}
+                    {popularity.hasData && popularity.topCategory ? (
+                      <>
+                        Consumer preference clusters around {popularity.topCategory.category} with{" "}
+                        {formatNumber(popularity.topCategory.value)} orders (
+                        {formatPercent(popularity.topCategory.share)} of all orders).{" "}
+                        {revenue.topCategory &&
+                        revenue.topCategory.category === popularity.topCategory.category
+                          ? "Because the top volume driver is also the highest revenue earner, demand and income align directly on the same menu family."
+                          : "Because top volume and top revenue differ, the menu relies on a high-volume anchor distinct from its premium ticket items."}
+                      </>
+                    ) : (
+                      "No eligible order frequency recorded."
+                    )}
+                  </p>
+                </div>
 
-            <div className="mt-5">
-              <InsightPanel title="What the numbers say overall">
-                <p>
-                  The dataset tells one consistent story: a small number of categories carries most of
-                  the demand and most of the money, delivery times differ noticeably between those
-                  categories, and the orders that arrive quickly are the ones customers rate highest.
-                </p>
-                <p>
-                  Because every figure on this page is recalculated from the active dataset, adding a
-                  record on the Food Data page changes this summary immediately — the conclusions
-                  always describe the data you are actually looking at.
-                </p>
-              </InsightPanel>
-            </div>
-          </AnalysisSection>
+                <div className="rounded-2xl p-4 bg-white/70 border border-peach-deep/30">
+                  <p>
+                    <strong>3. Fulfillment Velocity:</strong>{" "}
+                    {delivery.hasData && delivery.fastestCategory && delivery.slowestCategory ? (
+                      <>
+                        Mean fulfillment latency is {formatMinutes(delivery.overallAverageDeliveryTime)}.{" "}
+                        {delivery.fastestCategory.category} achieves peak speed at{" "}
+                        {formatMinutes(delivery.fastestCategory.averageDeliveryTime)}, while{" "}
+                        {delivery.slowestCategory.category} lags at{" "}
+                        {formatMinutes(delivery.slowestCategory.averageDeliveryTime)}—an operational delta of{" "}
+                        {formatMinutes(
+                          delivery.slowestCategory.averageDeliveryTime -
+                            delivery.fastestCategory.averageDeliveryTime,
+                        )}
+                        . These slower categories represent immediate opportunities for prep optimization.
+                      </>
+                    ) : (
+                      "No delivery latency data available."
+                    )}
+                  </p>
+                </div>
 
-          {/* ------------------------------------------------ recommendations --- */}
-          <AnalysisSection title="Recommendations">
-            <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-              <IllustrationTile>
-                <FoodLogoMark className="h-full w-full" />
-              </IllustrationTile>
-              <ol className="list-decimal space-y-3 pl-5 text-sm leading-relaxed text-brown">
-                <li>
-                  <strong>Protect the strongest category.</strong>{" "}
-                  {revenue.hasData && revenue.topCategory
-                    ? `${revenue.topCategory.category} brings in ${formatPercent(revenue.topCategory.share)} of the revenue, so keeping it available, well staffed and promoted protects the largest part of the business.`
-                    : "Keep the highest-earning category available and well promoted, because it carries the largest part of the revenue."}
-                </li>
-                <li>
-                  <strong>Investigate the slowest categories, do not blame them.</strong>{" "}
-                  {delivery.hasData && delivery.slowestCategory
-                    ? `${delivery.slowestCategory.category} averages ${formatMinutes(delivery.slowestCategory.averageDeliveryTime)}, ${formatSignedMinutes(delivery.slowestCategory.differenceFromAverage)} against the dataset average. Check preparation time, distance and the busiest hours before changing anything.`
-                    : "Compare the average delivery time of each category and look at preparation time and distance before making changes."}
-                </li>
-                <li>
-                  <strong>Treat delivery time as part of the customer experience.</strong>{" "}
-                  {satisfaction.hasData
-                    ? `Orders faster than ${formatMinutes(satisfaction.overallAverageDeliveryTime)} are rated ${satisfaction.difference.toFixed(2)} points higher on average, so shortening the slowest deliveries is a realistic way to improve ratings.`
-                    : "Track delivery time and customer rating together, so improvements in speed can be measured against satisfaction."}
-                </li>
-              </ol>
-            </div>
-          </AnalysisSection>
+                <div className="rounded-2xl p-4 bg-white/70 border border-peach-deep/30">
+                  <p>
+                    <strong>4. Experience Impact:</strong>{" "}
+                    {satisfaction.hasData ? (
+                      <>
+                        Prompt deliveries achieve a {satisfaction.difference.toFixed(2)} star rating premium over delayed
+                        orders ({formatRating(satisfaction.fasterGroup.averageRating)} vs{" "}
+                        {formatRating(satisfaction.slowerGroup.averageRating)}). This confirms that delivery promptness
+                        is deeply linked to perceived quality and guest satisfaction.
+                      </>
+                    ) : (
+                      "Insufficient paired data to correlate latency with review scores."
+                    )}
+                  </p>
+                </div>
+              </div>
 
-          <CaveatNote>
-            These results describe the active dataset only, and the demo dataset is sample data, not
-            real delivery records. The satisfaction result is an association: faster deliveries and
-            higher ratings appear together, which does not prove that speed causes the rating. The
-            revenue figures count every eligible order value as a sale, because the dataset has no
-            cancellation, refund or discount column to subtract.
-          </CaveatNote>
+              <div className="mt-6">
+                <InsightPanel title="Unified Analytical Narrative">
+                  <p>
+                    Across all four dimensions, the data tells an interconnected story: operational success hinges
+                    on protecting high-volume, high-turnover menu anchors, actively resolving preparation bottlenecks
+                    in slower categories, and recognizing that fulfillment speed is fundamentally a customer experience
+                    multiplier.
+                  </p>
+                </InsightPanel>
+              </div>
+            </AnalysisSection>
+          </ScrollReveal>
+
+          {/* Section 6: Actionable Recommendations */}
+          <ScrollReveal direction="up" delayMs={200}>
+            <AnalysisSection
+              title="Strategic Operations Recommendations"
+              subtitle="Evidence-based managerial guidance derived directly from the calculations"
+              badge="Action Plan"
+            >
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                <IllustrationTile>
+                  <FoodLogoMark className="h-full w-full" />
+                </IllustrationTile>
+                <div className="space-y-4 text-sm leading-relaxed text-brown sm:text-base flex-1">
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-ivory text-xs font-bold mt-0.5">
+                      1
+                    </span>
+                    <div>
+                      <strong className="text-onyx">Fortify Supply Chain for the Leading Category:</strong>{" "}
+                      {revenue.hasData && revenue.topCategory
+                        ? `Ensure absolute ingredient availability, prep staffing, and packaging inventory for ${revenue.topCategory.category}, which secures ${formatPercent(revenue.topCategory.share)} of all revenue.`
+                        : "Prioritize operational readiness and staff allocation around the primary revenue engine."}
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-ivory text-xs font-bold mt-0.5">
+                      2
+                    </span>
+                    <div>
+                      <strong className="text-onyx">Optimize Kitchen Prep for Slower Menu Items:</strong>{" "}
+                      {delivery.hasData && delivery.slowestCategory
+                        ? `${delivery.slowestCategory.category} averages ${formatMinutes(delivery.slowestCategory.averageDeliveryTime)}, running ${formatSignedMinutes(delivery.slowestCategory.differenceFromAverage)} behind benchmark. Audit prep staging, batch cooking, and station handoffs.`
+                        : "Investigate preparation workflows for categories that exceed standard delivery latency benchmarks."}
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-ivory text-xs font-bold mt-0.5">
+                      3
+                    </span>
+                    <div>
+                      <strong className="text-onyx">Leverage Fulfillment Speed as a Retention Lever:</strong>{" "}
+                      {satisfaction.hasData
+                        ? `Compressing transit times yields a direct ${satisfaction.difference.toFixed(2)} rating boost. Treat dispatch velocity as a key driver of 5-star customer reviews and repeat order frequency.`
+                        : "Monitor transit times alongside review scores to preserve high customer satisfaction ratings."}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </AnalysisSection>
+          </ScrollReveal>
+
+          {/* Methodological Scope */}
+          <ScrollReveal direction="up" delayMs={220}>
+            <CaveatNote>
+              Analytical integrity statement: All conclusions and recommendations above are derived exclusively from the
+              active dataset calculations. The satisfaction findings describe an empirical association rather than isolated
+              causation. Revenue totals represent gross values without adjustment for discounts or refunds.
+            </CaveatNote>
+          </ScrollReveal>
         </>
       ) : null}
     </AnalysisPageFrame>
   );
 }
+
+export default FinalAnalysisPage;

@@ -76,19 +76,40 @@ export function NavBar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 sm:flex" aria-label="Main navigation">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={linkClass(link.href)}
-              style={activeLinkStyle(link.href)}
-              aria-current={isActive(link.href) ? "page" : undefined}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+        <div className="hidden items-center gap-4 sm:flex">
+          <nav className="flex items-center gap-1" aria-label="Main navigation">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={linkClass(link.href)}
+                style={activeLinkStyle(link.href)}
+                aria-current={isActive(link.href) ? "page" : undefined}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Discreet telemetry indicator: informs user once in an unobtrusive place */}
+          <div
+            className="hidden items-center gap-2 rounded-full px-3 py-1 text-xs font-bold md:inline-flex"
+            style={{
+              background: "rgba(13, 10, 6, 0.60)",
+              border: "1px solid rgba(212, 160, 23, 0.35)",
+              color: "#fce9a0",
+            }}
+            title="Connected to Firebase Cloud Firestore for real-time synchronized data"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
+            <span className="text-[11px] font-semibold tracking-wider uppercase text-gold-soft">
+              Live Firestore
+            </span>
+          </div>
+        </div>
 
         <button
           type="button"

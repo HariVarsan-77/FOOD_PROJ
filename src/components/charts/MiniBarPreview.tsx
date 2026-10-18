@@ -34,26 +34,54 @@ export function MiniBarPreview({
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
     >
-      {heights.map((height, index) => (
-        <rect
-          key={index}
-          x={index * (barWidth + gap)}
-          y={52 - height}
-          width={barWidth}
-          height={height}
-          rx={4}
-          fill={index === highestIndex ? "#C1440E" : "#EDC884"}
-        />
-      ))}
+      <defs>
+        <linearGradient id={`mini-primary-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#ff8c3a" />
+          <stop offset="60%" stopColor="#e85d04" />
+          <stop offset="100%" stopColor="#b33e00" />
+        </linearGradient>
+        <linearGradient id={`mini-muted-${variant}`} x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#f5dfaa" />
+          <stop offset="60%" stopColor="#d4a017" />
+          <stop offset="100%" stopColor="#a3780a" />
+        </linearGradient>
+      </defs>
+      {heights.map((height, index) => {
+        const isHighest = index === highestIndex;
+        return (
+          <g key={index}>
+            <rect
+              x={index * (barWidth + gap)}
+              y={52 - height}
+              width={barWidth}
+              height={height}
+              rx={3.5}
+              fill={isHighest ? `url(#mini-primary-${variant})` : `url(#mini-muted-${variant})`}
+              stroke="rgba(0, 0, 0, 0.25)"
+              strokeWidth={0.5}
+            />
+            {/* Specular cap on top of bar for 2.5D shine */}
+            <line
+              x1={index * (barWidth + gap) + 1.5}
+              y1={52 - height + 1}
+              x2={index * (barWidth + gap) + barWidth - 1.5}
+              y2={52 - height + 1}
+              stroke="rgba(255, 255, 255, 0.6)"
+              strokeWidth={1}
+              strokeLinecap="round"
+            />
+          </g>
+        );
+      })}
       {variant === "delivery" ? (
         <line
           x1={0}
           y1={24}
           x2={width}
           y2={24}
-          stroke="#171008"
+          stroke="#f0c842"
           strokeWidth={1.5}
-          strokeDasharray="4 3"
+          strokeDasharray="3 2"
         />
       ) : null}
     </svg>

@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { ArrowDown, Plus } from "lucide-react";
+import { ArrowDown, Plus, Sparkles, TrendingUp, ShieldCheck, Zap } from "lucide-react";
 import {
   BurgerIllustration,
   DessertIllustration,
@@ -8,113 +10,199 @@ import {
   NoodlesIllustration,
   PizzaIllustration,
 } from "@/components/illustrations/FoodIllustrations";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
-/** Decorative food illustrations shown next to the hero text. */
-const HERO_ILLUSTRATIONS = [
-  { Component: BurgerIllustration, background: "bg-ivory" },
-  { Component: PizzaIllustration, background: "bg-ivory" },
-  { Component: DrinkIllustration, background: "bg-cream" },
-  { Component: NoodlesIllustration, background: "bg-cream" },
-  { Component: FriesIllustration, background: "bg-ivory" },
-  { Component: DessertIllustration, background: "bg-ivory" },
+const HERO_TILES = [
+  { Component: PizzaIllustration, label: "Pizza", tag: "Revenue Anchor" },
+  { Component: BurgerIllustration, label: "Burgers", tag: "Top Volume" },
+  { Component: NoodlesIllustration, label: "Noodles", tag: "Fast Transit" },
+  { Component: FriesIllustration, label: "Sides", tag: "Add-on Margin" },
+  { Component: DrinkIllustration, label: "Drinks", tag: "Instant Dispatch" },
+  { Component: DessertIllustration, label: "Desserts", tag: "Rating Leader" },
 ];
 
-/** The landing hero: project title, one paragraph and the main call to action. */
+/**
+ * 2.5D Elevated Hero Section.
+ * Sets a distinctive visual identity with layered perspective,
+ * clear focal hierarchy, and authentic analytical narrative.
+ */
 export function Hero() {
   return (
     <section
       className="relative overflow-hidden border-b"
       style={{
-        background: "linear-gradient(135deg, #0d0a06 0%, #1a1108 40%, #2e1a06 80%, #0d0a06 100%)",
-        borderColor: "rgba(212,160,23,0.35)",
+        background:
+          "radial-gradient(ellipse 90% 80% at 50% -20%, #2f1d0a 0%, #150e06 50%, #0d0a06 100%)",
+        borderColor: "rgba(212, 160, 23, 0.35)",
       }}
     >
-      {/* Gold radial glow decorations */}
+      {/* 2.5D ambient lighting and layered specular glows */}
       <span
-        className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full"
+        className="pointer-events-none absolute -top-32 -left-20 h-96 w-96 rounded-full opacity-40 blur-3xl"
         style={{
-          background: "radial-gradient(circle, rgba(212,160,23,0.20) 0%, transparent 70%)",
+          background: "radial-gradient(circle, #e85d04 0%, transparent 70%)",
         }}
       />
       <span
-        className="pointer-events-none absolute -right-16 -bottom-16 h-64 w-64 rounded-full"
+        className="pointer-events-none absolute -right-24 -bottom-24 h-96 w-96 rounded-full opacity-30 blur-3xl"
         style={{
-          background: "radial-gradient(circle, rgba(232,93,4,0.18) 0%, transparent 70%)",
-        }}
-      />
-      <span
-        className="pointer-events-none absolute top-1/2 left-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(212,160,23,0.05) 0%, transparent 70%)",
+          background: "radial-gradient(circle, #d4a017 0%, transparent 70%)",
         }}
       />
 
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:py-24">
+        {/* Left Column: Headline and Call-to-actions */}
         <div>
-          {/* Gold accent line above heading */}
-          <div
-            className="mb-4 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-bold"
-            style={{
-              background: "rgba(212,160,23,0.15)",
-              border: "1px solid rgba(212,160,23,0.40)",
-              color: "#f0c842",
-            }}
-          >
-            <span
-              className="h-1.5 w-1.5 rounded-full"
-              style={{ background: "#f0c842" }}
-            />
-            Interactive Data Dashboard
-          </div>
-
-          <h1
-            className="font-display text-4xl leading-[1.05] font-extrabold sm:text-5xl lg:text-[3.4rem]"
-            style={{
-              background: "linear-gradient(135deg, #f0c842 0%, #fce9a0 40%, #e85d04 75%, #ff7c2a 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
-          >
-            FOOD DELIVERY DATA ANALYSIS
-          </h1>
-
-          <p className="mt-5 max-w-2xl text-base leading-relaxed sm:text-lg" style={{ color: "rgba(252,233,160,0.80)" }}>
-            Turn food delivery data into meaningful business insights. Explore revenue trends,
-            discover popular food categories, evaluate delivery efficiency, and understand customer
-            satisfaction through simple calculations and interactive visualizations.
-          </p>
-
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#analyses" className="btn-primary">
-              Explore Analyses
-              <ArrowDown className="h-4 w-4" aria-hidden="true" />
-            </a>
-            <Link href="/food-data" className="btn-secondary">
-              <Plus className="h-4 w-4" aria-hidden="true" />
-              Add a food record
-            </Link>
-          </div>
-        </div>
-
-        {/* Cartoon food illustrations on dark cards */}
-        <div className="grid grid-cols-3 gap-4" aria-hidden="true">
-          {HERO_ILLUSTRATIONS.map(({ Component }, index) => (
+          <ScrollReveal direction="up" delayMs={50}>
             <div
-              key={index}
-              className="flex aspect-square items-center justify-center rounded-3xl p-3 transition duration-200 hover:-translate-y-1"
+              className="mb-5 inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-extrabold tracking-wide"
               style={{
-                background: "linear-gradient(145deg, #2e2010 0%, #1a1108 100%)",
-                border: "1px solid rgba(212,160,23,0.30)",
-                boxShadow: "0 8px 24px -12px rgba(13,10,6,0.80), inset 0 1px 0 rgba(212,160,23,0.15)",
+                background: "rgba(212, 160, 23, 0.15)",
+                border: "1px solid rgba(212, 160, 23, 0.45)",
+                color: "#f0c842",
+                boxShadow: "0 2px 8px -1px rgba(0,0,0,0.4)",
               }}
             >
-              <Component className="h-full w-full" />
+              <Sparkles className="h-3.5 w-3.5 text-gold-light" />
+              <span>Interactive Data Science & Analytics Platform</span>
             </div>
-          ))}
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delayMs={100}>
+            <h1
+              className="font-display text-4xl leading-[1.08] font-extrabold tracking-tight sm:text-5xl lg:text-[3.5rem]"
+              style={{
+                background:
+                  "linear-gradient(135deg, #ffffff 0%, #fef3dc 35%, #f0c842 70%, #ff7c2a 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+                filter: "drop-shadow(0 2px 10px rgba(0,0,0,0.5))",
+              }}
+            >
+              FOOD DELIVERY DATA ANALYSIS
+            </h1>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delayMs={150}>
+            <p
+              className="mt-6 max-w-2xl text-base leading-relaxed sm:text-lg"
+              style={{ color: "rgba(252, 233, 160, 0.88)" }}
+            >
+              Uncover the operational reality behind food delivery orders. Examine revenue
+              distributions, identify volume leaders, benchmark category transit latencies,
+              and evaluate how delivery speed directly impacts customer star ratings.
+            </p>
+          </ScrollReveal>
+
+          {/* 3 Telemetry Feature Badges */}
+          <ScrollReveal direction="up" delayMs={200}>
+            <div className="mt-6 flex flex-wrap items-center gap-2.5">
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold"
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(212, 160, 23, 0.35)",
+                  color: "#fce9a0",
+                }}
+              >
+                <Zap className="h-3.5 w-3.5 text-primary-soft" />
+                Vectorized Pandas Logic
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold"
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(212, 160, 23, 0.35)",
+                  color: "#fce9a0",
+                }}
+              >
+                <TrendingUp className="h-3.5 w-3.5 text-gold-light" />
+                Live Dynamic Recalculations
+              </span>
+              <span
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold"
+                style={{
+                  background: "rgba(255, 255, 255, 0.08)",
+                  border: "1px solid rgba(212, 160, 23, 0.35)",
+                  color: "#fce9a0",
+                }}
+              >
+                <ShieldCheck className="h-3.5 w-3.5 text-emerald-400" />
+                Clean Analytics Integrity
+              </span>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal direction="up" delayMs={250}>
+            <div className="mt-8 flex flex-wrap items-center gap-3.5">
+              <a href="#analyses" className="btn-primary">
+                <span>Explore Analytical Dimensions</span>
+                <ArrowDown className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <Link href="/food-data" className="btn-secondary">
+                <Plus className="h-4 w-4" aria-hidden="true" />
+                <span>Add Record & Recalculate</span>
+              </Link>
+            </div>
+          </ScrollReveal>
         </div>
+
+        {/* Right Column: 2.5D Layered Food Isometric Display */}
+        <ScrollReveal direction="up" delayMs={200}>
+          <div
+            className="relative rounded-3xl p-5 sm:p-6"
+            style={{
+              background:
+                "linear-gradient(150deg, rgba(42, 28, 13, 0.7) 0%, rgba(20, 14, 7, 0.9) 100%)",
+              border: "1.5px solid rgba(212, 160, 23, 0.35)",
+              boxShadow:
+                "0 20px 50px -15px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(240, 200, 66, 0.25)",
+            }}
+          >
+            <div className="mb-4 flex items-center justify-between border-b border-peach-deep/20 pb-3">
+              <span className="text-xs font-extrabold uppercase tracking-wider text-gold">
+                Analyzed Food Spectrum
+              </span>
+              <span className="text-[11px] font-semibold text-gold-soft/70">
+                Categorical Segments
+              </span>
+            </div>
+
+            <div className="grid grid-cols-3 gap-3.5">
+              {HERO_TILES.map(({ Component, label, tag }, index) => (
+                <div
+                  key={index}
+                  className="group relative flex flex-col items-center justify-center rounded-2xl p-3 transition-all duration-300 hover:-translate-y-1.5"
+                  style={{
+                    background:
+                      "linear-gradient(145deg, #2d1d0c 0%, #170f07 100%)",
+                    border: "1px solid rgba(212, 160, 23, 0.30)",
+                    boxShadow:
+                      "0 6px 16px -4px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08)",
+                  }}
+                >
+                  <div className="flex aspect-square w-full items-center justify-center p-1.5 transition-transform duration-300 group-hover:scale-110">
+                    <Component className="h-full w-full" />
+                  </div>
+                  <span className="mt-1 font-display text-xs font-bold text-ivory">
+                    {label}
+                  </span>
+                  <span className="mt-0.5 text-[9px] font-extrabold tracking-wide uppercase text-gold/80">
+                    {tag}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom mini telemetry footer */}
+            <div className="mt-4 flex items-center justify-between rounded-xl bg-black/40 px-3.5 py-2 text-[11px] text-gold-soft/80 border border-gold/15">
+              <span>Dynamic Pipeline</span>
+              <span className="font-bold text-gold">Ready for Simulation</span>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
 }
-
